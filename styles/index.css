@@ -50,6 +50,7 @@ html {
 
 h1, h2, h3, h4 {
   font-family: Syncopate;
+  text-transform: uppercase !important;
 }
 
 @font-face {
