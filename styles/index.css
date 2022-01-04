@@ -1,0 +1,150 @@
+@tailwind base;
+
+/* Write your own custom base styles here */
+
+/* Start purging... */
+@tailwind components;
+/* Stop purging. */
+
+/* Write your own custom component styles here */
+.btn-blue {
+  @apply bg-blue-500 text-white font-bold py-2 px-4 rounded;
+}
+
+.fade-in-section {
+  opacity: 0;
+  transform: translateY(20vh);
+  visibility: hidden;
+  transition: opacity 0.8s ease-out, transform 1.6s ease-out;
+  will-change: opacity, visibility;
+}
+.fade-in-section.is-visible {
+  opacity: 1;
+  transform: none;
+  visibility: visible;
+}
+
+/* Start purging... */
+@tailwind utilities;
+/* Stop purging. */
+
+/* Your own custom utilities */
+
+@layer utilities {
+  .text-gradient {
+    display: inline-block;
+    background-clip: text;
+    color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+.sync {
+  font-family: Syncopate !important;
+}
+
+html {
+  font-family: Inter;
+}
+
+h1, h2, h3, h4 {
+  font-family: Syncopate;
+}
+
+@font-face {
+  font-family: "Syncopate";
+  src: url("/fonts/Syncopate/Syncopate-Regular.ttf");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Syncopate";
+  src: url("/fonts/Syncopate/Syncopate-Bold.ttf");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("/fonts/Inter/static/Inter-Regular.ttf");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Inter";
+  src: url("/fonts/Inter/static/Inter-Bold.ttf");
+  font-style: bold;
+  font-weight: 800;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Inter";
+  src: url("/fonts/Inter/static/Inter-Light.ttf");
+  font-style: bold;
+  font-weight: 200;
+  font-display: swap;
+}
+
+.margin-on-sm {
+  @media (max-width: 768px) {
+    margin-top: 0 !important;
+  }
+  margin-top: -88px !important;
+}
+
+.logo {
+  max-height: 50px;
+}
+
+.tilt {
+  transform: perspective(400px) rotateY(-3deg);
+}
+
+.tilt2 {
+  transform: perspective(400px) rotateY(2deg);
+}
+.background {
+  background: linear-gradient(129deg, #383838, #263d6c);
+  background-size: 400% 400%;
+
+  -webkit-animation: AnimationName 4s ease infinite;
+  -moz-animation: AnimationName 4s ease infinite;
+  animation: AnimationName 4s ease infinite;
+}
+
+@-webkit-keyframes AnimationName {
+  0%{background-position:0% 56%}
+  50%{background-position:100% 45%}
+  100%{background-position:0% 56%}
+}
+@-moz-keyframes AnimationName {
+  0%{background-position:0% 56%}
+  50%{background-position:100% 45%}
+  100%{background-position:0% 56%}
+}
+@keyframes AnimationName {
+  0%{background-position:71% 0%}
+  50%{background-position:30% 100%}
+  100%{background-position:71% 0%}
+}
+
+.border-b {
+  border-bottom-width: 0px;
+}
+
+.border-b > div {
+  border-style: solid;
+  border-width: 4px;
+  border-color: black;
+  border-top: 0px;
+  border-bottom: 0px;
+}
+.border-b > div:nth-child(1) {
+  border: none;
+}
+
+
