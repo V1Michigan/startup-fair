@@ -21,7 +21,7 @@ const Header = () => (
         <div className="flex-1 flex my-2 items-center">
           <div className="">
             <h1 className="md:text-6xl text-5xl tracking-tight font-bold text-blue-700 leading-none">
-              V1 Startup Fair
+              V1 STARTUP FAIR 
             </h1>
             <h2 className="md:text-2xl text-xl mt-1 tracking-tight text-yellow-400">
             University of Michigan
