@@ -11,14 +11,18 @@ function checkEmail(email) {
 
   let tempEmail = email.toLowerCase().trim();
   let before = tempEmail.substr(0, tempEmail.indexOf("@"));
+  let domain = tempEmail.substr(tempEmail.indexOf("@") + 1);
+  if (domain.toLowerCase() !== "umich.edu") {
+    return false;
+  }
 
   let spam = false;
-  spamWords.map((word) => {
+  spamWords.forEach((word) => {
     if (before === word) {
       spam = true;
     }
   });
-  specialChars.map((char) => {
+  specialChars.forEach((char) => {
     if (tempEmail.includes(char)) {
       spam = true;
     }
@@ -50,7 +54,7 @@ export function sendAWSEmail(email, submit, first_name) {
     obj["type"] = "submitted";
   }
   if (first_name) {
-    obj['first_name'] = first_name;
+    obj["first_name"] = first_name;
   }
   let objEmail = JSON.stringify(obj);
 
@@ -61,14 +65,13 @@ export function sendAWSEmail(email, submit, first_name) {
 }
 
 export function pushToSheets(email) {
-  console.log(email)
+  console.log(email);
   if (checkEmail(email)) {
     pushEmailToSheets(email);
     return true;
   } else {
     return false;
   }
-
 }
 
 export function sendEmail(email) {

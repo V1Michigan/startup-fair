@@ -76,7 +76,7 @@ export default function Application() {
               can't wait to see what you build. {/*<i>Limited spots available.</i> */}
             </p>
             <p className="text-grey-800 text-lg text-center my-2 max-w-3xl mx-auto">
-              Signup to stay updated
+              Sign up to stay updated
               {/* Applications are due May 19th, 2021 at 11:59 PM ET */}
             </p>
             <br />
@@ -106,7 +106,7 @@ export default function Application() {
                   if (pushToSheets(email)) {
                     router.push("/subscribed");
                   } else {
-                    alert("Please enter a valid email address");
+                    alert("Please enter a valid @umich.edu email address");
                   }
                 }}
               >

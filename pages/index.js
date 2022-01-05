@@ -57,11 +57,12 @@ export default function IndexPage() {
     <>
       <main>
         <SEO />
-        {/* <StockTicker text="IT'S TIME TO BUILD™"></StockTicker> */}
 
         <Header />
 
-        <div className="bg-gray-100 pb-8">
+        <Projects />
+
+        <div className="bg-white-100 pb-8">
           <div className="p-8 max-w-6xl mx-auto text-center">
             {/* <div className="max-w-xl flex justify-center align-items mx-auto">
               <div className="text-gray-700 rounded-full border-8 animate-trippy-slow border-black h-16 w-16"></div>
@@ -72,16 +73,21 @@ export default function IndexPage() {
               A one-of-a-kind product studio.
             </h1> */}
             <h2 className="text-2xl md:text-3xl tracking-tight text-gray-800 my-4">
-              We can't wait to show you
+              February 4th @ 1pm
             </h2>
-            <h2 className="text-2xl md:text-xl tracking-tight text-gray-600 my-4">
-              February 4th @ 2 pm
-            </h2>
-            <div class="grid grid-cols-4 divide-x-4 border-b text-5xl sync mt-16 mb-8">
-              <div>{days}&nbsp;<label className="text-sm">days</label></div>
-              <div>{hrs}&nbsp;<label className="text-sm">hrs</label></div>
-              <div>{min}&nbsp;<label className="text-sm">min</label></div>
-              <div>{seconds}&nbsp;<label className="text-sm">sec</label></div>
+            <div className="grid grid-cols-4 divide-x-4 border-b text-5xl sync mt-16 mb-8">
+              <div>
+                {days}&nbsp;<label className="text-sm">days</label>
+              </div>
+              <div>
+                {hrs}&nbsp;<label className="text-sm">hrs</label>
+              </div>
+              <div>
+                {min}&nbsp;<label className="text-sm">min</label>
+              </div>
+              <div>
+                {seconds}&nbsp;<label className="text-sm">sec</label>
+              </div>
             </div>
           </div>
 
@@ -90,10 +96,6 @@ export default function IndexPage() {
           </div>
         </div>
 
-        {/* <Value /> */}
-        <Projects />
-        {/* <Logos /> */}
-
         <div id="apply" className="bg-gray-800 py-4 bg-topography-white">
           <section className="max-w-6xl mx-auto my-24 ">
             <div className="m-8">
@@ -101,7 +103,8 @@ export default function IndexPage() {
                 Interested? Apply here! ⚡
               </h1>
               <p className="text-white text-xl text-center my-2 max-w-3xl mx-auto">
-                Join the fastest growing Unicorns <br/> <i className="text-sm">Limited spots available</i>
+                Find your next career-defining role at a high-growth startup{" "}
+                <br /> <i className="text-sm">Limited spots available.</i>
               </p>
             </div>
 
@@ -125,27 +128,30 @@ export default function IndexPage() {
                 onClick={() => {
                   console.log(email);
                   if (sendEmail(email)) {
-                    alert("Thanks for submitting, you should receive an email shortly")
+                    alert(
+                      "Thanks for submitting, you should receive an email shortly"
+                    );
                   } else {
-                    alert("Please enter a valid email address");
+                    alert("Please enter a valid @umich.edu email address");
                   }
                 }}
               >
                 Let's do this ›
               </button>
-              <p className="italic text-white mt-2 text-sm">You will receive an email</p>
+              <p className="italic text-white mt-2 text-sm">
+                You will receive an email with the next steps to apply
+              </p>
             </div>
           </section>
         </div>
         <FAQ
-          titleUppercase="Questions? We got you"
+          subtitleBold="Questions? We got you"
           color="gray"
-          subtitleBold="Frequently Asked Questions"
           listOfQA={[
             {
               question: "When and where is this?",
               answer:
-                "On Feburary 4th at 2 pm, it will be held in Ross",
+                "February 4th at 1pm ET. It will be a hybrid event held in the Ross School of Business and virtually.",
             },
             {
               question: "What is V1?",
@@ -155,34 +161,49 @@ export default function IndexPage() {
               textAfterLink: "here.",
             },
             {
-              question: "How do I get a 1:1 chat with a recruiter?",
+              question: "How do I apply to match with companies 1:1?",
               answer:
-                "The application will have an optional section. If accepted, you will be matched with companies you are interested in, as well as companies which are interested in you.",
+                "Top candidates can fill out an optional section of the application to apply for 1:1s. We will collect which companies you'd like to meet with to match you with companies who are just as excited about you.",
             },
             {
               question: "How do I prepare?",
               answer:
-                "You will need a resume, a pitch about yourself, and some business casual clothes.",
+                "Come prepared with your resume, an elevator pitch for recruiters, and some business casual clothes.",
             },
             {
               question: "What should I wear?",
-              answer:
-                "Business casual",
+              answer: "Business casual (or your V1 Startup Fair swag!)",
             },
             {
               question: "Is this free?",
               answer:
-                "Yes. This is completely free for students to attend. We are affiliated with the University of Michigan",
+                "Yes. This is completely free for University of Michigan students to attend.",
             },
             {
               question: "Got another question?",
-              answer: "Email us at v1startupfair@umich.edu",
+              answer: (
+                <>
+                  Email us at{" "}
+                  <a
+                    className="underline"
+                    href="mailto:v1startupfair@umich.edu"
+                  >
+                    v1startupfair@umich.edu
+                  </a>
+                </>
+              ),
             },
           ]}
         />
         <div className="background">
           <p className="footer text-gray-200 text-center py-8 m-0">
-            &copy; <b>2021 V1 | v1startupfair@umich.edu</b>
+            &copy;{" "}
+            <b>
+              2021 V1 |{" "}
+              <a className="underline" href="mailto:v1startupfair@umich.edu">
+                v1startupfair@umich.edu
+              </a>
+            </b>
           </p>
         </div>
       </main>
