@@ -14,7 +14,7 @@ const TrippyDiv2 = styled.div`
 `;
 
 const Header = () => (
-  <div className="flex justify-center items-center px-12 py-24 shadow-md">
+  <div className="flex justify-center items-center px-12 py-24 shadow-md bg-topography">
     <div className="max-w-screen-2xl">
       <div className="flex items-center justify-center text-center ">
         

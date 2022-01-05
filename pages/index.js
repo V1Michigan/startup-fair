@@ -94,14 +94,14 @@ export default function IndexPage() {
         <Projects />
         {/* <Logos /> */}
 
-        <div id="apply" className="background py-4">
+        <div id="apply" className="bg-gray-800 py-4 bg-topography-white">
           <section className="max-w-6xl mx-auto my-24 ">
             <div className="m-8">
               <h1 className="text-white text-4xl text-center font-bold tracking-tight my-4">
                 Interested? Apply here! ⚡
               </h1>
               <p className="text-white text-xl text-center my-2 max-w-3xl mx-auto">
-                Join the fastest growing Unicorns <br/> <i className="text-xs">Limited spots available.</i>
+                Join the fastest growing Unicorns <br/> <i className="text-sm">Limited spots available</i>
               </p>
             </div>
 
@@ -110,7 +110,7 @@ export default function IndexPage() {
                 Email
               </label>
               <input
-                className="text-white mt-2 w-3/4 text-base outline-none bg-transparent border-2 border-gray-400 py-3 rounded-md shadow-sm px-3 leading-tight focus:outline-none"
+                className="text-white mt-2 w-3/4 text-base outline-none bg-transparent border-2 border-yellow-400 py-3 rounded-md shadow-sm px-3 leading-tight focus:outline-none"
                 type="text"
                 placeholder="billymagic@umich.edu"
                 value={email}
@@ -121,7 +121,7 @@ export default function IndexPage() {
             </div>
             <div className="text-center">
               <button
-                className="text-base md:text-xl m-2 font-bold outline-none text-white py-2 px-4 rounded-md bg-gradient-to-r from-blue-600 to-blue-700 hover:opacity-75"
+                className="text-base md:text-xl m-2 font-bold outline-none text-black py-2 px-4 rounded-md bg-white hover:opacity-75"
                 onClick={() => {
                   console.log(email);
                   if (sendEmail(email)) {
@@ -133,7 +133,7 @@ export default function IndexPage() {
               >
                 Let's do this ›
               </button>
-              <p className="italic text-white mt-2">You will receive an email</p>
+              <p className="italic text-white mt-2 text-sm">You will receive an email</p>
             </div>
           </section>
         </div>
