@@ -35,7 +35,7 @@ const Header = () => (
         </a>
 
         <p className="text-gray-600 text-sm italic mt-6 pb-2">
-         Applications close Jan 23rd (rolling admissions)
+         Applications close Jan 23rd
         </p>
       </div>
     </div>

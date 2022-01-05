@@ -24,21 +24,21 @@ export default function FAQ({ titleUppercase, subtitleBold, listOfQA, color }) {
               (
                 <div
                   key={item.question}
-                  className={`p-1 relative hover:bg-gray-100 my-4`}
+                  className={`p-1 cursor-pointer relative hover:bg-gray-100 my-4`}
+                  onClick={() => {
+                    dropdownOpen.find((element) => element == index)
+                      ? setdropdownOpen(
+                          dropdownOpen.filter((ans) => ans !== index)
+                        )
+                      : setdropdownOpen((dropdownOpen) => [
+                          ...dropdownOpen,
+                          index,
+                        ]);
+                  }}
                 >
                   <button
                     type="button"
                     className={`block md:w-full text-left md:text-2xl text-xl font-bold tracking-tight text-gray-700 mb-2 focus:outline-none`}
-                    onClick={() => {
-                      dropdownOpen.find((element) => element == index)
-                        ? setdropdownOpen(
-                            dropdownOpen.filter((ans) => ans !== index)
-                          )
-                        : setdropdownOpen((dropdownOpen) => [
-                            ...dropdownOpen,
-                            index,
-                          ]);
-                    }}
                   >
                     {item.question}
                     {dropdownOpen.find((element) => element == index) ? (
