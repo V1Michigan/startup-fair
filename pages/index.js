@@ -75,18 +75,18 @@ export default function IndexPage() {
             <h2 className="text-2xl md:text-3xl tracking-tight text-gray-800 my-4">
               February 4th @ 1pm
             </h2>
-            <div className="grid grid-cols-4 divide-x-4 border-b text-5xl sync mt-16 mb-8">
+            <div className="countdown-timer grid grid-cols-4 divide-x-4 border-b text-5xl sync mt-16 mb-8">
               <div>
-                {days}&nbsp;<label className="text-sm">days</label>
+                {days}&nbsp;<label className="text-sm">DAYS</label>
               </div>
               <div>
-                {hrs}&nbsp;<label className="text-sm">hrs</label>
+                {hrs}&nbsp;<label className="text-sm">HRS</label>
               </div>
               <div>
-                {min}&nbsp;<label className="text-sm">min</label>
+                {min}&nbsp;<label className="text-sm">MIN</label>
               </div>
               <div>
-                {seconds}&nbsp;<label className="text-sm">sec</label>
+                {seconds}&nbsp;<label className="text-sm">SEC</label>
               </div>
             </div>
           </div>
@@ -124,7 +124,7 @@ export default function IndexPage() {
             </div>
             <div className="text-center">
               <button
-                className="text-base md:text-xl m-2 font-bold outline-none text-black py-2 px-4 rounded-md bg-white hover:opacity-75"
+                className="text-base md:text-xl m-2 font-bold outline-none text-black py-2 px-4 rounded-md bg-yellow-400 hover:opacity-75"
                 onClick={() => {
                   console.log(email);
                   if (sendEmail(email)) {

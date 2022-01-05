@@ -35,7 +35,7 @@ const Header = () => (
         </a>
 
         <p className="text-gray-600 text-sm italic mt-6 pb-2">
-         Applications close Jan 23rd
+         Applications close Jan 22nd
         </p>
       </div>
     </div>
