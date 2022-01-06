@@ -31,7 +31,7 @@ export default function SEO({ title, description, image }) {
 
       <meta property="og:image" content={image ? image : "/share.png?refresh=true"} />
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-      <meta name="twitter:card" content="summary" />
+      <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:site" content="@v1michigan" />
       <meta name="twitter:title" content={title ? title : "V1 Startup Fair | University of Michigan"} />
       <meta name="twitter:description" content={
