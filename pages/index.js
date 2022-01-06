@@ -36,6 +36,14 @@ export default function IndexPage() {
     ]);
   };
 
+  const submitEmail = () =>  {
+    if (sendEmail(email)) {
+      router.push("https://wbkw5amrmmr.typeform.com/v1startupfair");
+    } else {
+      alert("Please enter a valid @umich.edu email address");
+    }
+  }
+
   useEffect(() => {
     const intervalId = setInterval(() => {
       console.log(Date.now())
@@ -140,6 +148,11 @@ export default function IndexPage() {
                 type="text"
                 placeholder="billymagic@umich.edu"
                 value={email}
+                onKeyPress={(e) => {
+                  if (e.key === "Enter") {
+                    submitEmail();
+                  }
+                }}
                 onChange={(e) => {
                   setEmail(e.target.value);
                 }}
@@ -148,16 +161,7 @@ export default function IndexPage() {
             <div className="text-center">
               <button
                 className="text-base md:text-xl m-2 font-bold outline-none text-black py-2 px-4 rounded-md bg-yellow-400 hover:opacity-75"
-                onClick={() => {
-                  console.log(email);
-                  if (sendEmail(email)) {
-                    alert(
-                      "Thanks for submitting, you should receive an email shortly"
-                    );
-                  } else {
-                    alert("Please enter a valid @umich.edu email address");
-                  }
-                }}
+                onClick={submitEmail}
               >
                 Let's do this ›
               </button>
