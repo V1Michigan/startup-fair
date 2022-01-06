@@ -72,10 +72,33 @@ export default function IndexPage() {
             {/* <h1 className="text-4xl md:text-6xl font-bold tracking-tighter text-gray-900 mt-8">
               A one-of-a-kind product studio.
             </h1> */}
-            <h2 className="text-2xl md:text-3xl tracking-tight text-gray-800 my-4">
+            <h2 className="text-4xl md:text-4xl tracking-tight text-gray-800 my-4">
               February 4th @ 1pm
             </h2>
-            <div className="countdown-timer grid grid-cols-4 divide-x-4 border-b text-5xl sync mt-16 mb-8">
+            <table
+              className="text-lg text-left text-gray-800 border-separate m-auto"
+              style={{ borderSpacing: "1em" }}
+            >
+              <tbody>
+                <tr>
+                  <td className="font-bold">1:00pm</td>
+                  <td>Kickoff + Keynote</td>
+                </tr>
+                <tr>
+                  <td className="font-bold">1:45pm</td>
+                  <td>Networking event for students</td>
+                </tr>
+                <tr>
+                  <td className="font-bold">2:45pm</td>
+                  <td>Virtual Booths + Tech Talks</td>
+                </tr>
+                <tr>
+                  <td className="font-bold">After the event</td>
+                  <td>1:1 meetings with companies</td>
+                </tr>
+              </tbody>
+            </table>
+            <div className="countdown-timer grid grid-cols-4 divide-x-4 border-b text-3xl sync my-8 mx-32">
               <div>
                 {days}&nbsp;<label className="text-sm">DAYS</label>
               </div>
