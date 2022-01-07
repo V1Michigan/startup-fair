@@ -222,6 +222,40 @@ export default function IndexPage() {
             },
           ]}
         />
+        <div className="text-gray-600 bg-gray-100 py-8">
+          <p className="md:text-2xl text-xl font-bold leading-relaxed xl:w-2/4 lg:w-3/4 tracking-tight mx-auto mb-4">
+            P.S. — why are we doing this?
+          </p>
+          <p className="md:text-2xl text-xl leading-relaxed xl:w-2/4 lg:w-3/4 tracking-tight mx-auto mb-4">
+            We're a group of entrepreneurial students passionate about startups.
+            After incredible experiences building projects and working at
+            innovative startups, we've come together to share the excitement of
+            startups with top talent at the University of Michigan.
+          </p>
+          <div className="text-center mx-auto -space-x-4 mb-4">
+            {[
+              "varun",
+              "samay",
+              "megan",
+              "reese",
+              "divya",
+              "drew",
+              "alaa",
+              "elliot",
+              "emir",
+              "leon",
+            ].map((member) => (
+              <img
+                class="relative z-10 inline object-cover w-12 h-12 border-2 border-white rounded-full"
+                src={`/team/${member}.jpg`}
+                alt={`Profile image of ${member}`}
+              />
+            ))}
+          </div>
+          <p className="md:text-2xl text-xl font-bold leading-relaxed xl:w-2/4 lg:w-3/4 tracking-tight mx-auto mb-4">
+            — the V1 Startup Fair team
+          </p>
+        </div>
         <div className="background">
           <p className="footer text-gray-200 text-center py-8 m-0">
             &copy;{" "}
