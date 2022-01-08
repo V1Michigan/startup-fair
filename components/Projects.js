@@ -43,7 +43,7 @@ const Projects = () => {
                 TECH TALKS
               </h2>
               <p className="leading-relaxed text-base text-gray-600">
-                Learn from the best, get a founders view on when is the right
+                Learn from the best, get a founder's view on when is the right
                 time to start a company, understand what it takes to reach
                 product-market fit, learn about the best architecture for fast
                 iteration, and more.
@@ -72,4 +72,3 @@ const Projects = () => {
 };
 
 export default Projects;
-

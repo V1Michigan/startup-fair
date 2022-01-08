@@ -10,7 +10,7 @@ import Logos from "../components/Logos";
 import FAQ from "../components/FAQ";
 import Typist from "react-typist";
 import { sendEmail } from "../components/functions";
-//The program runs from Late October 2021 to August 8th, 2021.
+
 export default function IndexPage() {
   const [email, setEmail] = useState("");
   const [seconds, setSeconds] = useState(0);
@@ -67,6 +67,23 @@ export default function IndexPage() {
         <SEO />
 
         <Header />
+
+        <StockTicker
+          text={[
+            "Product Manager",
+            "Backend Engineer",
+            "UX Designer",
+            "Growth Marketer",
+            "Data Scientist",
+            "Security Engineer",
+            "Mobile Engineer",
+            "Graphic Designer",
+            "Frontend Engineer",
+            "Machine Learning Engineer",
+            "Software Engineer",
+            "Business Development Representative",
+          ]}
+        />
 
         <Projects />
 
