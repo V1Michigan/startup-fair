@@ -10,11 +10,11 @@ export default function StockTicker({ text }) {
   const [paused, setPaused] = useState(false);
   return (
     <div
-      className="bg-gray-700 text-white"
+      className="bg-gray-800 text-white uppercase tracking-wide font-bold"
       onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => setPaused(false)}
     >
-      <Marquee velocity={paused ? 0 : 10}>
+      <Marquee velocity={paused ? 0 : 2}>
         {times(10, Number)
           .map((_) =>
             [].concat(text).map((text, i) => (

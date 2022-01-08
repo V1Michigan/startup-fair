@@ -5,7 +5,7 @@ import { pushToSheets } from "../components/functions";
 import SEO from "../components/SEO";
 import Header from "../components/Header";
 import Value from "../components/Value";
-import Projects from "../components/Projects";
+import ValueProp from "../components/ValueProp";
 import Logos from "../components/Logos";
 import FAQ from "../components/FAQ";
 import Typist from "react-typist";
@@ -85,21 +85,16 @@ export default function IndexPage() {
           ]}
         />
 
-        <Projects />
+        <ValueProp />
 
         <div className="bg-white-100 pb-8">
           <div className="p-8 max-w-6xl mx-auto text-center">
-            {/* <div className="max-w-xl flex justify-center align-items mx-auto">
-              <div className="text-gray-700 rounded-full border-8 animate-trippy-slow border-black h-16 w-16"></div>
-              <div className="text-gray-700 rounded-full border-8 animate-trippy2-slow border-black h-16 w-16"></div>
-              <div className="text-gray-700 rounded-full border-8 animate-trippy3-slow border-black h-16 w-16"></div>
-            </div> */}
-            {/* <h1 className="text-4xl md:text-6xl font-bold tracking-tighter text-gray-900 mt-8">
-              A one-of-a-kind product studio.
-            </h1> */}
-            <h2 className="text-4xl md:text-4xl tracking-tight text-gray-800 my-4">
-              February 4th @ 1pm
+            <h2 className="text-4xl md:text-4xl tracking-tight text-gray-800 my-4 syncopate">
+              Schedule
             </h2>
+            <p className="text-xl tracking-tight font-bold text-gray-800">
+              February 4th @ 1 PM ET
+            </p>
             <table
               className="text-lg text-left text-gray-800 border-separate m-auto"
               style={{ borderSpacing: "1em" }}
@@ -147,11 +142,11 @@ export default function IndexPage() {
         <div id="apply" className="bg-gray-800 py-4 bg-topography-white">
           <section className="max-w-6xl mx-auto my-24 ">
             <div className="m-8">
-              <h1 className="text-white text-4xl text-center font-bold tracking-tight my-4">
+              <h1 className="text-white text-4xl text-center font-bold tracking-tight my-4 syncopate">
                 Interested? Apply here! ⚡
               </h1>
               <p className="text-white text-xl text-center my-2 max-w-3xl mx-auto">
-                Find your next career-defining role at a high-growth startup{" "}
+                Find your next career-defining role at a high-growth startup.{" "}
                 <br /> <i className="text-sm">Limited spots available.</i>
               </p>
             </div>
@@ -183,13 +178,13 @@ export default function IndexPage() {
                 Let's do this ›
               </button>
               <p className="italic text-white mt-2 text-sm">
-                You will receive an email with the next steps to apply
+                You will receive an email with the next steps to apply.
               </p>
             </div>
           </section>
         </div>
         <FAQ
-          subtitleBold="Questions? We got you"
+          subtitleBold="Questions? We got you."
           color="gray"
           listOfQA={[
             {
@@ -261,6 +256,9 @@ export default function IndexPage() {
                 alt={`Profile image of ${member}`}
               />
             ))}
+            <p className="text-center text-white mt-2 tracking-tight">
+              V1 Michigan Startup Fair Team
+            </p>
           </div>
           <p className="footer text-gray-200 text-center py-8 m-0">
             &copy;{" "}
