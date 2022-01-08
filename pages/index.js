@@ -1,6 +1,7 @@
 import StockTicker from "../components/StockTicker";
 import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
+import { Parallax, ParallaxProvider } from "react-scroll-parallax";
 import { pushToSheets } from "../components/functions";
 import SEO from "../components/SEO";
 import Header from "../components/Header";
@@ -11,7 +12,7 @@ import FAQ from "../components/FAQ";
 import Typist from "react-typist";
 import { sendEmail } from "../components/functions";
 
-export default function IndexPage() {
+function IndexPage() {
   const [email, setEmail] = useState("");
   const [seconds, setSeconds] = useState(0);
   const [min, setMin] = useState(0);
@@ -280,3 +281,12 @@ export default function IndexPage() {
     </>
   );
 }
+
+const withParallax = (Component) => (props) =>
+  (
+    <ParallaxProvider>
+      <Component {...props} />
+    </ParallaxProvider>
+  );
+
+export default withParallax(IndexPage);
