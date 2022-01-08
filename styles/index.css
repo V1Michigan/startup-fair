@@ -48,7 +48,7 @@ html {
   font-family: Inter;
 }
 
-h1, h2, h3, h4 {
+.syncopate {
   font-family: Syncopate;
   text-transform: uppercase !important;
 }
@@ -118,19 +118,37 @@ h1, h2, h3, h4 {
 }
 
 @-webkit-keyframes AnimationName {
-  0%{background-position:0% 56%}
-  50%{background-position:100% 45%}
-  100%{background-position:0% 56%}
+  0% {
+    background-position: 0% 56%;
+  }
+  50% {
+    background-position: 100% 45%;
+  }
+  100% {
+    background-position: 0% 56%;
+  }
 }
 @-moz-keyframes AnimationName {
-  0%{background-position:0% 56%}
-  50%{background-position:100% 45%}
-  100%{background-position:0% 56%}
+  0% {
+    background-position: 0% 56%;
+  }
+  50% {
+    background-position: 100% 45%;
+  }
+  100% {
+    background-position: 0% 56%;
+  }
 }
 @keyframes AnimationName {
-  0%{background-position:71% 0%}
-  50%{background-position:30% 100%}
-  100%{background-position:71% 0%}
+  0% {
+    background-position: 71% 0%;
+  }
+  50% {
+    background-position: 30% 100%;
+  }
+  100% {
+    background-position: 71% 0%;
+  }
 }
 
 .border-b {
