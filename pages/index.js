@@ -106,19 +106,19 @@ export default function IndexPage() {
             >
               <tbody>
                 <tr>
-                  <td className="font-bold">1:00pm</td>
+                  <td className="font-bold">1:00 PM</td>
                   <td>Kickoff + Keynote</td>
                 </tr>
                 <tr>
-                  <td className="font-bold">1:45pm</td>
+                  <td className="font-bold">1:45 PM</td>
                   <td>Networking event for students</td>
                 </tr>
                 <tr>
-                  <td className="font-bold">2:45pm</td>
+                  <td className="font-bold">2:45 PM</td>
                   <td>Virtual Booths + Tech Talks</td>
                 </tr>
                 <tr>
-                  <td className="font-bold">After the event</td>
+                  <td className="font-bold">After event</td>
                   <td>1:1 meetings with companies</td>
                 </tr>
               </tbody>
@@ -195,8 +195,12 @@ export default function IndexPage() {
             {
               question: "When and where is this?",
               answer:
-                "February 4th at 1pm ET. It will be a hybrid event held in the Ross School of Business and virtually.",
+                "It is February 4th at 1pm ET. It will be a hybrid event held in the Ross School of Business featuring a mix of 1:1 meetings, startup booths, and founder speakers.",
             },
+            {
+              question: "Who is this meant for?",
+              answer:
+                "This is designed for undergrad and new grad engineers, designers, and product people who are actively searching for their next roles at hyper-growth startups. We welcome and encourage applicants from all backgrounds to apply."            },
             {
               question: "What is V1?",
               answer:
@@ -217,11 +221,6 @@ export default function IndexPage() {
             {
               question: "What should I wear?",
               answer: "Business casual (or your V1 Startup Fair swag!)",
-            },
-            {
-              question: "Is this free?",
-              answer:
-                "Yes. This is completely free for University of Michigan students to attend.",
             },
             {
               question: "Got another question?",
@@ -265,7 +264,7 @@ export default function IndexPage() {
           <p className="footer text-gray-200 text-center py-8 m-0">
             &copy;{" "}
             <b>
-              2021 V1 |{" "}
+              2022 V1 |{" "}
               <a className="underline" href="mailto:v1startupfair@umich.edu">
                 v1startupfair@umich.edu
               </a>

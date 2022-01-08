@@ -14,7 +14,6 @@ class MyDocument extends Document {
             async
             src="https://www.googletagmanager.com/gtag/js?id=UA-197056568-1"
           />
-
           <script
             dangerouslySetInnerHTML={{
               __html: `
@@ -24,6 +23,30 @@ class MyDocument extends Document {
             gtag('config', 'UA-197056568-1');
         `,
             }}
+          />
+          <link
+            rel="preload"
+            href="/fonts/Inter/static/Inter-Regular.ttf"
+            as="font"
+            type="font/ttf"
+          />
+          <link
+            rel="preload"
+            href="/fonts/Inter/static/Inter-Bold.ttf"
+            as="font"
+            type="font/ttf"
+          />
+          <link
+            rel="preload"
+            href="/fonts/Syncopate/Syncopate-Bold.ttf"
+            as="font"
+            type="font/ttf"
+          />
+          <link
+            rel="preload"
+            href="/fonts/Syncopate/Syncopate-Regular.ttf"
+            as="font"
+            type="font/ttf"
           />
         </Head>
         <Main />
