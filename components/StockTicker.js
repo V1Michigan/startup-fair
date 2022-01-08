@@ -10,7 +10,7 @@ export default function StockTicker({ text }) {
   const [paused, setPaused] = useState(false);
   return (
     <div
-      className="bg-gray-800 text-white uppercase tracking-wide font-bold"
+      className="bg-yellow-400 text-gray-800 uppercase tracking-wide font-bold"
       onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => setPaused(false)}
     >
