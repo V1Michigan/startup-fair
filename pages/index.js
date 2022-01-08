@@ -99,7 +99,7 @@ export default function IndexPage() {
 
         <div className="bg-white-100 pb-8">
           <div className="p-8 max-w-6xl mx-auto text-center">
-            <h2 className="text-4xl md:text-4xl tracking-tight text-gray-800 my-4 syncopate">
+            <h2 className="text-4xl md:text-5xl tracking-tight text-gray-800 my-4 font-bold">
               Schedule
             </h2>
             <p className="text-xl tracking-tight font-bold text-gray-800">
@@ -152,7 +152,7 @@ export default function IndexPage() {
         <div id="apply" className="bg-gray-800 py-4 bg-topography-white">
           <section className="max-w-6xl mx-auto my-24 ">
             <div className="m-8">
-              <h1 className="text-white text-4xl text-center font-bold tracking-tight my-4 syncopate">
+              <h1 className="text-white text-4xl text-center font-bold tracking-tight my-4">
                 Interested? Apply here! ⚡
               </h1>
               <p className="text-white text-xl text-center my-2 max-w-3xl mx-auto">
@@ -262,7 +262,7 @@ export default function IndexPage() {
                 alt={`Profile image of ${member}`}
               />
             ))}
-            <p className="text-center text-white mt-2 tracking-tight">
+            <p className="text-center text-white mt-2 tracking-tight font-bold">
               V1 Michigan Startup Fair Team
             </p>
           </div>
