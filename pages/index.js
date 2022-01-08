@@ -1,6 +1,7 @@
 import StockTicker from "../components/StockTicker";
 import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
+import { Parallax, ParallaxProvider } from "react-scroll-parallax";
 import { pushToSheets } from "../components/functions";
 import SEO from "../components/SEO";
 import Header from "../components/Header";
@@ -11,7 +12,7 @@ import FAQ from "../components/FAQ";
 import Typist from "react-typist";
 import { sendEmail } from "../components/functions";
 
-export default function IndexPage() {
+function IndexPage() {
   const [email, setEmail] = useState("");
   const [seconds, setSeconds] = useState(0);
   const [min, setMin] = useState(0);
@@ -112,7 +113,7 @@ export default function IndexPage() {
               <tbody>
                 <tr>
                   <td className="font-bold">1:00 PM</td>
-                  <td>Kickoff & keynote</td>
+                  <td>Kickoff &amp; keynote</td>
                 </tr>
                 <tr>
                   <td className="font-bold">1:45 PM</td>
@@ -120,7 +121,7 @@ export default function IndexPage() {
                 </tr>
                 <tr>
                   <td className="font-bold">2:45 PM</td>
-                  <td>Virtual booths & tech talks</td>
+                  <td>Virtual booths &amp; tech talks</td>
                 </tr>
                 <tr>
                   <td className="font-bold">After event</td>
@@ -257,7 +258,7 @@ export default function IndexPage() {
               "leon",
             ].map((member) => (
               <img
-                class="relative z-10 inline object-cover w-12 h-12 border-2 border-white rounded-full"
+                className="relative z-10 inline object-cover w-12 h-12 border-2 border-white rounded-full"
                 src={`/team/${member}.jpg`}
                 alt={`Profile image of ${member}`}
               />
@@ -280,3 +281,12 @@ export default function IndexPage() {
     </>
   );
 }
+
+const withParallax = (Component) => (props) =>
+  (
+    <ParallaxProvider>
+      <Component {...props} />
+    </ParallaxProvider>
+  );
+
+export default withParallax(IndexPage);

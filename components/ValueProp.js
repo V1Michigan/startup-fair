@@ -1,15 +1,33 @@
+import { Parallax } from "react-scroll-parallax";
+import GrowthSvg from "./GrowthSvg";
+
+const Growth = () => (
+  <div className="relative pt-12 pb-6">
+    {/* Not using top-0 so it clips to the bottom, since I can't figure out
+        how to fit the SVG inside the container height */}
+    <div
+      className="absolute right-0 bottom-0 overflow-hidden z-0"
+      style={{ left: "-25%" }}
+    >
+      <Parallax x={[7.5, 0]}>
+        <GrowthSvg />
+      </Parallax>
+    </div>
+    <div className="max-w-2xl mx-auto relative z-1">
+      <h1 className="text-5xl text-gray-800 text-center tracking-tight font-bold">
+        Meet the fastest-growing startups at V1 Startup Fair.
+      </h1>
+      <p className="mt-4 text-2xl text-gray-600 text-center tracking-tight font-bold p-2">
+        Startups are changing the world — make an impact by working at one.
+      </p>
+    </div>
+  </div>
+);
+
 const ValueProp = () => {
   return (
     <>
-      <div className="justify-center pt-12 pb-6 max-w-2xl mx-auto">
-        <h1 className="text-5xl text-gray-800 text-center tracking-tight font-bold">
-          Meet the fastest-growing startups at V1 Startup Fair.
-        </h1>
-        <p className="mt-4 text-2xl text-gray-600 text-center tracking-tight font-bold p-2">
-          Startups are changing the world — make an impact by working at one.
-        </p>
-      </div>
-
+      <Growth />
       <section className="text-gray-700 bg-gray-100 body-font py-8">
         <section className="text-gray-600 body-font px-5">
           <div className="flex flex-wrap">
@@ -59,7 +77,6 @@ const ValueProp = () => {
           </div>
         </section>
       </section>
-
     </>
   );
 };
