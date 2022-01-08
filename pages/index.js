@@ -13,10 +13,10 @@ import { sendEmail } from "../components/functions";
 //The program runs from Late October 2021 to August 8th, 2021.
 export default function IndexPage() {
   const [email, setEmail] = useState("");
-  const [seconds, setSeconds] = useState(0)
-  const [min, setMin] = useState(0)
-  const [hrs, setHrs] = useState(0)
-  const [days, setDays] = useState(0)
+  const [seconds, setSeconds] = useState(0);
+  const [min, setMin] = useState(0);
+  const [hrs, setHrs] = useState(0);
+  const [days, setDays] = useState(0);
   const router = useRouter();
   const [people, setPeople] = useState([
     "Engineers",
@@ -36,30 +36,30 @@ export default function IndexPage() {
     ]);
   };
 
-  const submitEmail = () =>  {
+  const submitEmail = () => {
     if (sendEmail(email)) {
       router.push("https://wbkw5amrmmr.typeform.com/v1startupfair");
     } else {
       alert("Please enter a valid @umich.edu email address");
     }
-  }
+  };
 
   useEffect(() => {
     const intervalId = setInterval(() => {
-      console.log(Date.now())
+      console.log(Date.now());
       var time = 1644001200000 - Date.now();
-      time = Math.floor(time / 1000)
-      setSeconds(time % 60)
-      time = Math.floor(time / 60)
-      setMin(time % 60)
-      time = Math.floor(time / 60)
-      setHrs(time % 24)
-      time = Math.floor(time / 24)
-      setDays(time)
-    }, 1000)
+      time = Math.floor(time / 1000);
+      setSeconds(time % 60);
+      time = Math.floor(time / 60);
+      setMin(time % 60);
+      time = Math.floor(time / 60);
+      setHrs(time % 24);
+      time = Math.floor(time / 24);
+      setDays(time);
+    }, 1000);
 
     return () => clearInterval(intervalId);
-  }, [])
+  }, []);
 
   return (
     <>
@@ -223,6 +223,28 @@ export default function IndexPage() {
           ]}
         />
         <div className="background">
+          <br />
+          <br />
+          <div className="text-center mx-auto -space-x-4 mb-4">
+            {[
+              "varun",
+              "samay",
+              "megan",
+              "reese",
+              "divya",
+              "drew",
+              "alaa",
+              "elliot",
+              "emir",
+              "leon",
+            ].map((member) => (
+              <img
+                class="relative z-10 inline object-cover w-12 h-12 border-2 border-white rounded-full"
+                src={`/team/${member}.jpg`}
+                alt={`Profile image of ${member}`}
+              />
+            ))}
+          </div>
           <p className="footer text-gray-200 text-center py-8 m-0">
             &copy;{" "}
             <b>
