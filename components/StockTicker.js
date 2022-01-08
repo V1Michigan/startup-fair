@@ -18,7 +18,7 @@ export default function StockTicker({ text }) {
         {times(10, Number)
           .map((_) =>
             [].concat(text).map((text, i) => (
-              <div key={i} className="m-2">
+              <div key={i} className="m-3">
                 {text}
               </div>
             ))
