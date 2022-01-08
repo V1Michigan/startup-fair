@@ -66,6 +66,16 @@ export default function IndexPage() {
       <main>
         <SEO />
 
+        {/* <div className="bg-gray-800 md:flex text-center p-2 tracking-widest">
+        <p className="text-white uppercase flex-1 p-2">SEED 🌱</p>
+        <p className="text-white uppercase flex-1 p-2">Series A</p>
+        <p className="text-white uppercase flex-1 p-2">Series B</p>
+        <p className="text-white uppercase flex-1 p-2">Series C</p>
+        <p className="text-white uppercase flex-1 p-2">Series D</p>
+        <p className="text-white uppercase flex-1 p-2">Series E</p>
+        <p className="text-white uppercase flex-1 p-2">IPO 🚀</p>
+      </div> */}
+
         <Header />
 
         <StockTicker
@@ -102,7 +112,7 @@ export default function IndexPage() {
               <tbody>
                 <tr>
                   <td className="font-bold">1:00 PM</td>
-                  <td>Kickoff + Keynote</td>
+                  <td>Kickoff & keynote</td>
                 </tr>
                 <tr>
                   <td className="font-bold">1:45 PM</td>
@@ -110,7 +120,7 @@ export default function IndexPage() {
                 </tr>
                 <tr>
                   <td className="font-bold">2:45 PM</td>
-                  <td>Virtual Booths + Tech Talks</td>
+                  <td>Virtual booths & tech talks</td>
                 </tr>
                 <tr>
                   <td className="font-bold">After event</td>
@@ -190,12 +200,13 @@ export default function IndexPage() {
             {
               question: "When and where is this?",
               answer:
-                "It is February 4th at 1pm ET. It will be a hybrid event held in the Ross School of Business featuring a mix of 1:1 meetings, startup booths, and founder speakers.",
+                "V1 Startup Fair is February 4th at 1 PM ET. It will be a hybrid event held in the Ross School of Business featuring a mix of 1:1 meetings, startup booths, and founder speakers.",
             },
             {
-              question: "Who is this meant for?",
+              question: "Who is this designed for?",
               answer:
-                "This is designed for undergrad and new grad engineers, designers, and product people who are actively searching for their next roles at hyper-growth startups. We welcome and encourage applicants from all backgrounds to apply."            },
+                "This is designed for undergrad and new grad engineers, designers, and product people who are actively searching for their next roles at hyper-growth startups. We welcome and encourage applicants from all backgrounds to apply.",
+            },
             {
               question: "What is V1?",
               answer:
@@ -212,10 +223,6 @@ export default function IndexPage() {
               question: "How do I prepare?",
               answer:
                 "Come prepared with your resume, an elevator pitch for recruiters, and some business casual clothes.",
-            },
-            {
-              question: "What should I wear?",
-              answer: "Business casual (or your V1 Startup Fair swag!)",
             },
             {
               question: "Got another question?",

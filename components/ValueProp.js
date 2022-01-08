@@ -1,7 +1,7 @@
 const ValueProp = () => {
   return (
     <>
-      <div className="justify-center pt-12 pb-8 max-w-2xl mx-auto">
+      <div className="justify-center pt-12 pb-6 max-w-2xl mx-auto">
         <h1 className="text-5xl text-gray-800 text-center tracking-tight font-bold">
           Meet the fastest-growing startups at V1 Startup Fair.
         </h1>
@@ -10,15 +10,6 @@ const ValueProp = () => {
         </p>
       </div>
 
-      <div className="bg-gray-800 md:flex text-center p-4 tracking-widest">
-        <p className="text-white uppercase flex-1 p-2">SEED 🌱</p>
-        <p className="text-white uppercase flex-1 p-2">Series A</p>
-        <p className="text-white uppercase flex-1 p-2">Series B</p>
-        <p className="text-white uppercase flex-1 p-2">Series C</p>
-        <p className="text-white uppercase flex-1 p-2">Series D</p>
-        <p className="text-white uppercase flex-1 p-2">Series E</p>
-        <p className="text-white uppercase flex-1 p-2">IPO 🚀</p>
-      </div>
       <section className="text-gray-700 bg-gray-100 body-font py-8">
         <section className="text-gray-600 body-font px-5">
           <div className="flex flex-wrap">
