@@ -2,13 +2,20 @@ import StockTicker from "../components/StockTicker";
 import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import { ParallaxProvider } from "react-scroll-parallax";
+import ReactGA from "react-ga";
 import SEO from "../components/SEO";
 import Header from "../components/Header";
 import ValueProp from "../components/ValueProp";
 import Logos from "../components/Logos";
 import FAQ from "../components/FAQ";
-import Typist from "react-typist";
 import { sendEmail } from "../components/functions";
+
+function initGA() {
+  if (process.env.NODE_ENV !== "development") {
+    ReactGA.initialize("UA-216661415-1"); // "Startup Fair website" property
+    ReactGA.pageview(window.location.pathname + window.location.search);
+  }
+}
 
 function IndexPage() {
   const [email, setEmail] = useState("");
@@ -20,11 +27,18 @@ function IndexPage() {
 
   const submitEmail = () => {
     if (sendEmail(email)) {
+      ReactGA.event({
+        category: "Button",
+        action: "Apply",
+        label: "Submit email",
+      });
       router.push("https://wbkw5amrmmr.typeform.com/v1startupfair");
     } else {
       alert("Please enter a valid @umich.edu email address");
     }
   };
+
+  useEffect(initGA, []); // Only runs once
 
   useEffect(() => {
     const intervalId = setInterval(() => {

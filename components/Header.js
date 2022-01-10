@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import ReactGA from "react-ga";
 
 const Header = () => (
   <div className="flex bg-gray-800 justify-center items-center px-12 py-24 border border-bottom bg-topography-white">
@@ -22,6 +22,13 @@ const Header = () => (
         <a
           href="#apply"
           className="text-base md:text-xl font-bold outline-none text-black py-3 px-6 rounded-md bg-white hover:opacity-75"
+          onClick={() =>
+            ReactGA.event({
+              category: "Button",
+              action: "Apply",
+              label: "Apply Now (intra-page link)",
+            })
+          }
         >
           Apply Now ›
         </a>
