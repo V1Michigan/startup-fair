@@ -1,11 +1,9 @@
 import StockTicker from "../components/StockTicker";
 import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
-import { Parallax, ParallaxProvider } from "react-scroll-parallax";
-import { pushToSheets } from "../components/functions";
+import { ParallaxProvider } from "react-scroll-parallax";
 import SEO from "../components/SEO";
 import Header from "../components/Header";
-import Value from "../components/Value";
 import ValueProp from "../components/ValueProp";
 import Logos from "../components/Logos";
 import FAQ from "../components/FAQ";
@@ -19,23 +17,6 @@ function IndexPage() {
   const [hrs, setHrs] = useState(0);
   const [days, setDays] = useState(0);
   const router = useRouter();
-  const [people, setPeople] = useState([
-    "Engineers",
-    "Designers",
-    "Growth Hackers",
-    "Creatives",
-    "Builders",
-  ]);
-
-  const onTypingDone = () => {
-    setPeople([
-      "Engineers",
-      "Designers",
-      "Growth Hackers",
-      "Creatives",
-      "Builders",
-    ]);
-  };
 
   const submitEmail = () => {
     if (sendEmail(email)) {
@@ -47,8 +28,7 @@ function IndexPage() {
 
   useEffect(() => {
     const intervalId = setInterval(() => {
-      console.log(Date.now());
-      var time = 1644001200000 - Date.now();
+      var time = 1643997600000 - Date.now();
       time = Math.floor(time / 1000);
       setSeconds(time % 60);
       time = Math.floor(time / 60);
@@ -261,6 +241,7 @@ function IndexPage() {
                 className="relative z-10 inline object-cover w-12 h-12 border-2 border-white rounded-full"
                 src={`/team/${member}.jpg`}
                 alt={`Profile image of ${member}`}
+                key={member}
               />
             ))}
             <p className="text-center text-white mt-2 tracking-tight font-bold">

@@ -1,14 +1,14 @@
-import 'typeface-inter';
-import PropTypes from 'prop-types';
+import "typeface-inter";
+import PropTypes from "prop-types";
 
-import '../styles/index.css';
+import "../styles/index.css";
 
 function MyApp({ Component, pageProps }) {
-  return <Component { ...pageProps } />;
+  return <Component {...pageProps} />;
 }
 
 MyApp.propTypes = {
-  Component: PropTypes.element.isRequired,
+  Component: PropTypes.elementType.isRequired,
   pageProps: PropTypes.object.isRequired, // eslint-disable-line react/forbid-prop-types
 };
 

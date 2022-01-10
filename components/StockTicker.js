@@ -30,8 +30,8 @@ export default function StockTicker({ text }) {
 }
 
 StockTicker.propTypes = {
-  text: PropTypes.oneOf([
-    PropTypes.string.isRequired,
-    PropTypes.arrayOf(PropTypes.string).isRequired,
-  ]),
+  text: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.arrayOf(PropTypes.string),
+  ]).isRequired,
 };
