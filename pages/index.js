@@ -193,6 +193,11 @@ function IndexPage() {
           color="gray"
           listOfQA={[
             {
+              question: "What if I already have a job for the summer?",
+              answer:
+                "Not a problem at all, still apply! Companies are recruiting for Summer 2022, Fall 2022, and Winter 2023.",
+            },
+            {
               question: "When and where is this?",
               answer:
                 "V1 Startup Fair is February 4th at 1 PM ET. It will be a hybrid event held in the Ross School of Business featuring a mix of 1:1 meetings, startup booths, and founder speakers.",
