@@ -225,6 +225,22 @@ function IndexPage() {
                 "Come prepared with your resume, an elevator pitch for recruiters, and some business casual clothes.",
             },
             {
+              question: "Can my company recruit at Startup Fair?",
+              answer: (
+                <>
+                  We'd love to chat about whether your company would be a fit
+                  for Startup Fair — please drop us an email at{" "}
+                  <a
+                    className="underline"
+                    href="mailto:v1startupfair@umich.edu"
+                  >
+                    v1startupfair@umich.edu
+                  </a>{" "}
+                  and we'll get in touch!
+                </>
+              ),
+            },
+            {
               question: "Got another question?",
               answer: (
                 <>

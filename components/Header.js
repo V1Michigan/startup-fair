@@ -77,7 +77,7 @@ const Header = () => (
         Apply Now ›
       </a>
       <p className="text-gray-300 text-sm italic font-bold mt-6 pb-2">
-        Applications close Jan 22nd
+        Student applications close Jan 22nd
       </p>
     </div>
     <Companies />
