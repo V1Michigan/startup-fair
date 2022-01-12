@@ -13,11 +13,11 @@ const Growth = () => (
         <GrowthSvg />
       </Parallax>
     </div>
-    <div className="max-w-2xl mx-auto relative z-1">
+    <div className="max-w-2xl mx-auto relative z-1 py-2 px-4">
       <h1 className="text-5xl text-gray-800 text-center tracking-tight font-bold">
         Meet the fastest-growing startups at V1 Startup Fair.
       </h1>
-      <p className="mt-4 text-2xl text-gray-600 text-center tracking-tight font-bold p-2">
+      <p className="mt-4 text-2xl text-gray-600 text-center tracking-tight font-bold">
         Startups are changing the world — make an impact by working at one.
       </p>
     </div>
