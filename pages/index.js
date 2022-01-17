@@ -86,7 +86,6 @@ function IndexPage() {
             "Frontend Engineer",
             "Machine Learning Engineer",
             "Software Engineer",
-            "Business Development Representative",
           ]}
         />
 
