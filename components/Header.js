@@ -2,9 +2,9 @@ import ReactGA from "react-ga";
 
 const Companies = () => (
   <>
-    {/* TODO: Make images from lower packages smaller, make break into a second row as we get more companies */}
-    <div className="flex flex-row items-center justify-center gap-8 mt-8">
-      {/* Growth */}
+    {/* TODO: Make images from lower packages smaller, maybe break into a second row as we get more companies */}
+    <div className="flex flex-col items-center justify-center mt-4">
+      {/* Title sponsor */}
       <div className="flex flex-row items-center justify-start py-1">
         <a href="https://ramp.com" target="_blank" rel="noopener noreferrer">
           <img
@@ -14,15 +14,35 @@ const Companies = () => (
           />
         </a>
       </div>
-      {/* Iteration */}
-      <div className="flex flex-row items-center justify-start py-1">
-        <a href="https://trmlabs.com" target="_blank" rel="noopener noreferrer">
-          <img
-            className="w-36 hover:opacity-75"
-            src="/companies/trm.svg"
-            alt="TRM Labs"
-          />
-        </a>
+      <div className="flex flex-row items-center justify-start gap-8 py-2">
+        {/* Iteration */}
+        <div className="flex flex-row items-center justify-start py-1">
+          <a
+            href="https://trmlabs.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              className="w-36 hover:opacity-75"
+              src="/companies/trm.svg"
+              alt="TRM Labs"
+            />
+          </a>
+        </div>
+        {/* Launch */}
+        <div className="flex flex-row items-center justify-start py-1">
+          <a
+            href="https://siteline.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              className="w-40 hover:opacity-75"
+              src="/companies/siteline.png"
+              alt="Siteline"
+            />
+          </a>
+        </div>
       </div>
     </div>
     {/* Partners */}
