@@ -12,9 +12,9 @@ function checkEmail(email) {
   let tempEmail = email.toLowerCase().trim();
   let before = tempEmail.substr(0, tempEmail.indexOf("@"));
   let domain = tempEmail.substr(tempEmail.indexOf("@") + 1);
-  if (domain.toLowerCase() !== "umich.edu") {
-    return false;
-  }
+  //if (domain.toLowerCase() !== "umich.edu") {
+  //  return false;
+  //}
 
   let spam = false;
   spamWords.forEach((word) => {
