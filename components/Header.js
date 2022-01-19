@@ -73,6 +73,18 @@ const Companies = () => (
           alt="Intros"
           size="28"
         /> */}
+      {/* <Logo
+        href="https://mage.ai"
+        src="/companies/mage.svg"
+        alt="Mage"
+        size="28"
+      /> */}
+      {/* <Logo
+        href="https://ridewithloop.com"
+        src="/companies/loop.svg"
+        alt="Loop"
+        size="28"
+      /> */}
       {/* </div> */}
     </div>
     {/* Partners */}
