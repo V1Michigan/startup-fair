@@ -24,68 +24,68 @@ const Companies = () => (
           alt="Neon"
           size="48"
         /> */}
-      </div>
-      {/* Iteration */}
-      <div className="flex flex-row items-center justify-start gap-6 py-1">
+        {/* TODO: Put TRM below, they're actually Iteration */}
         <Logo
           src="/companies/trm.svg"
           href="https://trmlabs.com/"
           alt="TRM Labs"
           size="32"
         />
-        {/* <Logo
+      </div>
+      {/* Iteration */}
+      {/* <div className="flex flex-row items-center justify-start gap-6 py-1"> */}
+      {/* <Logo
           src="/companies/treehouse.svg"
           href="https://treehouse.finance/"
           alt="Treehouse Finance"
           size="32"
         /> */}
-        {/* <Logo
+      {/* <Logo
           src="/companies/truera.svg"
           href="https://truera.com/"
           alt="TruEra"
           size="28"
         /> */}
-        {/* TODO: Move Siteline down, it's actually Launch */}
+      {/* </div> */}
+      {/* Launch */}
+      <div className="flex flex-row items-center justify-start gap-6 py-1">
         <Logo
           href="https://siteline.com"
           src="/companies/siteline.png"
           alt="Siteline"
           size="36"
         />
-      </div>
-      {/* Launch */}
-      {/* <div className="flex flex-row items-center justify-start gap-6 py-1"> */}
-      {/* <Logo
+        <Logo
+          href="https://ridewithloop.com"
+          src="/companies/loop.svg"
+          alt="Loop"
+          size="28"
+        />
+        {/* <Logo
           href="https://bubble.com"
           src="/companies/bubble.svg"
           alt="Bubble"
           size="28"
         /> */}
-      {/* <Logo
+        {/* <Logo
           href="https://merge.dev"
           src="/companies/merge.svg"
           alt="Merge"
           size="28"
         /> */}
-      {/* <Logo
+        {/* <Logo
           href="https://intros.ai"
           src="/companies/intros.png"
           alt="Intros"
           size="28"
         /> */}
-      {/* <Logo
+        {/* <Logo
         href="https://mage.ai"
         src="/companies/mage.svg"
         alt="Mage"
         size="28"
       /> */}
-      {/* <Logo
-        href="https://ridewithloop.com"
-        src="/companies/loop.svg"
-        alt="Loop"
-        size="28"
-      /> */}
-      {/* </div> */}
+      </div>
     </div>
     {/* Partners */}
     <div className="flex flex-col items-center justify-center py-1 gap-0 md:gap-4 md:flex-row my-2">
@@ -140,7 +140,7 @@ const Header = () => (
         Apply Now ›
       </a>
       <p className="text-gray-300 text-sm italic font-bold mt-6 pb-2">
-        Student applications close Jan 22nd
+        Student applications close January 22nd
       </p>
     </div>
     <Companies />
