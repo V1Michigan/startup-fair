@@ -87,12 +87,12 @@ const Companies = () => (
           alt="Contrary Capital"
           size="36"
         />
-        <Logo
+        {/* <Logo
           href="https://a16z.com/"
           src="/partners/a16z.png"
           alt="Andreessen Horowitz"
           size="16"
-        />
+        /> */}
       </div>
     </div>
   </>
