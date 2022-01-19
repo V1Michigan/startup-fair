@@ -72,18 +72,27 @@ const Companies = () => (
           alt="Merge"
           size="28"
         /> */}
-      <Logo
-        href="https://intros.ai"
-        src="/companies/intros.png"
-        alt="Intros"
-        size="28"
-      />
       {/* <Logo
         href="https://mage.ai"
         src="/companies/mage.svg"
         alt="Mage"
         size="28"
       /> */}
+    </div>
+    {/* Launch -- second row(!) */}
+    <div className="flex flex-row items-center justify-start gap-6">
+      <Logo
+        href="https://intros.ai"
+        src="/companies/intros.png"
+        alt="Intros"
+        size="28"
+      />
+      <Logo
+        href="https://actively.ai"
+        src="/companies/actively.png"
+        alt="Actively"
+        size="28"
+      />
     </div>
     {/* Partners */}
     <div className="flex flex-col items-center justify-center gap-2 md:gap-4 md:flex-row">
