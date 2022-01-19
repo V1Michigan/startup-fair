@@ -7,7 +7,7 @@ const Logo = ({ src, href, alt, size }) => (
 );
 
 const Companies = () => (
-  <div className="flex flex-col items-center justify-center gap-4 mt-8 md:gap-8 md:mt-12">
+  <div className="flex flex-col items-center justify-center gap-4 mt-6">
     <div className="flex flex-row items-center justify-start gap-8">
       {/* Title sponsor */}
       <Logo
