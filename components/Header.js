@@ -1,67 +1,98 @@
 import ReactGA from "react-ga";
 
+const Logo = ({ src, href, alt, size }) => (
+  <a href={href} target="_blank" rel="noopener noreferrer">
+    <img className={`w-${size} hover:opacity-75`} src={src} alt={alt} />
+  </a>
+);
+
 const Companies = () => (
   <>
-    {/* TODO: Make images from lower packages smaller, maybe break into a second row as we get more companies */}
-    <div className="flex flex-col items-center justify-center mt-4">
-      {/* Title sponsor */}
-      <div className="flex flex-row items-center justify-start py-1">
-        <a href="https://ramp.com" target="_blank" rel="noopener noreferrer">
-          <img
-            className="w-48 hover:opacity-75"
-            src="/companies/ramp.svg"
-            alt="Ramp"
-          />
-        </a>
+    <div className="flex flex-col items-center justify-center gap-1 mt-4">
+      <div className="flex flex-row items-center justify-start gap-8 py-1">
+        {/* Title sponsor */}
+        <Logo
+          src="/companies/ramp.svg"
+          href="https://ramp.com/"
+          alt="Ramp"
+          size="48"
+        />
+        {/* Growth */}
+        {/* <Logo
+          src="/companies/neon.png"
+          href="https://neonapp.com/"
+          alt="Neon"
+          size="48"
+        /> */}
       </div>
-      <div className="flex flex-row items-center justify-start gap-8 py-2">
-        {/* Iteration */}
-        <div className="flex flex-row items-center justify-start py-1">
-          <a
-            href="https://trmlabs.com"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img
-              className="w-36 hover:opacity-75"
-              src="/companies/trm.svg"
-              alt="TRM Labs"
-            />
-          </a>
-        </div>
-        {/* Launch */}
-        <div className="flex flex-row items-center justify-start py-1">
-          <a
-            href="https://siteline.com"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img
-              className="w-40 hover:opacity-75"
-              src="/companies/siteline.png"
-              alt="Siteline"
-            />
-          </a>
-        </div>
+      {/* Iteration */}
+      <div className="flex flex-row items-center justify-start gap-6 py-1">
+        <Logo
+          src="/companies/trm.svg"
+          href="https://trmlabs.com/"
+          alt="TRM Labs"
+          size="32"
+        />
+        {/* <Logo
+          src="/companies/treehouse.svg"
+          href="https://treehouse.finance/"
+          alt="Treehouse Finance"
+          size="32"
+        /> */}
+        {/* <Logo
+          src="/companies/truera.svg"
+          href="https://truera.com/"
+          alt="TruEra"
+          size="28"
+        /> */}
+        {/* TODO: Move Siteline down, it's actually Launch */}
+        <Logo
+          href="https://siteline.com"
+          src="/companies/siteline.png"
+          alt="Siteline"
+          size="36"
+        />
       </div>
+      {/* Launch */}
+      {/* <div className="flex flex-row items-center justify-start gap-6 py-1"> */}
+      {/* <Logo
+          href="https://bubble.com"
+          src="/companies/bubble.svg"
+          alt="Bubble"
+          size="28"
+        /> */}
+      {/* <Logo
+          href="https://merge.dev"
+          src="/companies/merge.svg"
+          alt="Merge"
+          size="28"
+        /> */}
+      {/* <Logo
+          href="https://intros.ai"
+          src="/companies/intros.png"
+          alt="Intros"
+          size="28"
+        /> */}
+      {/* </div> */}
     </div>
     {/* Partners */}
     <div className="flex flex-col items-center justify-center py-1 gap-0 md:gap-4 md:flex-row my-2">
       <p className="text-gray-300 text-sm italic font-bold">
         In partnership with
       </p>
-      <div className="flex flex-row items-center justify-start py-1">
-        <a
+      <div className="flex flex-row items-center justify-start gap-2 py-1">
+        <Logo
           href="https://contrarycap.com"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img
-            className="w-36 hover:opacity-75"
-            src="/partners/contrary.svg"
-            alt="Contrary Capital"
-          />
-        </a>
+          src="/partners/contrary.svg"
+          alt="Contrary Capital"
+          size="36"
+        />
+        <Logo
+          href="https://a16z.com/"
+          src="/partners/a16z.png"
+          alt="Andreessen Horowitz"
+          size="16"
+        />
       </div>
     </div>
   </>
