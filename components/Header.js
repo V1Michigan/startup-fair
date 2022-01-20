@@ -154,7 +154,7 @@ const Header = () => (
       className="h-5 w-5"
       viewBox="0 0 20 20"
       fill="#f3f3f3"
-      className="animate-bounce cursor-pointer h-8 w-8 mt-4 md:mt-8"
+      className="animate-bounce cursor-pointer h-8 w-8 mt-auto"
       onClick={() =>
         window.scrollTo({
           top: window.innerHeight,
