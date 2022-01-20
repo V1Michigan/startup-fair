@@ -1,6 +1,6 @@
 import ReactGA from "react-ga";
 
-const Logo = ({src, href, alt, size}) => (
+const Logo = ({ src, href, alt, size }) => (
   <a href={href} target="_blank" rel="noopener noreferrer">
     <img className={`w-${size} hover:opacity-75`} src={src} alt={alt} />
   </a>
@@ -118,7 +118,7 @@ const Companies = () => (
 );
 
 const Header = () => (
-  <div className="h-screen p-6 md:p-12 bg-gray-800 border border-bottom bg-topography-white text-center">
+  <div className="h-screen p-8 bg-gray-800 border border-bottom bg-topography-white text-center flex items-center justify-center">
     <div className="flex flex-col items-center justify-center">
       <div className="my-2">
         <h2 className="md:text-2xl text-xl mt-1 tracking-tight text-yellow-400 syncopate">
@@ -155,7 +155,13 @@ const Header = () => (
         className="h-5 w-5"
         viewBox="0 0 20 20"
         fill="#f3f3f3"
-        className="animate-bounce h-8 w-8 mt-4 md:mt-8 lg:mt-16"
+        className="animate-bounce cursor-pointer h-8 w-8 mt-4 md:mt-8"
+        onClick={() =>
+          window.scrollTo({
+            top: window.innerHeight,
+            behavior: "smooth",
+          })
+        }
       >
         <path
           fillRule="evenodd"
