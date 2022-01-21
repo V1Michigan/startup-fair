@@ -66,12 +66,6 @@ const Companies = () => (
         size="28"
       />
       {/* <Logo
-          href="https://merge.dev"
-          src="/companies/merge.svg"
-          alt="Merge"
-          size="28"
-        /> */}
-      {/* <Logo
         href="https://mage.ai"
         src="/companies/mage.svg"
         alt="Mage"
@@ -97,6 +91,12 @@ const Companies = () => (
         href="https://pinwheelapi.com/"
         alt="Pinwheel"
         size="36"
+      />
+      <Logo
+        href="https://merge.dev"
+        src="/companies/merge.svg"
+        alt="Merge"
+        size="28"
       />
     </div>
     {/* Partners */}
