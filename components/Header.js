@@ -2,19 +2,24 @@ import ReactGA from "react-ga";
 
 const Logo = ({ src, href, alt, size }) => (
   <a href={href} target="_blank" rel="noopener noreferrer">
-    <img className={`w-${size} hover:opacity-75`} src={src} alt={alt} />
+    <img
+      // Yep, this size calculation for smaller screens is hacky
+      className={`w-${Math.max(size - 24, 24)} md:w-${size} hover:opacity-75`}
+      src={src}
+      alt={alt}
+    />
   </a>
 );
 
 const Companies = () => (
-  <div className="flex flex-col items-center justify-center gap-4 mt-6">
+  <div className="flex flex-col items-center justify-center gap-2 md:gap-4 mt-auto mb-2">
     <div className="flex flex-row items-center justify-start gap-8">
       {/* Title sponsor */}
       <Logo
         src="/companies/ramp.svg"
         href="https://ramp.com/"
         alt="Ramp"
-        size="48"
+        size="56"
       />
       {/* Growth */}
     </div>
@@ -24,19 +29,19 @@ const Companies = () => (
         src="/companies/neon.png"
         href="https://neonapp.com/"
         alt="Neon"
-        size="44"
+        size="52"
       />
       <Logo
         src="/companies/trm.svg"
         href="https://trmlabs.com/"
         alt="TRM Labs"
-        size="32"
+        size="40"
       />
       {/* <Logo
           src="/companies/treehouse.svg"
           href="https://treehouse.finance/"
           alt="Treehouse Finance"
-          size="32"
+          size="40"
         /> */}
     </div>
     {/* Launch */}
@@ -45,31 +50,31 @@ const Companies = () => (
         href="https://siteline.com"
         src="/companies/siteline.png"
         alt="Siteline"
-        size="40"
+        size="52"
       />
       <Logo
         href="https://ridewithloop.com"
         src="/companies/loop.svg"
         alt="Loop"
-        size="28"
+        size="32"
       />
       <Logo
         href="https://bubble.com"
         src="/companies/bubble.svg"
         alt="Bubble"
-        size="32"
+        size="36"
       />
       <Logo
         href="https://intros.ai"
         src="/companies/intros.png"
         alt="Intros"
-        size="28"
+        size="36"
       />
       {/* <Logo
         href="https://mage.ai"
         src="/companies/mage.svg"
         alt="Mage"
-        size="28"
+        size="32"
       /> */}
     </div>
     {/* Launch -- second row(!) */}
@@ -78,30 +83,30 @@ const Companies = () => (
         href="https://actively.ai"
         src="/companies/actively.png"
         alt="Actively"
-        size="28"
+        size="36"
       />
       <Logo
         src="/companies/truera.svg"
         href="https://truera.com/"
         alt="TruEra"
-        size="28"
+        size="32"
       />
       <Logo
         src="/companies/pinwheel.svg"
         href="https://pinwheelapi.com/"
         alt="Pinwheel"
-        size="36"
+        size="44"
       />
       <Logo
         href="https://merge.dev"
         src="/companies/merge.svg"
         alt="Merge"
-        size="28"
+        size="36"
       />
     </div>
     {/* Partners */}
-    <div className="flex flex-col items-center justify-center gap-2 md:gap-4 md:flex-row">
-      <p className="text-gray-300 text-sm italic font-bold">
+    <div className="flex flex-col md:flex-row items-center justify-center gap-2 md:gap-4 mt-1">
+      <p className="text-gray-300 text-sm md:text-base italic font-bold">
         In partnership with
       </p>
       <div className="flex flex-row items-center justify-start gap-2">
@@ -109,13 +114,13 @@ const Companies = () => (
           href="https://contrarycap.com"
           src="/partners/contrary.svg"
           alt="Contrary Capital"
-          size="36"
+          size="44"
         />
         {/* <Logo
           href="https://a16z.com/"
           src="/partners/a16z.png"
           alt="Andreessen Horowitz"
-          size="16"
+          size="24"
         /> */}
       </div>
     </div>
@@ -123,23 +128,23 @@ const Companies = () => (
 );
 
 const Header = () => (
-  <div className="h-screen p-8 bg-gray-800 border border-bottom bg-topography-white text-center flex items-center justify-center">
+  <div className="h-screen px-8 py-6 bg-gray-800 border border-bottom bg-topography-white text-center flex justify-center">
     <div className="flex flex-col items-center justify-center">
-      <div className="my-2">
-        <h2 className="md:text-2xl text-xl mt-1 tracking-tight text-yellow-400 syncopate">
+      <div className="md:my-3">
+        <h2 className="md:text-4xl text-lg mt-1 tracking-tight text-yellow-400 syncopate">
           University of Michigan
         </h2>
-        <h1 className="md:text-6xl text-5xl tracking-tight font-bold text-white leading-none syncopate">
+        <h1 className="md:text-7xl text-3xl tracking-tight font-bold text-white leading-none syncopate">
           V1 STARTUP FAIR 🚀
         </h1>
-        <h2 className="text-xl mt-1 tracking-tight text-yellow-400 syncopate">
+        <h2 className="md:text-xl text-md mt-1 tracking-tight text-yellow-400 syncopate">
           FEBRUARY 4th, 2022
         </h2>
       </div>
-      <div className="mt-6">
+      <div className="mt-4">
         <a
           href="#apply"
-          className="text-base md:text-xl font-bold outline-none text-black py-3 px-6 rounded-md bg-white hover:opacity-75"
+          className="text-xl md:text-2xl font-bold outline-none text-black py-3 px-6 rounded-md bg-white hover:opacity-75"
           onClick={() =>
             ReactGA.event({
               category: "Button",
@@ -150,17 +155,16 @@ const Header = () => (
         >
           Apply Now ›
         </a>
-        <p className="text-gray-300 text-sm italic font-bold mt-6 pb-2">
+        <p className="text-gray-300 text-sm md:text-base italic font-bold mt-6 pb-2">
           Student applications close January 22nd
         </p>
       </div>
       <Companies />
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        className="h-5 w-5"
         viewBox="0 0 20 20"
         fill="#f3f3f3"
-        className="animate-bounce cursor-pointer h-8 w-8 mt-4 md:mt-8"
+        className="animate-bounce cursor-pointer h-8 w-8 mt-auto"
         onClick={() =>
           window.scrollTo({
             top: window.innerHeight,
