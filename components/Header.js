@@ -17,29 +17,28 @@ const Companies = () => (
         size="48"
       />
       {/* Growth */}
-      {/* <Logo
-          src="/companies/neon.png"
-          href="https://neonapp.com/"
-          alt="Neon"
-          size="48"
-        /> */}
-      {/* TODO: Put TRM below, they're actually Iteration */}
+    </div>
+    {/* Iteration */}
+    <div className="flex flex-row items-center justify-start gap-6">
+      <Logo
+        src="/companies/neon.png"
+        href="https://neonapp.com/"
+        alt="Neon"
+        size="44"
+      />
       <Logo
         src="/companies/trm.svg"
         href="https://trmlabs.com/"
         alt="TRM Labs"
         size="32"
       />
-    </div>
-    {/* Iteration */}
-    {/* <div className="flex flex-row items-center justify-start gap-6"> */}
-    {/* <Logo
+      {/* <Logo
           src="/companies/treehouse.svg"
           href="https://treehouse.finance/"
           alt="Treehouse Finance"
           size="32"
         /> */}
-    {/* </div> */}
+    </div>
     {/* Launch */}
     <div className="flex flex-row items-center justify-start gap-6">
       <Logo
