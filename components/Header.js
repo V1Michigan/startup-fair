@@ -4,7 +4,10 @@ const Logo = ({ src, href, alt, size }) => (
   <a href={href} target="_blank" rel="noopener noreferrer">
     <img
       // Yep, this size calculation for smaller screens is hacky
-      className={`w-${Math.max(size - 24, 24)} md:w-${size} hover:opacity-75`}
+      className={`w-${Math.max(
+        size - 24,
+        24
+      )} md:w-${size} hover:opacity-75 md:mx-3 md:my-1`}
       src={src}
       alt={alt}
     />
@@ -13,7 +16,7 @@ const Logo = ({ src, href, alt, size }) => (
 
 const Companies = () => (
   <div className="flex flex-col items-center justify-center gap-2 md:gap-4 mt-auto mb-2">
-    <div className="flex flex-row items-center justify-start gap-8">
+    <div className="flex flex-row flex-wrap items-center justify-center gap-6">
       {/* Title sponsor */}
       <Logo
         src="/companies/ramp.svg"
@@ -24,7 +27,7 @@ const Companies = () => (
       {/* Growth */}
     </div>
     {/* Iteration */}
-    <div className="flex flex-row items-center justify-start gap-6">
+    <div className="flex flex-row flex-wrap items-center justify-center gap-6 mt-2">
       <Logo
         src="/companies/neon.png"
         href="https://neonapp.com/"
@@ -37,15 +40,22 @@ const Companies = () => (
         alt="TRM Labs"
         size="40"
       />
+
+      <Logo
+        href="https://mage.ai"
+        src="/companies/mage.svg"
+        alt="Mage"
+        size="44"
+      />
+    </div>
+    <div className="flex flex-row flex-wrap items-center justify-center gap-6 mt-2">
       {/* <Logo
           src="/companies/treehouse.svg"
           href="https://treehouse.finance/"
           alt="Treehouse Finance"
           size="40"
         /> */}
-    </div>
-    {/* Launch */}
-    <div className="flex flex-row items-center justify-start gap-6">
+      {/* Launch */}
       <Logo
         href="https://siteline.com"
         src="/companies/siteline.png"
@@ -70,15 +80,6 @@ const Companies = () => (
         alt="Intros"
         size="36"
       />
-      {/* <Logo
-        href="https://mage.ai"
-        src="/companies/mage.svg"
-        alt="Mage"
-        size="32"
-      /> */}
-    </div>
-    {/* Launch -- second row(!) */}
-    <div className="flex flex-row items-center justify-start gap-6">
       <Logo
         href="https://actively.ai"
         src="/companies/actively.png"
@@ -105,7 +106,7 @@ const Companies = () => (
       />
     </div>
     {/* Partners */}
-    <div className="flex flex-col md:flex-row items-center justify-center gap-2 md:gap-4 mt-1">
+    <div className="flex flex-col md:flex-row items-center justify-center gap-2 md:gap-4 mt-2">
       <p className="text-gray-300 text-sm md:text-base italic font-bold">
         In partnership with
       </p>
