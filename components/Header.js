@@ -39,12 +39,6 @@ const Companies = () => (
           alt="Treehouse Finance"
           size="32"
         /> */}
-    {/* <Logo
-          src="/companies/truera.svg"
-          href="https://truera.com/"
-          alt="TruEra"
-          size="28"
-        /> */}
     {/* </div> */}
     {/* Launch */}
     <div className="flex flex-row items-center justify-start gap-6">
@@ -66,6 +60,12 @@ const Companies = () => (
         alt="Bubble"
         size="32"
       />
+      <Logo
+        href="https://intros.ai"
+        src="/companies/intros.png"
+        alt="Intros"
+        size="28"
+      />
       {/* <Logo
           href="https://merge.dev"
           src="/companies/merge.svg"
@@ -82,16 +82,22 @@ const Companies = () => (
     {/* Launch -- second row(!) */}
     <div className="flex flex-row items-center justify-start gap-6">
       <Logo
-        href="https://intros.ai"
-        src="/companies/intros.png"
-        alt="Intros"
-        size="28"
-      />
-      <Logo
         href="https://actively.ai"
         src="/companies/actively.png"
         alt="Actively"
         size="28"
+      />
+      <Logo
+        src="/companies/truera.svg"
+        href="https://truera.com/"
+        alt="TruEra"
+        size="28"
+      />
+      <Logo
+        src="/companies/pinwheel.svg"
+        href="https://pinwheelapi.com/"
+        alt="Pinwheel"
+        size="36"
       />
     </div>
     {/* Partners */}
