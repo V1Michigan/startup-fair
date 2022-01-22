@@ -16,7 +16,7 @@ const Logo = ({ src, href, alt, size }) => (
 
 const Companies = () => (
   <div className="flex flex-col items-center justify-center gap-2 md:gap-4 mt-auto mb-2">
-    <div className="flex flex-row flex-wrap items-center justify-center gap-6">
+    <div className="flex flex-row flex-wrap items-center justify-center gap-x-6 gap-y-2 mt-2">
       {/* Title sponsor */}
       <Logo
         src="/companies/ramp.svg"
@@ -27,7 +27,7 @@ const Companies = () => (
       {/* Growth */}
     </div>
     {/* Iteration */}
-    <div className="flex flex-row flex-wrap items-center justify-center gap-6 mt-2">
+    <div className="flex flex-row flex-wrap items-center justify-center gap-x-6 gap-y-2">
       <Logo
         src="/companies/neon.png"
         href="https://neonapp.com/"
@@ -40,7 +40,6 @@ const Companies = () => (
         alt="TRM Labs"
         size="40"
       />
-
       <Logo
         href="https://mage.ai"
         src="/companies/mage.svg"
@@ -48,14 +47,14 @@ const Companies = () => (
         size="44"
       />
     </div>
-    <div className="flex flex-row flex-wrap items-center justify-center gap-6 mt-2">
+    {/* Launch */}
+    <div className="flex flex-row flex-wrap items-center justify-center gap-x-6 gap-y-2 2xl:mx-32">
       {/* <Logo
           src="/companies/treehouse.svg"
           href="https://treehouse.finance/"
           alt="Treehouse Finance"
           size="40"
         /> */}
-      {/* Launch */}
       <Logo
         href="https://siteline.com"
         src="/companies/siteline.png"
@@ -104,6 +103,26 @@ const Companies = () => (
         alt="Merge"
         size="36"
       />
+      {/* TODO: Confirm that OpenStore's actually Launch */}
+      {/* Maybe should just make OpenStore white, not dark purple? */}
+      <Logo
+        href="https://open.store"
+        src="/companies/openstore.svg"
+        alt="OpenStore"
+        size="36"
+      />
+      <Logo
+        href="https://cent.co"
+        src="/companies/cent.png"
+        alt="Cent"
+        size="24"
+      />
+      <Logo
+        href="https://appliedintuition.com"
+        src="/companies/appliedintuition.svg"
+        alt="Applied Intuition"
+        size="56"
+      />
     </div>
     {/* Partners */}
     <div className="flex flex-col md:flex-row items-center justify-center gap-2 md:gap-4 mt-2">
@@ -129,7 +148,7 @@ const Companies = () => (
 );
 
 const Header = () => (
-  <div className="h-screen px-8 py-6 bg-gray-800 border border-bottom bg-topography-white text-center flex justify-center">
+  <div className="h-max-screen-content px-8 py-6 bg-gray-800 border border-bottom bg-topography-white text-center flex justify-center">
     <div className="flex flex-col items-center justify-center">
       <div className="md:my-3">
         <h2 className="md:text-4xl text-lg mt-1 tracking-tight text-yellow-400 syncopate">
@@ -165,7 +184,7 @@ const Header = () => (
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 20 20"
         fill="#f3f3f3"
-        className="animate-bounce cursor-pointer h-8 w-8 mt-auto"
+        className="animate-bounce cursor-pointer h-8 w-8 mt-6"
         onClick={() =>
           window.scrollTo({
             top: window.innerHeight,

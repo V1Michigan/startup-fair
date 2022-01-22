@@ -117,6 +117,10 @@ html {
   animation: AnimationName 4s ease infinite;
 }
 
+.h-max-screen-content {
+  height: max(100vh, 100%);
+}
+
 @-webkit-keyframes AnimationName {
   0% {
     background-position: 0% 56%;
