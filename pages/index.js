@@ -1,14 +1,14 @@
 import StockTicker from "../components/StockTicker";
-import { useState, useEffect } from "react";
-import { useRouter } from "next/router";
-import { ParallaxProvider } from "react-scroll-parallax";
+import {useState, useEffect} from "react";
+import {useRouter} from "next/router";
+import {ParallaxProvider} from "react-scroll-parallax";
 import ReactGA from "react-ga";
 import SEO from "../components/SEO";
 import Header from "../components/Header";
 import ValueProp from "../components/ValueProp";
 import Logos from "../components/Logos";
 import FAQ from "../components/FAQ";
-import { sendEmail } from "../components/functions";
+import {sendEmail} from "../components/functions";
 
 function initGA() {
   if (process.env.NODE_ENV !== "development") {
@@ -26,16 +26,17 @@ function IndexPage() {
   const router = useRouter();
 
   const submitEmail = () => {
-    if (sendEmail(email)) {
-      ReactGA.event({
-        category: "Button",
-        action: "Apply",
-        label: "Submit email",
-      });
-      router.push("https://wbkw5amrmmr.typeform.com/v1startupfair");
-    } else {
-      alert("Please enter a valid @umich.edu email address");
-    }
+    alert("Apps are closed!");
+    // if (sendEmail(email)) {
+    //   ReactGA.event({
+    //     category: "Button",
+    //     action: "Apply",
+    //     label: "Submit email",
+    //   });
+    //   router.push("https://wbkw5amrmmr.typeform.com/v1startupfair");
+    // } else {
+    //   alert("Please enter a valid @umich.edu email address");
+    // }
   };
 
   useEffect(initGA, []); // Only runs once
@@ -101,7 +102,7 @@ function IndexPage() {
             </p>
             <table
               className="text-lg text-left text-gray-800 border-separate m-auto"
-              style={{ borderSpacing: "1em" }}
+              style={{borderSpacing: "1em"}}
             >
               <tbody>
                 <tr>
@@ -182,7 +183,8 @@ function IndexPage() {
                 Let's do this ›
               </button>
               <p className="italic text-white mt-2 text-sm">
-                You will receive an email with the next steps to apply.
+                Apps are now closed.
+                {/* You will receive an email with the next steps to apply. */}
               </p>
             </div>
           </section>
