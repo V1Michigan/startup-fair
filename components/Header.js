@@ -151,9 +151,9 @@ const Header = () => (
   <div className="h-max-screen-content px-8 py-6 bg-gray-800 border border-bottom bg-topography-white text-center flex justify-center">
     <div className="flex flex-col items-center justify-center">
       <div className="md:my-3">
-        <h2 className="md:text-4xl text-lg mt-1 tracking-tight text-yellow-400 syncopate">
+        {/* <h2 className="md:text-4xl text-lg mt-1 tracking-tight text-yellow-400 syncopate">
           University of Michigan
-        </h2>
+        </h2> */}
         <h1 className="md:text-7xl text-3xl tracking-tight font-bold text-white leading-none syncopate">
           V1 STARTUP FAIR 🚀
         </h1>
