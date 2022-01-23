@@ -1,14 +1,14 @@
 import StockTicker from "../components/StockTicker";
-import {useState, useEffect} from "react";
-import {useRouter} from "next/router";
-import {ParallaxProvider} from "react-scroll-parallax";
+import { useState, useEffect } from "react";
+import { useRouter } from "next/router";
+import { ParallaxProvider } from "react-scroll-parallax";
 import ReactGA from "react-ga";
 import SEO from "../components/SEO";
 import Header from "../components/Header";
 import ValueProp from "../components/ValueProp";
 import Logos from "../components/Logos";
 import FAQ from "../components/FAQ";
-import {sendEmail} from "../components/functions";
+import { sendEmail } from "../components/functions";
 
 function initGA() {
   if (process.env.NODE_ENV !== "development") {
@@ -102,7 +102,7 @@ function IndexPage() {
             </p>
             <table
               className="text-lg text-left text-gray-800 border-separate m-auto"
-              style={{borderSpacing: "1em"}}
+              style={{ borderSpacing: "1em" }}
             >
               <tbody>
                 <tr>
@@ -177,7 +177,7 @@ function IndexPage() {
             </div>
             <div className="text-center">
               <button
-                className="text-base md:text-xl m-2 font-bold outline-none text-black py-2 px-4 rounded-md bg-yellow-400 hover:opacity-75"
+                className="text-base md:text-xl m-2 font-bold outline-none text-black py-2 px-4 rounded-md bg-yellow-400  /*hover:opacity-75*/ opacity-50 cursor-not-allowed"
                 onClick={submitEmail}
               >
                 Let's do this ›

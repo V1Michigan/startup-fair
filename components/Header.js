@@ -164,7 +164,7 @@ const Header = () => (
       <div className="mt-4">
         <a
           // href="#apply"
-          className="text-xl md:text-2xl font-bold outline-none text-black py-3 px-6 rounded-md bg-white hover:opacity-75"
+          className="text-xl md:text-2xl font-bold outline-none text-black py-3 px-6 rounded-md bg-white /*hover:opacity-75*/ opacity-50 cursor-not-allowed"
           onClick={() =>
             ReactGA.event({
               category: "Button",
