@@ -176,7 +176,7 @@ const Header = () => (
           Apps Closed ›
         </a>
         <p className="text-gray-300 text-sm md:text-base italic font-bold mt-6 pb-2">
-          Student applications close January 22nd
+          Student applications close January 23rd
         </p>
       </div>
       <Companies />
