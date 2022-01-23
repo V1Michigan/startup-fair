@@ -26,17 +26,16 @@ function IndexPage() {
   const router = useRouter();
 
   const submitEmail = () => {
-    alert("Apps are closed!");
-    // if (sendEmail(email)) {
-    //   ReactGA.event({
-    //     category: "Button",
-    //     action: "Apply",
-    //     label: "Submit email",
-    //   });
-    //   router.push("https://wbkw5amrmmr.typeform.com/v1startupfair");
-    // } else {
-    //   alert("Please enter a valid @umich.edu email address");
-    // }
+    if (sendEmail(email)) {
+      ReactGA.event({
+        category: "Button",
+        action: "Apply",
+        label: "Submit email",
+      });
+      router.push("https://wbkw5amrmmr.typeform.com/v1startupfair");
+    } else {
+      alert("Please enter a valid @umich.edu email address");
+    }
   };
 
   useEffect(initGA, []); // Only runs once
@@ -177,14 +176,13 @@ function IndexPage() {
             </div>
             <div className="text-center">
               <button
-                className="text-base md:text-xl m-2 font-bold outline-none text-black py-2 px-4 rounded-md bg-yellow-400  /*hover:opacity-75*/ opacity-50 cursor-not-allowed"
+                className="text-base md:text-xl m-2 font-bold outline-none text-black py-2 px-4 rounded-md bg-yellow-400 hover:opacity-75"
                 onClick={submitEmail}
               >
                 Let's do this ›
               </button>
               <p className="italic text-white mt-2 text-sm">
-                Apps are now closed.
-                {/* You will receive an email with the next steps to apply. */}
+                You will receive an email with the next steps to apply.
               </p>
             </div>
           </section>
