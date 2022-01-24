@@ -123,6 +123,12 @@ const Companies = () => (
         alt="Applied Intuition"
         size="56"
       />
+      <Logo
+        href="https://collabai.co"
+        src="/companies/collabai.svg"
+        alt="Collab AI"
+        size="32"
+      />
     </div>
     {/* Partners */}
     <div className="flex flex-col md:flex-row items-center justify-center gap-2 md:gap-4 mt-2">
