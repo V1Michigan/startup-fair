@@ -163,8 +163,8 @@ const Header = () => (
       </div>
       <div className="mt-4">
         <a
-          href="#apply"
-          className="text-xl md:text-2xl font-bold outline-none text-black py-3 px-6 rounded-md bg-white hover:opacity-75"
+          // href="#apply"
+          className="text-xl md:text-2xl font-bold outline-none text-black py-3 px-6 rounded-md bg-white  /*hover:opacity-75*/ opacity-50 cursor-not-allowed"
           onClick={() =>
             ReactGA.event({
               category: "Button",
@@ -173,10 +173,11 @@ const Header = () => (
             })
           }
         >
-          Apply Now ›
+          {/* Apply Now › */}
+          Apps Closed ›
         </a>
         <p className="text-gray-300 text-sm md:text-base italic font-bold mt-6 pb-2">
-          Student applications close January 23rd
+          Student applications close January 22nd
         </p>
       </div>
       <Companies />

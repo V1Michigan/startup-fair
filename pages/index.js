@@ -26,16 +26,17 @@ function IndexPage() {
   const router = useRouter();
 
   const submitEmail = () => {
-    if (sendEmail(email)) {
-      ReactGA.event({
-        category: "Button",
-        action: "Apply",
-        label: "Submit email",
-      });
-      router.push("https://wbkw5amrmmr.typeform.com/v1startupfair");
-    } else {
-      alert("Please enter a valid @umich.edu email address");
-    }
+    // if (sendEmail(email)) {
+    //   ReactGA.event({
+    //     category: "Button",
+    //     action: "Apply",
+    //     label: "Submit email",
+    //   });
+    //   router.push("https://wbkw5amrmmr.typeform.com/v1startupfair");
+    // } else {
+    //   alert("Please enter a valid @umich.edu email address");
+    // }
+    alert("Apps are now closed");
   };
 
   useEffect(initGA, []); // Only runs once
@@ -160,7 +161,7 @@ function IndexPage() {
                 Email
               </label>
               <input
-                className="text-white mt-2 w-3/4 text-base outline-none bg-transparent border-2 border-yellow-400 py-3 rounded-md shadow-sm px-3 leading-tight focus:outline-none"
+                className="text-white mt-2 w-3/4 text-base outline-none bg-transparent border-2 border-yellow-400 py-3 rounded-md shadow-sm px-3 leading-tight focus:outline-none opacity-50 cursor-not-allowed"
                 type="text"
                 placeholder="billymagic@umich.edu"
                 value={email}
@@ -172,17 +173,20 @@ function IndexPage() {
                 onChange={(e) => {
                   setEmail(e.target.value);
                 }}
+                disabled
               />
             </div>
             <div className="text-center">
               <button
-                className="text-base md:text-xl m-2 font-bold outline-none text-black py-2 px-4 rounded-md bg-yellow-400 hover:opacity-75"
+                className="text-base md:text-xl m-2 font-bold outline-none text-black py-2 px-4 rounded-md bg-yellow-400 /*hover:opacity-75*/ opacity-50 cursor-not-allowed"
+                disabled
                 onClick={submitEmail}
               >
                 Let's do this ›
               </button>
               <p className="italic text-white mt-2 text-sm">
-                You will receive an email with the next steps to apply.
+                {/* You will receive an email with the next steps to apply. */}
+                Apps are now closed.
               </p>
             </div>
           </section>
