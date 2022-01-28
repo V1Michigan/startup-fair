@@ -50,12 +50,6 @@ const Companies = () => (
     </div>
     {/* Launch */}
     <div className="flex flex-row flex-wrap items-center justify-center gap-x-6 gap-y-2 2xl:mx-32">
-      {/* <Logo
-          src="/companies/treehouse.svg"
-          href="https://treehouse.finance/"
-          alt="Treehouse Finance"
-          size="40"
-        /> */}
       <Logo
         href="https://siteline.com"
         src="/companies/siteline.png"
@@ -104,7 +98,6 @@ const Companies = () => (
         alt="Merge"
         size="36"
       />
-      {/* TODO: Confirm that OpenStore's actually Launch */}
       {/* Maybe should just make OpenStore white, not dark purple? */}
       <Logo
         href="https://open.store"
@@ -128,6 +121,12 @@ const Companies = () => (
         href="https://collabai.co"
         src="/companies/collabai.svg"
         alt="Collab AI"
+        size="32"
+      />
+      <Logo
+        href="https://un1feed.com"
+        src="/companies/un1feed.png"
+        alt="Un1feed"
         size="32"
       />
     </div>
