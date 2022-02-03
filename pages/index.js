@@ -43,7 +43,7 @@ function IndexPage() {
 
   useEffect(() => {
     const intervalId = setInterval(() => {
-      var time = 1643997600000 - Date.now();
+      var time = Math.max(1643997600000 - Date.now(), 0);
       time = Math.floor(time / 1000);
       setSeconds(time % 60);
       time = Math.floor(time / 60);
@@ -125,10 +125,10 @@ function IndexPage() {
             </table>
             <div className="countdown-timer grid grid-cols-4 divide-x-4 border-b text-3xl sync my-8 mx-32">
               <div>
-                {days}&nbsp;<label className="text-sm">DAYS</label>
+                {days}&nbsp;<label className="text-sm">{days === 1 ? "DAY" : "DAYS"}</label>
               </div>
               <div>
-                {hrs}&nbsp;<label className="text-sm">HRS</label>
+                {hrs}&nbsp;<label className="text-sm">{hrs === 1 ? "HR" : "HRS"}</label>
               </div>
               <div>
                 {min}&nbsp;<label className="text-sm">MIN</label>
