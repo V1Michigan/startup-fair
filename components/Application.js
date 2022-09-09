@@ -1,12 +1,13 @@
 import { useState } from "react";
-import { sendEmail } from "../components/functions";
+import { pushToSheets } from "../components/functions";
 import ReactGA from "react-ga";
 
 export default function Application() {
   const [email, setEmail] = useState("");
+  const [submitted, setSubmitted] = useState(false);
 
   const submitEmail = () => {
-    if (sendEmail(email)) {
+    if (pushToSheets(email)) {
       ReactGA.event({
         category: "Button",
         action: "Apply",
@@ -14,6 +15,8 @@ export default function Application() {
         label: "Submit email to register interest",
       });
       //   router.push("https://wbkw5amrmmr.typeform.com/v1startupfair");
+      setSubmitted(true);
+      setEmail("");
     } else {
       //   alert("Please enter a valid @umich.edu email address");
       alert("Please enter a valid email address");
@@ -40,7 +43,7 @@ export default function Application() {
           </label> */}
         <div className="flex flex-row flex-wrap gap-2 justify-center md:flex-no-wrap px-10">
           <input
-            className="text-white text-lg outline-none bg-transparent border-2 border-yellow-400 py-3 rounded-md shadow-sm px-3 leading-tight focus:outline-none /*opacity-50 cursor-not-allowed*/"
+            className={`text-white text-lg outline-none bg-transparent border-2 border-yellow-400 py-3 rounded-md shadow-sm px-3 leading-tight focus:outline-none ${submitted && "opacity-50 cursor-not-allowed"}`}
             type="text"
             placeholder="billymagic@umich.edu"
             value={email}
@@ -52,12 +55,14 @@ export default function Application() {
             onChange={(e) => {
               setEmail(e.target.value);
             }}
+            disabled={submitted}
           />
           <button
-            className="text-base md:text-lg font-bold outline-none text-black py-2 px-5 rounded-md bg-yellow-400 hover:opacity-75 /*opacity-50 cursor-not-allowed*/"
+            className={`text-base md:text-lg font-bold outline-none text-black py-2 px-5 rounded-md bg-yellow-400 ${submitted ? "opacity-50 cursor-not-allowed" : "hover:opacity-75"} `}
             onClick={submitEmail}
+            disabled={submitted}
           >
-            Let's do this ›
+             {submitted ? "Submitted! ✅" : "Let's do this ›"}
           </button>
         </div>
 

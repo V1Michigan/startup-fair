@@ -43,7 +43,7 @@ export function pushEmailToSheets(email) {
 
   // TODO: hide api request urls in _redirects (netlify)
   fetch(
-    "https://script.google.com/macros/s/AKfycbz0glmfd9DVo1_NkplXlXRFH_HGS9c-SnnU7uhQr2sLM-_tMeKY6QWjPFCFlBVjQRHN/exec",
+    "https://script.google.com/macros/s/AKfycbz9XHLqKpLHRliEViuUQjnPPp6chtGTnbW41bgYkVQLqXOpe7EAejvhgklGd63atQjS/exec",
     { method: "POST", body: formData }
   );
 }
