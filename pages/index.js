@@ -6,9 +6,11 @@ import ReactGA from "react-ga";
 import SEO from "../components/SEO";
 import Header from "../components/Header";
 import ValueProp from "../components/ValueProp";
+import Schedule from "../components/Schedule";
 import Logos from "../components/Logos";
 import FAQ from "../components/FAQ";
-import { sendEmail } from "../components/functions";
+import Application from "../components/Application";
+import Companies from "../components/Companies";
 
 function initGA() {
   if (process.env.NODE_ENV !== "development") {
@@ -18,44 +20,9 @@ function initGA() {
 }
 
 function IndexPage() {
-  const [email, setEmail] = useState("");
-  const [seconds, setSeconds] = useState(0);
-  const [min, setMin] = useState(0);
-  const [hrs, setHrs] = useState(0);
-  const [days, setDays] = useState(0);
   const router = useRouter();
 
-  const submitEmail = () => {
-    // if (sendEmail(email)) {
-    //   ReactGA.event({
-    //     category: "Button",
-    //     action: "Apply",
-    //     label: "Submit email",
-    //   });
-    //   router.push("https://wbkw5amrmmr.typeform.com/v1startupfair");
-    // } else {
-    //   alert("Please enter a valid @umich.edu email address");
-    // }
-    alert("Apps are now closed");
-  };
-
   useEffect(initGA, []); // Only runs once
-
-  useEffect(() => {
-    const intervalId = setInterval(() => {
-      var time = Math.max(1643997600000 - Date.now(), 0);
-      time = Math.floor(time / 1000);
-      setSeconds(time % 60);
-      time = Math.floor(time / 60);
-      setMin(time % 60);
-      time = Math.floor(time / 60);
-      setHrs(time % 24);
-      time = Math.floor(time / 24);
-      setDays(time);
-    }, 1000);
-
-    return () => clearInterval(intervalId);
-  }, []);
 
   return (
     <>
@@ -63,14 +30,14 @@ function IndexPage() {
         <SEO />
 
         {/* <div className="bg-gray-800 md:flex text-center p-2 tracking-widest">
-        <p className="text-white uppercase flex-1 p-2">SEED 🌱</p>
-        <p className="text-white uppercase flex-1 p-2">Series A</p>
-        <p className="text-white uppercase flex-1 p-2">Series B</p>
-        <p className="text-white uppercase flex-1 p-2">Series C</p>
-        <p className="text-white uppercase flex-1 p-2">Series D</p>
-        <p className="text-white uppercase flex-1 p-2">Series E</p>
-        <p className="text-white uppercase flex-1 p-2">IPO 🚀</p>
-      </div> */}
+          <p className="text-white uppercase flex-1 p-2">SEED 🌱</p>
+          <p className="text-white uppercase flex-1 p-2">Series A</p>
+          <p className="text-white uppercase flex-1 p-2">Series B</p>
+          <p className="text-white uppercase flex-1 p-2">Series C</p>
+          <p className="text-white uppercase flex-1 p-2">Series D</p>
+          <p className="text-white uppercase flex-1 p-2">Series E</p>
+          <p className="text-white uppercase flex-1 p-2">IPO 🚀</p>
+        </div> */}
 
         <Header />
 
@@ -92,105 +59,9 @@ function IndexPage() {
 
         <ValueProp />
 
-        <div className="bg-white-100 pb-8">
-          <div className="p-8 max-w-6xl mx-auto text-center">
-            <h2 className="text-4xl md:text-5xl tracking-tight text-gray-800 my-4 font-bold">
-              Schedule
-            </h2>
-            <p className="text-xl tracking-tight font-bold text-gray-800">
-              February 4th @ 1 PM ET
-            </p>
-            <table
-              className="text-lg text-left text-gray-800 border-separate m-auto"
-              style={{ borderSpacing: "1em" }}
-            >
-              <tbody>
-                <tr>
-                  <td className="font-bold">1:00 PM</td>
-                  <td>Kickoff &amp; keynote</td>
-                </tr>
-                <tr>
-                  <td className="font-bold">1:45 PM</td>
-                  <td>Networking event for students</td>
-                </tr>
-                <tr>
-                  <td className="font-bold">2:45 PM</td>
-                  <td>Virtual booths &amp; tech talks</td>
-                </tr>
-                <tr>
-                  <td className="font-bold">After event</td>
-                  <td>1:1 meetings with companies</td>
-                </tr>
-              </tbody>
-            </table>
-            <div className="countdown-timer grid grid-cols-4 divide-x-4 border-b text-3xl sync my-8 mx-32">
-              <div>
-                {days}&nbsp;<label className="text-sm">{days === 1 ? "DAY" : "DAYS"}</label>
-              </div>
-              <div>
-                {hrs}&nbsp;<label className="text-sm">{hrs === 1 ? "HR" : "HRS"}</label>
-              </div>
-              <div>
-                {min}&nbsp;<label className="text-sm">MIN</label>
-              </div>
-              <div>
-                {seconds}&nbsp;<label className="text-sm">SEC</label>
-              </div>
-            </div>
-          </div>
+        {/* <Schedule /> */}
 
-          <div className="animate-bounce text-center font-bold text-3xl text-gray-700">
-            &darr;
-          </div>
-        </div>
-
-        <div id="apply" className="bg-gray-800 py-4 bg-topography-white">
-          <section className="max-w-6xl mx-auto my-24 ">
-            <div className="m-8">
-              <h1 className="text-white text-4xl text-center font-bold tracking-tight my-4">
-                Interested? Apply here! ⚡
-              </h1>
-              <p className="text-white text-xl text-center my-2 max-w-3xl mx-auto">
-                Find your next career-defining role at a high-growth startup.{" "}
-                <br /> <i className="text-sm">Limited spots available.</i>
-              </p>
-            </div>
-
-            <div className="max-w-md mx-auto m-3 text-center">
-              <label className="mb-1 text-gray-200 font-bold text-xl block text-center">
-                Email
-              </label>
-              <input
-                className="text-white mt-2 w-3/4 text-base outline-none bg-transparent border-2 border-yellow-400 py-3 rounded-md shadow-sm px-3 leading-tight focus:outline-none opacity-50 cursor-not-allowed"
-                type="text"
-                placeholder="billymagic@umich.edu"
-                value={email}
-                onKeyPress={(e) => {
-                  if (e.key === "Enter") {
-                    submitEmail();
-                  }
-                }}
-                onChange={(e) => {
-                  setEmail(e.target.value);
-                }}
-                disabled
-              />
-            </div>
-            <div className="text-center">
-              <button
-                className="text-base md:text-xl m-2 font-bold outline-none text-black py-2 px-4 rounded-md bg-yellow-400 /*hover:opacity-75*/ opacity-50 cursor-not-allowed"
-                disabled
-                onClick={submitEmail}
-              >
-                Let's do this ›
-              </button>
-              <p className="italic text-white mt-2 text-sm">
-                {/* You will receive an email with the next steps to apply. */}
-                Apps are now closed.
-              </p>
-            </div>
-          </section>
-        </div>
+        {/*
         <FAQ
           subtitleBold="Questions? We got you."
           color="gray"
@@ -259,6 +130,18 @@ function IndexPage() {
             },
           ]}
         />
+        */}
+
+        <div id="apply" className="bg-gray-800 py-4 bg-topography-white">
+          <section className="max-w-6xl mx-auto my-4">
+            
+          <p className="text-white text-lg text-center max-w-3xl mx-auto font-medium ">
+            Last Year's Companies
+          </p>
+            <Companies />
+          </section>
+        </div>
+
         <div className="background">
           <br />
           <br />
