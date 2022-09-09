@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { sendEmail } from "../components/functions";
+import ReactGA from "react-ga";
 
 export default function Application() {
   const [email, setEmail] = useState("");
@@ -19,9 +20,9 @@ export default function Application() {
     }
   };
 
-  return (<>
-    {/* <div id="apply" className="bg-gray-800 py-4 bg-topography-white">
-      <section className="max-w-6xl mx-auto my-24 "> */}
+  return (
+    <div>
+      <section className="max-w-6xl mx-auto my-24 ">
         <div className="m-2">
           {/* <h1 className="text-white text-4xl text-center font-bold tracking-tight my-4">
                 Interested? Apply here! ⚡
@@ -67,8 +68,7 @@ export default function Application() {
             {/* Apps are now closed. */}
           </p>
         </div>
-      {/* </section>
-    </div> */}
-    </>
+      </section>
+    </div> 
   );
 }

@@ -1,6 +1,5 @@
 import StockTicker from "../components/StockTicker";
-import { useState, useEffect } from "react";
-import { useRouter } from "next/router";
+import { useEffect } from "react";
 import { ParallaxProvider } from "react-scroll-parallax";
 import ReactGA from "react-ga";
 import SEO from "../components/SEO";
@@ -19,8 +18,16 @@ function initGA() {
   }
 }
 
+function Statistic({ value, label }) {
+  return (
+    <div className="flex flex-col items-start text-white">
+      <div className="text-6xl font-bold">{value}</div>
+      <div className="text-sm">{label}</div>
+    </div>
+  );
+}
+
 function IndexPage() {
-  const router = useRouter();
 
   useEffect(initGA, []); // Only runs once
 
@@ -134,10 +141,23 @@ function IndexPage() {
 
         <div id="apply" className="bg-gray-800 py-4 bg-topography-white">
           <section className="max-w-6xl mx-auto my-4">
-            
-          <p className="text-white text-lg text-center max-w-3xl mx-auto font-medium ">
-            Last Year's Companies
-          </p>
+            {/* <h1 className="text-5xl text-white text-center tracking-tight font-bold">
+              Recap: V1 Startup Fair W22
+            </h1> */}
+            <h1 className="text-5xl text-gray-400 text-center tracking-tight font-bold">
+              Recap: V1 Startup Fair W22
+            </h1>
+            <p className="mt-4 text-lg text-white text-center tracking-tight font-bold">
+              February 4th, 2022
+            </p>
+            <div className="flex flex-row justify-center gap-16 my-4">
+              <Statistic value="17" label="high-growth startups" />
+              <Statistic value="200+" label="top students" />
+              <Statistic value="20+" label="offers" />
+            </div>
+            <p className="text-white text-lg text-center max-w-3xl mx-auto font-medium ">
+              Last Year's Companies
+            </p>
             <Companies />
           </section>
         </div>
@@ -157,6 +177,7 @@ function IndexPage() {
               "elliot",
               "emir",
               "leon",
+              "shrey",
             ].map((member) => (
               <img
                 className="relative z-10 inline object-cover w-12 h-12 border-2 border-white rounded-full"
