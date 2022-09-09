@@ -122,7 +122,7 @@ function IndexPage() {
         />
         */}
 
-        <div id="apply" className="bg-gray-800 py-4 bg-topography-white">
+        <div className="bg-gray-800 py-4 bg-topography-white">
           <section className="max-w-6xl mx-auto my-4">
             {/* <h1 className="text-5xl text-white text-center tracking-tight font-bold">
               Recap: V1 Startup Fair W22
@@ -136,7 +136,7 @@ function IndexPage() {
             <div className="flex flex-row flex-wrap justify-center gap-16 my-16">
               <Statistic value="17" label="high-growth startups" />
               <Statistic value="200+" label="top students" />
-              <Statistic value="20+" label="offers" />
+              <Statistic value="20+" label="job offers" />
             </div>
             {/* <p className="text-white text-lg text-center max-w-3xl mx-auto font-medium ">
               Last Year's Companies

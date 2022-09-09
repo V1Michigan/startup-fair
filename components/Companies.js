@@ -1,4 +1,3 @@
-
 const Logo = ({ src, href, alt, size }) => (
   <a href={href} target="_blank" rel="noopener noreferrer">
     <img
@@ -15,7 +14,7 @@ const Logo = ({ src, href, alt, size }) => (
 
 const Companies = () => (
   <div className="flex flex-col items-center justify-center gap-2 md:gap-4 mt-auto mb-2">
-    <div className="flex flex-row flex-wrap items-center justify-center gap-x-6 gap-y-2 mt-2">
+    <div className="flex flex-row flex-wrap items-center justify-center gap-x-6 gap-y-4 md:gap-y-2 mt-2">
       {/* Title sponsor */}
       <Logo
         src="/companies/ramp.svg"
@@ -26,7 +25,7 @@ const Companies = () => (
       {/* Growth */}
     </div>
     {/* Iteration */}
-    <div className="flex flex-row flex-wrap items-center justify-center gap-x-6 gap-y-2">
+    <div className="flex flex-row flex-wrap items-center justify-center gap-x-6 gap-y-4 md:gap-y-2">
       <Logo
         src="/companies/neon.png"
         href="https://neonapp.com/"
@@ -47,7 +46,7 @@ const Companies = () => (
       />
     </div>
     {/* Launch */}
-    <div className="flex flex-row flex-wrap items-center justify-center gap-x-6 gap-y-2 2xl:mx-32">
+    <div className="flex flex-row flex-wrap items-center justify-center gap-x-6 gap-y-4 md:gap-y-2 2xl:mx-32">
       <Logo
         href="https://siteline.com"
         src="/companies/siteline.png"
@@ -151,4 +150,4 @@ const Companies = () => (
   </div>
 );
 
-export default Companies
+export default Companies;
