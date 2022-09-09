@@ -21,14 +21,13 @@ function initGA() {
 function Statistic({ value, label }) {
   return (
     <div className="flex flex-col items-start text-white">
-      <div className="text-6xl font-bold">{value}</div>
-      <div className="text-sm">{label}</div>
+      <div className="text-6xl font-bold text-center md:text-left">{value}</div>
+      <div className="text-sm text-center md:text-left">{label}</div>
     </div>
   );
 }
 
 function IndexPage() {
-
   useEffect(initGA, []); // Only runs once
 
   return (
@@ -47,22 +46,6 @@ function IndexPage() {
         </div> */}
 
         <Header />
-
-        <StockTicker
-          text={[
-            "Product Manager",
-            "Backend Engineer",
-            "UX Designer",
-            "Growth Marketer",
-            "Data Scientist",
-            "Security Engineer",
-            "Mobile Engineer",
-            "Graphic Designer",
-            "Frontend Engineer",
-            "Machine Learning Engineer",
-            "Software Engineer",
-          ]}
-        />
 
         <ValueProp />
 
@@ -144,20 +127,20 @@ function IndexPage() {
             {/* <h1 className="text-5xl text-white text-center tracking-tight font-bold">
               Recap: V1 Startup Fair W22
             </h1> */}
-            <h1 className="text-5xl text-gray-400 text-center tracking-tight font-bold">
-              Recap: V1 Startup Fair W22
+            <h1 className="text-5xl text-white text-center tracking-tight font-bold">
+              Last Year's Recap
             </h1>
-            <p className="mt-4 text-lg text-white text-center tracking-tight font-bold">
+            <p className="mt-4 text-lg text-gray-400 text-center tracking-tight font-bold">
               February 4th, 2022
             </p>
-            <div className="flex flex-row justify-center gap-16 my-4">
+            <div className="flex flex-row flex-wrap justify-center gap-16 my-16">
               <Statistic value="17" label="high-growth startups" />
               <Statistic value="200+" label="top students" />
               <Statistic value="20+" label="offers" />
             </div>
-            <p className="text-white text-lg text-center max-w-3xl mx-auto font-medium ">
+            {/* <p className="text-white text-lg text-center max-w-3xl mx-auto font-medium ">
               Last Year's Companies
-            </p>
+            </p> */}
             <Companies />
           </section>
         </div>

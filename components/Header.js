@@ -3,13 +3,14 @@ import { useRouter } from "next/router";
 import Application from "../components/Application";
 import Companies from "../components/Companies";
 import DownArrow from "../components/DownArrow";
+import StockTicker from "./StockTicker";
 
 const Header = () => {
   const router = useRouter();
   return (
-    <div className="h-max-screen-content px-8 py-6 bg-gray-800 border border-bottom bg-topography-white text-center flex justify-center">
-      <div className="flex flex-col items-center justify-center">
-        <div className="md:my-3 mb-4">
+    <div className="h-screen bg-gray-800 border border-bottom bg-topography-white text-center flex justify-center">
+      <div className="flex flex-col items-center justify-start">
+        <div className="my-16">
           {/* <h2 className="md:text-4xl text-lg mt-1 tracking-tight text-yellow-400 syncopate">
           University of Michigan
         </h2> */}
@@ -17,7 +18,7 @@ const Header = () => {
             V1 STARTUP FAIR 🚀
           </h1>
           <h2 className="md:text-xl text-md mt-1 tracking-tight text-yellow-400 syncopate">
-            FALL 2022
+            COMING FALL 2022
           </h2>
         </div>
 
@@ -54,9 +55,27 @@ const Header = () => {
 
         <Application />
 
+        <div className="mt-auto my-4">
+          <DownArrow />
+        </div>
+
         {/* <Companies /> */}
 
-        <DownArrow />
+        <StockTicker
+          text={[
+            "Product Manager",
+            "Backend Engineer",
+            "UX Designer",
+            "Growth Marketer",
+            "Data Scientist",
+            "Security Engineer",
+            "Mobile Engineer",
+            "Graphic Designer",
+            "Frontend Engineer",
+            "Machine Learning Engineer",
+            "Software Engineer",
+          ]}
+        />
       </div>
     </div>
   );
