@@ -28,7 +28,7 @@ const ValueProp = () => {
   return (
     <>
       <Growth />
-      {/* <section className="text-gray-700 bg-gray-100 body-font py-8">
+      <section className="text-gray-700 bg-gray-100 body-font py-8">
         <section className="text-gray-600 body-font px-5">
           <div className="flex flex-wrap">
             <div className="p-4 md:w-1/3 flex flex-col text-center items-center">
@@ -76,7 +76,7 @@ const ValueProp = () => {
             </div>
           </div>
         </section>
-      </section> */}
+      </section>
     </>
   );
 };

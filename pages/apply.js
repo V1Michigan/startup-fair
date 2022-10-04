@@ -103,11 +103,11 @@ const TextArea = ({
 
 export default function Apply() {
   return (
-  <script>
+    <script>
       const router = useRouter();
       router.push('https://docs.google.com/forms/d/e/1FAIpQLScNXUE48KGGN0eE0WnHfNbHEKfG2-QkeoRUkEUhcb5keOBmcQ/viewform');
-  </script>
-  )
+    </script>
+  );
 }
 
 /* 
@@ -365,7 +365,7 @@ export default function Apply() {
       </div>
       <div className="bg-gradient-to-r from-gray-900 to-black">
         <p className="footer text-gray-200 text-center py-8">
-          &copy; 2021 V1 | team@v1michigan.com
+          &copy; 2022 V1 | team@v1michigan.com
         </p>
       </div>
     </main>
