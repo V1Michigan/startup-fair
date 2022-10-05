@@ -28,14 +28,14 @@ export default function Submitted() {
           <div className="max-w-lg mx-auto p-4 text-2xl">
             {" "}
             <p className="text-center text-gray-800">
-             A confirmation email should be in your inbox in a few minutes! :) 
+              A confirmation email should be in your inbox in a few minutes! :)
             </p>
           </div>
         </div>
       </div>
       <div className="absolute bottom-0 left-0 w-screen bg-gradient-to-r from-gray-900 to-black">
         <p className="footer text-gray-200 text-center py-8">
-          &copy; 2021 V1 | team@v1michigan.com
+          &copy; 2022 V1 | team@v1michigan.com
         </p>
       </div>
     </main>

@@ -77,7 +77,7 @@ export function pushToSheets(email) {
 export function sendEmail(email) {
   if (checkEmail(email)) {
     pushEmailToSheets(email);
-    sendAWSEmail(email, false, false);
+    // sendAWSEmail(email, false, false);
     return true;
   } else {
     return false;
