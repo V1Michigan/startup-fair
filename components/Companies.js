@@ -128,7 +128,7 @@ const Companies = () => (
       />
     </div>
     {/* Partners */}
-    <div className="flex flex-col md:flex-row items-center justify-center gap-2 md:gap-4 mt-2">
+    {/* <div className="flex flex-col md:flex-row items-center justify-center gap-2 md:gap-4 mt-2">
       <p className="text-gray-300 text-sm md:text-base italic font-bold">
         In partnership with
       </p>
@@ -139,14 +139,14 @@ const Companies = () => (
           alt="Contrary Capital"
           size="44"
         />
-        {/* <Logo
+         <Logo
           href="https://a16z.com/"
           src="/partners/a16z.png"
           alt="Andreessen Horowitz"
           size="24"
-        /> */}
+        /> 
       </div>
-    </div>
+    </div>  */}
   </div>
 );
 
