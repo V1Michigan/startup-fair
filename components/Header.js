@@ -169,7 +169,7 @@ const Header = () => {
             V1 STARTUP FAIR 🚀
           </h1>
           <h2 className="md:text-xl text-md mt-1 tracking-tight text-yellow-400 syncopate">
-            November 18th, 2022
+            November 16th, 2022
           </h2>
         </div>
         <div className="mt-4">

@@ -98,7 +98,7 @@ function IndexPage() {
           {
             question: "When and where is this?",
             answer:
-              "V1 Startup Fair is November 18th at 1 PM ET. It will be a hybrid event held in the Ross School of Business featuring a mix of startup booths, tech talks with founder, and opportunites to meet like minded students.",
+              "V1 Startup Fair is November 16th at 1 PM ET. It will be a hybrid event held in the Ross School of Business featuring a mix of startup booths, tech talks with founder, and opportunites to meet like minded students.",
           },
           {
             question: "Who is this designed for?",

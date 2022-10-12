@@ -29,7 +29,7 @@ export default function Schedule() {
           Schedule
         </h2>
         <p className="text-xl tracking-tight font-bold text-gray-800">
-          November 18th @ 1 PM ET
+          November 16th @ 1 PM ET
         </p>
          <table
           className="text-lg text-left text-gray-800 border-separate m-auto"
