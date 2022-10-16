@@ -201,7 +201,7 @@ const Header = () => {
             Student applications are now closed — please check back in the fall
           </p>
         </div> */}
-        <Companies />
+        {/* <Companies /> */}
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 20 20"
