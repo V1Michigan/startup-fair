@@ -159,7 +159,7 @@ const Companies = () => (
 
 const Header = () => {
   return (
-    <div className="h-screen /*h-max-screen-content*/ px-8 py-6 bg-gray-800 border border-bottom bg-topography-white text-center flex justify-center">
+    <div className="h-max-screen-content px-8 py-6 bg-gray-800 border border-bottom bg-topography-white text-center flex justify-center">
       <div className="flex flex-col items-center justify-center">
         <div className="md:my-3">
           {/* <h2 className="md:text-4xl text-lg mt-1 tracking-tight text-yellow-400 syncopate">
@@ -172,10 +172,10 @@ const Header = () => {
             November 16th, 2022
           </h2>
         </div>
-        <div className="mt-auto">
+        <div className="mt-4">
           <a
             href="#apply"
-            className="text-2xl md:text-3xl font-bold outline-none text-black py-3 px-6 rounded-md bg-yellow-400 hover:opacity-75"
+            className="text-xl md:text-2xl font-bold outline-none text-black py-3 px-6 rounded-md bg-yellow-400 hover:opacity-75"
             onClick={() =>
               ReactGA.event({
                 category: "Button",
@@ -206,7 +206,7 @@ const Header = () => {
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 20 20"
           fill="#f3f3f3"
-          className="animate-bounce cursor-pointer h-8 w-8 mt-auto"
+          className="animate-bounce cursor-pointer h-8 w-8 mt-6"
           onClick={() =>
             window.scrollTo({
               top: window.innerHeight,
