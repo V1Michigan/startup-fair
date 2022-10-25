@@ -1,18 +1,6 @@
-const Logo = ({ src, href, alt, size }) => (
-  <a href={href} target="_blank" rel="noopener noreferrer">
-    <img
-      // Yep, this size calculation for smaller screens is hacky
-      className={`w-${Math.max(
-        size - 24,
-        24
-      )} md:w-${size} hover:opacity-75 md:mx-3 md:my-1`}
-      src={src}
-      alt={alt}
-    />
-  </a>
-);
+import Logo from "./Logo";
 
-const Companies = () => (
+const CompaniesW22 = () => (
   <div className="flex flex-col items-center justify-center gap-2 md:gap-4 mt-auto mb-2">
     <div className="flex flex-row flex-wrap items-center justify-center gap-x-6 gap-y-4 md:gap-y-2 mt-2">
       {/* Title sponsor */}
@@ -150,4 +138,4 @@ const Companies = () => (
   </div>
 );
 
-export default Companies;
+export default CompaniesW22;
