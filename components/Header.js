@@ -30,6 +30,9 @@ const CompaniesF22 = () => (
         size="56"
       />
     </div>
+    <p className="text-gray-300 text-xs md:text-sm italic font-bold mt-2 pb-2">
+      ...more companies to be announced soon!
+    </p>
   </div>
 );
 
