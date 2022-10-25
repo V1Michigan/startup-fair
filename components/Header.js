@@ -1,5 +1,4 @@
 import ReactGA from "react-ga";
-import { useRouter } from "next/router";
 import Logo from "./Logo";
 
 const CompaniesF22 = () => (
@@ -25,7 +24,7 @@ const CompaniesF22 = () => (
       />
       <Logo
         src="/companies/intros.png"
-        href="https://ramp.com/"
+        href="https://intros.ai/"
         alt="Intros"
         size="56"
       />
