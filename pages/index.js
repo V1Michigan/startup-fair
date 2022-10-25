@@ -6,7 +6,7 @@ import SEO from "../components/SEO";
 import Header from "../components/Header";
 import ValueProp from "../components/ValueProp";
 import FAQ from "../components/FAQ";
-import Companies from "../components/Companies";
+import CompaniesW22 from "../components/CompaniesW22";
 import Schedule from "../components/Schedule";
 import Application from "../components/Application";
 
@@ -81,7 +81,7 @@ function IndexPage() {
               <Statistic value="200+" label="top students" />
               <Statistic value="20+" label="job offers" />
             </div>
-            <Companies />
+            <CompaniesW22 />
           </section>
         </div>
       </div>
