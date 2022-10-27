@@ -70,9 +70,9 @@ const Header = () => {
           >
             Apply Now ›
           </a>
-          <p className="text-gray-300 text-sm md:text-base italic font-bold mt-6 pb-2">
+          {/* <p className="text-gray-300 text-sm md:text-base italic font-bold mt-6 pb-2">
             Student applications close October 21st
-          </p>
+          </p> */}
         </div>
         {/* <div className="my-6">
           <a
