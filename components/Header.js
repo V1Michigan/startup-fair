@@ -28,6 +28,12 @@ const CompaniesF22 = () => (
         alt="Intros"
         size="56"
       />
+      <Logo
+        src="/companies/healpay.png"
+        href="https://www.healpay.com/"
+        alt="Healpay"
+        size="47"
+      />
     </div>
     <p className="text-gray-300 text-xs md:text-sm italic font-bold mt-2 pb-2">
       ...more companies to be announced soon!
