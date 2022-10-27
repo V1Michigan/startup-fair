@@ -34,6 +34,12 @@ const CompaniesF22 = () => (
         alt="Healpay"
         size="47"
       />
+      <Logo
+        src="/companies/retool.png"
+        href="https://retool.com/"
+        alt="Retool"
+        size="48"
+      />
     </div>
     <p className="text-gray-300 text-xs md:text-sm italic font-bold mt-2 pb-2">
       ...more companies to be announced soon!
