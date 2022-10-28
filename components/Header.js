@@ -38,7 +38,7 @@ const CompaniesF22 = () => (
         src="/companies/retool.png"
         href="https://retool.com/"
         alt="Retool"
-        size="48"
+        size="44"
       />
     </div>
     <p className="text-gray-300 text-xs md:text-sm italic font-bold mt-2 pb-2">
