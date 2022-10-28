@@ -20,7 +20,7 @@ const CompaniesF22 = () => (
         href="https://actively.ai"
         src="/companies/actively.png"
         alt="Actively"
-        size="36"
+        size="40"
       />
       <Logo
         src="/companies/intros.png"
@@ -32,7 +32,13 @@ const CompaniesF22 = () => (
         src="/companies/healpay.png"
         href="https://www.healpay.com/"
         alt="Healpay"
-        size="47"
+        size="30"
+      />
+      <Logo
+        src="/companies/valon.svg"
+        href="https://www.valon.com/"
+        alt="Valon"
+        size="40"
       />
     </div>
     <p className="text-gray-300 text-xs md:text-sm italic font-bold mt-2 pb-2">
