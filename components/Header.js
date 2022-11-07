@@ -52,6 +52,13 @@ const CompaniesF22 = () => (
         alt="Chestr"
         size="44"
       />
+
+      <Logo
+        src="/companies/unipro.png"
+        href="https://unipr0.com/arcade-home/"
+        alt="unipro"
+        size="40"
+      />
     </div>
     <p className="text-gray-300 text-xs md:text-sm italic font-bold mt-2 pb-2">
       ...more companies to be announced soon!
