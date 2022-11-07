@@ -46,6 +46,12 @@ const CompaniesF22 = () => (
         alt="Retool"
         size="44"
       />
+      <Logo
+        src="/companies/chestr.svg"
+        href="https://www.getchestr.com/"
+        alt="Chestr"
+        size="44"
+      />
     </div>
     <p className="text-gray-300 text-xs md:text-sm italic font-bold mt-2 pb-2">
       ...more companies to be announced soon!
