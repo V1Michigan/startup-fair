@@ -52,6 +52,18 @@ const CompaniesF22 = () => (
         alt="Chestr"
         size="44"
       />
+      <Logo
+        src="/companies/chariot.svg"
+        href="https://www.givechariot.com/"
+        alt="Chariot"
+        size="44"
+      />
+      <Logo
+        src="/companies/preveil.png"
+        href="https://www.preveil.com/"
+        alt="Preveil"
+        size="48"
+      />
     </div>
     <p className="text-gray-300 text-xs md:text-sm italic font-bold mt-2 pb-2">
       ...more companies to be announced soon!
