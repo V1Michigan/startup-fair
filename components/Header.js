@@ -56,13 +56,13 @@ const CompaniesF22 = () => (
         src="/companies/chariot.svg"
         href="https://www.givechariot.com/"
         alt="Chariot"
-        size="44"
+        size="40"
       />
       <Logo
-        src="/companies/preveil.png"
+        src="/companies/preveil.svg"
         href="https://www.preveil.com/"
         alt="Preveil"
-        size="48"
+        size="32"
       />
     </div>
     <p className="text-gray-300 text-xs md:text-sm italic font-bold mt-2 pb-2">
