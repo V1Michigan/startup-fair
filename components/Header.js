@@ -4,6 +4,12 @@ import Logo from "./Logo";
 const CompaniesF22 = () => (
   <div className="flex flex-col items-center justify-center gap-2 md:gap-4 mt-auto mb-2">
     <div className="flex flex-row flex-wrap items-center justify-center gap-x-6 gap-y-2 mt-2">
+       <Logo
+        src="/companies/aipi.svg"
+        href="https://aipisolutions.com/"
+        alt="aipi"
+        size="48"
+      />
       <Logo
         src="/companies/ramp.svg"
         href="https://ramp.com/"
@@ -71,9 +77,6 @@ const CompaniesF22 = () => (
         size="20"
       />
     </div>
-    <p className="text-gray-300 text-xs md:text-sm italic font-bold mt-2 pb-2">
-      ...more companies to be announced soon!
-    </p>
   </div>
 );
 
@@ -92,8 +95,8 @@ const Header = () => {
             November 16th, 2022
           </h2>
         </div>
-        <div className="mt-4">
-          <a
+        <div className="my-4">
+            {/* <a
             href="#apply"
             className="text-xl md:text-2xl font-bold outline-none text-black py-3 px-6 rounded-md bg-yellow-400 hover:opacity-75"
             onClick={() =>
@@ -105,7 +108,21 @@ const Header = () => {
             }
           >
             Apply Now ›
-          </a>
+          </a> */}
+            <a
+              href="https://v1-startupfair-directory.super.site/"
+              className="text-lg md:text-xl font-bold outline-none text-black py-3 px-6 rounded-md bg-yellow-400 hover:opacity-75"
+              onClick={() =>
+                ReactGA.event({
+                  category: "Button",
+                  action: "Apply",
+                  label: "Company Directory",
+                })
+              }
+            >
+              Company Directory ›
+            </a>
+
           {/* <p className="text-gray-300 text-sm md:text-base italic font-bold mt-6 pb-2">
             Student applications close October 21st
           </p> */}
