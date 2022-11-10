@@ -95,8 +95,8 @@ const Header = () => {
             November 16th, 2022
           </h2>
         </div>
-        <div className="mt-4">
-          <a
+        <div className="my-4">
+            {/* <a
             href="#apply"
             className="text-xl md:text-2xl font-bold outline-none text-black py-3 px-6 rounded-md bg-yellow-400 hover:opacity-75"
             onClick={() =>
@@ -108,7 +108,21 @@ const Header = () => {
             }
           >
             Apply Now ›
-          </a>
+          </a> */}
+            <a
+              href="https://v1-startupfair-directory.super.site/"
+              className="text-lg md:text-xl font-bold outline-none text-black py-3 px-6 rounded-md bg-yellow-400 hover:opacity-75"
+              onClick={() =>
+                ReactGA.event({
+                  category: "Button",
+                  action: "Apply",
+                  label: "Company Directory",
+                })
+              }
+            >
+              Company Directory ›
+            </a>
+
           {/* <p className="text-gray-300 text-sm md:text-base italic font-bold mt-6 pb-2">
             Student applications close October 21st
           </p> */}
