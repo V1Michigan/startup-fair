@@ -4,6 +4,12 @@ import Logo from "./Logo";
 const CompaniesF22 = () => (
   <div className="flex flex-col items-center justify-center gap-2 md:gap-4 mt-auto mb-2">
     <div className="flex flex-row flex-wrap items-center justify-center gap-x-6 gap-y-2 mt-2">
+       <Logo
+        src="/companies/aipi.svg"
+        href="https://aipisolutions.com/"
+        alt="aipi"
+        size="48"
+      />
       <Logo
         src="/companies/ramp.svg"
         href="https://ramp.com/"
@@ -71,9 +77,6 @@ const CompaniesF22 = () => (
         size="20"
       />
     </div>
-    <p className="text-gray-300 text-xs md:text-sm italic font-bold mt-2 pb-2">
-      ...more companies to be announced soon!
-    </p>
   </div>
 );
 
