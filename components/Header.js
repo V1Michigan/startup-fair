@@ -139,6 +139,17 @@ const Header = () => {
           </p>
         </div> */}
         <CompaniesF22 />
+        
+        <p className="text-gray-300 text-xs md:text-base font-bold italic mt-5 ">
+            Sponsored by
+        </p>
+           <Logo 
+                src="/companies/undergroundprinting.png"
+                href="https://undergroundshirts.com/pages/custom-t-shirt-printing?gclid=Cj0KCQiA37KbBhDgARIsAIzce175udg6Ut8VmEiGu6soClMKEK1QV2HS2We-BWRPy7pNDOurMyITXQsaAhQSEALw_wcB"
+                alt="Undergroud Printing"
+                size="24"
+            />
+
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 20 20"
