@@ -76,6 +76,12 @@ const CompaniesF22 = () => (
         alt="unipro"
         size="20"
       />
+      <Logo
+        src="/companies/lumos.svg"
+        href="https://www.lumos.com/"
+        alt="Lumos"
+        size="48"
+      />
     </div>
   </div>
 );
