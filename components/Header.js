@@ -4,7 +4,7 @@ import Logo from "./Logo";
 const CompaniesF22 = () => (
   <div className="flex flex-col items-center justify-center gap-2 md:gap-4 mt-auto mb-2">
     <div className="flex flex-row flex-wrap items-center justify-center gap-x-6 gap-y-2 mt-2">
-       <Logo
+      <Logo
         src="/companies/aipi.svg"
         href="https://aipisolutions.com/"
         alt="aipi"
@@ -96,7 +96,7 @@ const Header = () => {
           </h2>
         </div>
         <div className="my-4">
-            {/* <a
+          {/* <a
             href="#apply"
             className="text-xl md:text-2xl font-bold outline-none text-black py-3 px-6 rounded-md bg-yellow-400 hover:opacity-75"
             onClick={() =>
@@ -109,19 +109,19 @@ const Header = () => {
           >
             Apply Now ›
           </a> */}
-            <a
-              href="https://v1-startupfair-directory.super.site/"
-              className="text-lg md:text-xl font-bold outline-none text-black py-3 px-6 rounded-md bg-yellow-400 hover:opacity-75"
-              onClick={() =>
-                ReactGA.event({
-                  category: "Button",
-                  action: "Apply",
-                  label: "Company Directory",
-                })
-              }
-            >
-              Company Directory ›
-            </a>
+          <a
+            href="https://v1-startupfair-directory.super.site/"
+            className="text-lg md:text-xl font-bold outline-none text-black py-3 px-6 rounded-md bg-yellow-400 hover:opacity-75"
+            onClick={() =>
+              ReactGA.event({
+                category: "Button",
+                action: "Apply",
+                label: "Company Directory",
+              })
+            }
+          >
+            Company Directory ›
+          </a>
 
           {/* <p className="text-gray-300 text-sm md:text-base italic font-bold mt-6 pb-2">
             Student applications close October 21st
@@ -139,16 +139,18 @@ const Header = () => {
           </p>
         </div> */}
         <CompaniesF22 />
-        
-        <p className="text-gray-300 text-xs md:text-base font-bold italic mt-5 ">
-            Sponsored by
-        </p>
-           <Logo 
-                src="/companies/undergroundprinting.png"
-                href="https://undergroundshirts.com/pages/custom-t-shirt-printing?gclid=Cj0KCQiA37KbBhDgARIsAIzce175udg6Ut8VmEiGu6soClMKEK1QV2HS2We-BWRPy7pNDOurMyITXQsaAhQSEALw_wcB"
-                alt="Undergroud Printing"
-                size="24"
-            />
+
+        <div className="flex flex-wrap gap-x-1 items-center justify-center mt-4">
+          <p className="text-gray-300 text-xs md:text-base font-bold italic">
+            Special thanks to
+          </p>
+          <Logo
+            src="/companies/undergroundprinting.png"
+            href="https://undergroundshirts.com"
+            alt="Underground Printing"
+            size="24"
+          />
+        </div>
 
         <svg
           xmlns="http://www.w3.org/2000/svg"
