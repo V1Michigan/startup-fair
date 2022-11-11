@@ -77,6 +77,12 @@ const CompaniesF22 = () => (
         size="20"
       />
       <Logo
+        src="/companies/lumos.svg"
+        href="https://www.lumos.com/"
+        alt="Lumos"
+        size="44"
+      />
+      <Logo
         src="/companies/warp.svg"
         href="https://www.warp.dev/"
         alt="Warp"
