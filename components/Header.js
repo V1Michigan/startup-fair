@@ -80,7 +80,7 @@ const CompaniesF22 = () => (
         src="/companies/warp.svg"
         href="https://www.warp.dev/"
         alt="Warp"
-        size="20"
+        size="16"
       />
     </div>
   </div>
