@@ -80,7 +80,7 @@ const CompaniesF22 = () => (
         src="/companies/lumos.svg"
         href="https://www.lumos.com/"
         alt="Lumos"
-        size="48"
+        size="44"
       />
     </div>
   </div>
