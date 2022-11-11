@@ -5,7 +5,7 @@ export default function Schedule() {
   const [min, setMin] = useState(0);
   const [hrs, setHrs] = useState(0);
   const [days, setDays] = useState(0);
-  const startDate = new Date("11/18/2022 13:00:00");
+  const startDate = new Date("11/16/2022 13:00:00");
 
   useEffect(() => {
     const intervalId = setInterval(() => {
