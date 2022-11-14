@@ -76,6 +76,18 @@ const CompaniesF22 = () => (
         alt="unipro"
         size="20"
       />
+      <Logo
+        src="/companies/lumos.svg"
+        href="https://www.lumos.com/"
+        alt="Lumos"
+        size="44"
+      />
+      <Logo
+        src="/companies/warp.svg"
+        href="https://www.warp.dev/"
+        alt="Warp"
+        size="16"
+      />
     </div>
   </div>
 );
