@@ -94,6 +94,12 @@ const CompaniesF22 = () => (
         alt="Launchparty"
         size="60"
       />
+      <Logo
+        src="/companies/hebbia.svg"
+        href="https://www.hebbia.ai/"
+        alt="Hebbia"
+        size="56"
+      />
     </div>
   </div>
 );
