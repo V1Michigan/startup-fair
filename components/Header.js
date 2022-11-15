@@ -29,6 +29,42 @@ const CompaniesF22 = () => (
         size="40"
       />
       <Logo
+        src="/companies/retool.png"
+        href="https://retool.com/"
+        alt="Retool"
+        size="44"
+      />
+      <Logo
+        src="/companies/lumos.svg"
+        href="https://www.lumos.com/"
+        alt="Lumos"
+        size="44"
+      />
+      <Logo
+        src="/companies/warp.svg"
+        href="https://www.warp.dev/"
+        alt="Warp"
+        size="16"
+      />
+      <Logo
+        src="/companies/valon.svg"
+        href="https://www.valon.com/"
+        alt="Valon"
+        size="40"
+      />
+      <Logo
+        src="/companies/chariot.svg"
+        href="https://www.givechariot.com/"
+        alt="Chariot"
+        size="40"
+      />
+      <Logo
+        src="/companies/chestr.svg"
+        href="https://www.getchestr.com/"
+        alt="Chestr"
+        size="44"
+      />
+      <Logo
         src="/companies/intros.png"
         href="https://intros.ai/"
         alt="Intros"
@@ -39,30 +75,6 @@ const CompaniesF22 = () => (
         href="https://www.healpay.com/"
         alt="Healpay"
         size="30"
-      />
-      <Logo
-        src="/companies/valon.svg"
-        href="https://www.valon.com/"
-        alt="Valon"
-        size="40"
-      />
-      <Logo
-        src="/companies/retool.png"
-        href="https://retool.com/"
-        alt="Retool"
-        size="44"
-      />
-      <Logo
-        src="/companies/chestr.svg"
-        href="https://www.getchestr.com/"
-        alt="Chestr"
-        size="44"
-      />
-      <Logo
-        src="/companies/chariot.svg"
-        href="https://www.givechariot.com/"
-        alt="Chariot"
-        size="40"
       />
       <Logo
         src="/companies/preveil.svg"
@@ -77,16 +89,10 @@ const CompaniesF22 = () => (
         size="20"
       />
       <Logo
-        src="/companies/lumos.svg"
-        href="https://www.lumos.com/"
-        alt="Lumos"
-        size="44"
-      />
-      <Logo
-        src="/companies/warp.svg"
-        href="https://www.warp.dev/"
-        alt="Warp"
-        size="16"
+        src="/companies/launchparty.svg"
+        href="https://www.launchparty.vc/"
+        alt="Launchparty"
+        size="60"
       />
     </div>
   </div>
