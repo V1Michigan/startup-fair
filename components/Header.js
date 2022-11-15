@@ -168,6 +168,12 @@ const Header = () => {
             alt="Underground Printing"
             size="24"
           />
+          <Logo
+            src="/companies/upround.png"
+            href="https://upround.vc"
+            alt="Upround Ventures"
+            size="48"
+          />
         </div>
 
         <svg
