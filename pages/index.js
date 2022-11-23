@@ -148,16 +148,18 @@ function IndexPage() {
         <br />
         <div className="text-center mx-auto -space-x-4 mb-4">
           {[
-            "varun",
-            "samay",
             "megan",
             "reese",
+            "mbogo",
             "divya",
-            "drew",
-            "alaa",
+            "varun",
+            "samay",
+            "shrey",
+            "tyrus",
+            "hari",
+            "lucas",
             "elliot",
-            "emir",
-            "leon",
+            "rohan",
           ].map((member) => (
             <img
               className="relative z-10 inline object-cover w-12 h-12 border-2 border-white rounded-full"
