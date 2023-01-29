@@ -26,6 +26,7 @@
 8. `git add [changed_files]` (replace `changed_files` with the actual file names you changed)
 9.  `git commit -m "meaningful commit message goes here"`
     1.  Please make your commit messages [imperative present tense](https://stackoverflow.com/questions/3580013/should-i-use-past-or-present-tense-in-git-commit-messages)!
+    2.  Please ensure your commit messages say why you made said changes or what the implications of the changes are, not what changes you made to the code (because anyone can see what changes by looking at the commit diffs). 
 10. `git push --set-upstream origin [FEATURE_NAME]` (the next time you push to this branch you can just say `git push`).
 11. Go to the GitHub repo page, open a pull request and put the Linear issue ID in the PR title.
     1.  This allows Linear to automatically sync the status of the issue with the PR's status.
