@@ -14,7 +14,7 @@
       2. Run `whereis node`. 
       3. There should be two paths. 
       4. Use `sudo rm -rf <path>` (No angle brackets), to delete each of those two paths. Look at the first answer here for more help: https://stackoverflow.com/questions/11177954/how-do-i-completely-uninstall-node-js-and-reinstall-from-beginning-mac-os-x
-   2. Set up `nvm` ([find tutorial here](https://www.freecodecamp.org/news/node-version-manager-nvm-install-guide/)).
+   2. Set up `nvm` ([find tutorial here](https://www.freecodecamp.org/news/node-version-manager-nvm-install-guide/) or see directions in [their repo here](https://github.com/nvm-sh/nvm#about)).
    3. Run `nvm use 16` to switch to Node v16.
    4. Verify `node -v` again. If it says `v16.xx.x`, it worked!
 5. Install dependencies: `npm install`. **We DO NOT use yarn for this.**
