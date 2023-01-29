@@ -9,6 +9,8 @@ import FAQ from "../components/FAQ";
 import CompaniesW22 from "../components/CompaniesW22";
 import Schedule from "../components/Schedule";
 import Application from "../components/Application";
+import NewsletterForm from "../components/NewsletterForm";
+
 
 function initGA() {
   if (process.env.NODE_ENV !== "development") {
@@ -63,7 +65,7 @@ function IndexPage() {
 
       <ValueProp />
 
-      <Application />
+      <NewsletterForm />
 
       <Schedule />
 
