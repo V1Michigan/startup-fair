@@ -10,7 +10,7 @@
    3. `[FEATURE_NAME]` should be all lowercase and formatted as `[f][l]--[describe-feature]`, where `f` and `l` are your first and last initials.
 4. Ensure you are on **Node v16** by verifying `node -v`. If you're not:
    1. If you already have node, but a different version:
-      1. Go to the root directory in your terminal (type `cd` and hit enter and it should take you there).
+      1. Go to the root directory in your terminal (type `cd` and hit enter and it should take you there). We will be deleting your existing node installations, because nvm will install its own node installations separately. It won't use your existing installation and as such it will just be wasting space on your disk. So let's remove it. If you have a reason to keep it, scroll below to the "Setup `nvm`" step.
       2. Run `whereis node`. 
       3. There should be two paths. 
       4. Use `sudo rm -rf <path>` (No angle brackets), to delete each of those two paths. Look at the first answer here for more help: https://stackoverflow.com/questions/11177954/how-do-i-completely-uninstall-node-js-and-reinstall-from-beginning-mac-os-x
