@@ -47,12 +47,6 @@ const CompaniesF22 = () => (
         size="16"
       />
       <Logo
-        src="/companies/hebbia.svg"
-        href="https://www.hebbia.ai/"
-        alt="Hebbia"
-        size="44"
-      />
-      <Logo
         src="/companies/valon.svg"
         href="https://www.valon.com/"
         alt="Valon"
