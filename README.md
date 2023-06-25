@@ -15,10 +15,8 @@
       3. Run `whereis node`. You should see two paths.
       4. Use `sudo rm -rf <path>` (No angle brackets) to delete each of them (check the [first answer here](https://stackoverflow.com/questions/11177954/how-do-i-completely-uninstall-node-js-and-reinstall-from-beginning-mac-os-x) for more help).
    2. Set up `nvm` ([find tutorial here](https://www.freecodecamp.org/news/node-version-manager-nvm-install-guide/) or see directions in [their repo here](https://github.com/nvm-sh/nvm#about)).
-   3. Run  `nvm ls-remote`.
-   4. Scroll up to find the latest version of v16 (should look similar to: `v16.x.x   (Latest LTS: Gallium)`. 
-   5. Run `nvm install v16.x.x` (x.x is the latest version you found above. 
-   6. Run `nvm use v16.x.x` to switch to Node v16.
+   5. Run `nvm install 16`
+   6. Run `nvm use 16` to switch to Node v16.
    7. Verify `node -v` again. If it says `v16.x.x`, it worked!
 5. Install dependencies: `npm install`. **We DO NOT use yarn for this.**
 6. Begin Devving: `npm run dev`. This will allow you to access a dev version of the site @ `localhost:3000` that will update automatically as you save files.

@@ -33,10 +33,10 @@ export default function Slideshow() {
           <div onClick={() => setIndex(i)} className={`cursor-pointer rounded-full border-white border-2 w-5 h-5 ${index === i ? "bg-white" : "bg-transparent"}`}></div>
         ))}
       </div>
-      <div onClick={() => setIndex(prev => (prev - 1 + recaps.length) % recaps.length)} className="cursor-pointer text-white absolute left-5 top-1/2 transform translate-y-1/2 text-5xl">
+      <div onClick={() => setIndex(prev => (prev - 1 + recaps.length) % recaps.length)} className="hover:opacity-70 transition cursor-pointer text-white absolute left-5 top-1/2 transform translate-y-1/2 text-5xl">
         &larr;
       </div>
-      <div onClick={() => setIndex(prev => (prev + 1) % recaps.length)} className="cursor-pointer text-white absolute right-5 top-1/2 transform translate-y-1/2 text-5xl">
+      <div onClick={() => setIndex(prev => (prev + 1) % recaps.length)} className="hover:opacity-70 transition cursor-pointer text-white absolute right-5 top-1/2 transform translate-y-1/2 text-5xl">
         &rarr;
       </div>
     </div>
