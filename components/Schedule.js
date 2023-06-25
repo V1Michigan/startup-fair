@@ -5,7 +5,7 @@ export default function Schedule() {
   const [min, setMin] = useState(0);
   const [hrs, setHrs] = useState(0);
   const [days, setDays] = useState(0);
-  const startDate = new Date("11/16/2022 13:00:00");
+  const startDate = new Date("10/8/2023 13:00:00");
 
   useEffect(() => {
     const intervalId = setInterval(() => {
@@ -25,7 +25,7 @@ export default function Schedule() {
 
   return (
     <div className="bg-white-100 max-w-6xl mx-auto text-center">
-      {/*<h2 className="text-4xl md:text-5xl tracking-tight text-gray-800 my-4 font-bold">
+      {/* <h2 className="text-4xl md:text-5xl tracking-tight text-gray-800 my-4 font-bold">
           Schedule
         </h2>
         <p className="text-xl tracking-tight font-bold text-gray-800">

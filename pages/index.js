@@ -10,8 +10,7 @@ import CompaniesW22 from "../components/CompaniesW22";
 import Schedule from "../components/Schedule";
 import Application from "../components/Application";
 import NewsletterForm from "../components/NewsletterForm";
-
-
+import Slideshow from "../components/Slideshow";
 function initGA() {
   if (process.env.NODE_ENV !== "development") {
     ReactGA.initialize("UA-216661415-1"); // "Startup Fair website" property
@@ -19,14 +18,6 @@ function initGA() {
   }
 }
 
-function Statistic({ value, label }) {
-  return (
-    <div className="flex flex-col items-start text-white">
-      <div className="text-6xl font-bold text-center md:text-left">{value}</div>
-      <div className="text-sm text-center md:text-left">{label}</div>
-    </div>
-  );
-}
 
 function IndexPage() {
   useEffect(initGA, []); // Only runs once
@@ -45,7 +36,8 @@ function IndexPage() {
         <p className="text-white uppercase flex-1 p-2">IPO 🚀</p>
       </div> */}
 
-      <Header />
+      {/* <Header /> */}
+      <Slideshow />
 
       <StockTicker
         text={[
@@ -68,25 +60,8 @@ function IndexPage() {
       <NewsletterForm />
 
       <Schedule />
-
-      <div className="h-full w-full bg-landing bg-cover bg-center bg-no-repeat">
-        <div className="h-full w-full bg-shade py-4">
-          <section className="max-w-6xl mx-auto my-4">
-            <h1 className="text-5xl text-white text-center tracking-tight font-bold">
-              Last Year's Recap
-            </h1>
-            <p className="mt-4 text-lg text-gray-400 text-center tracking-tight font-bold">
-              February 4th, 2022
-            </p>
-            <div className="flex flex-row flex-wrap justify-center gap-16 my-16">
-              <Statistic value="17" label="high-growth startups" />
-              <Statistic value="200+" label="top students" />
-              <Statistic value="20+" label="job offers" />
-            </div>
-            <CompaniesW22 />
-          </section>
-        </div>
-      </div>
+      
+      {/* <Slideshow /> */}
 
       <FAQ
         subtitleBold="Questions? We got you."
