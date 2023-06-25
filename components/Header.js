@@ -110,11 +110,11 @@ const Header = () => {
             V1 STARTUP FAIR 🚀
           </h1>
           <h2 className="md:text-xl text-md mt-1 tracking-tight text-yellow-400 syncopate">
-            November 16th, 2022
+            October 8th, 2023
           </h2>
         </div>
         <div className="my-4">
-          {/* <a
+          {/* <al
             href="#apply"
             className="text-xl md:text-2xl font-bold outline-none text-black py-3 px-6 rounded-md bg-yellow-400 hover:opacity-75"
             onClick={() =>
@@ -126,7 +126,7 @@ const Header = () => {
             }
           >
             Apply Now ›
-          </a> */}
+          </al> */}
           <a
             href="https://v1-startupfair-directory.super.site/"
             className="text-lg md:text-xl font-bold outline-none text-black py-3 px-6 rounded-md bg-yellow-400 hover:opacity-75"
