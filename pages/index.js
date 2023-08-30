@@ -125,18 +125,26 @@ function IndexPage() {
         <br />
         <div className="text-center mx-auto -space-x-4 mb-4">
           {[
-            "megan",
-            "reese",
-            "mbogo",
-            "divya",
-            "varun",
-            "samay",
-            "shrey",
-            "tyrus",
+            
             "hari",
+            "pranay",
+            "deric",
+            "dev",
             "lucas",
-            "elliot",
-            "rohan",
+            "daphne",
+            "akira",
+            "tyrus",
+            "amy",
+            "adviti",
+            "spencer",
+            "kevin",
+            "navya",
+            "vijaya",
+            "cole",
+            "raghav",
+            "sohavni",
+            "brian",
+            
           ].map((member) => (
             <img
               className="relative z-10 inline object-cover w-12 h-12 border-2 border-white rounded-full"
@@ -152,7 +160,7 @@ function IndexPage() {
         <p className="footer text-gray-200 text-center py-8 px-4 m-0">
           &copy;{"  "}
           <b>
-            2022 V1 |{"  "}
+            2023 V1 |{"  "}
             <a
               className="underline hover:opacity-90"
               href="mailto:v1startupfair@umich.edu"
