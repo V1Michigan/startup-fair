@@ -28,7 +28,7 @@ export default function Slideshow() {
   return (
     <div className="relative">
       <Recap Header={recaps[index].Header} Date={recaps[index].Date} Startups={recaps[index].Startups} numStartups={recaps[index].numStartups} numStudents={recaps[index].numStudents} numOffers={recaps[index].numOffers} />
-      <div className="absolute flex gap-4 bottom-5 left-1/2 transform -translate-x-1/2">
+      <div className="absolute flex gap-4 bottom-2 left-1/2 transform -translate-x-1/2">
         {recaps.map((_, i) => (
           <div onClick={() => setIndex(i)} className={`cursor-pointer rounded-full border-white border-2 w-5 h-5 ${index === i ? "bg-white" : "bg-transparent"}`}></div>
         ))}

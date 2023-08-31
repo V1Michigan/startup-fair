@@ -3,7 +3,7 @@ import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
 
 const navigation = [
-    { name: 'Startup Fair', href: 'https://startupfair.v1michigan.com/', current: false },
+    { name: 'Startup Fair', href: 'https://startupfair.v1michigan.com/', current: true },
     { name: 'Newsletter', href: 'https://v1network.substack.com/', current: false },
 ]
 
