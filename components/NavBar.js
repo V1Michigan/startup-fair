@@ -1,57 +1,94 @@
-import React from 'react';
+import { Fragment } from 'react'
+import { Disclosure, Menu, Transition } from '@headlessui/react'
+import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
 
-function NavBar() {
-    return (
-        <nav className="bg-gray-800">
-            <nav class="bg-gray-800">
-                <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
-                    <div class="relative flex h-16 items-center justify-between">
-                        <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
-                            <button type="button" class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-controls="mobile-menu" aria-expanded="false">
-                                <span class="absolute -inset-0.5"></span>
-                                <span class="sr-only">Open main menu</span>
+const navigation = [
+    { name: 'Startup Fair', href: 'https://startupfair.v1michigan.com/', current: false },
+    { name: 'Newsletter', href: 'https://v1network.substack.com/', current: false },
+]
 
-                                <svg class="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-                                </svg>
-
-                                <svg class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-                                </svg>
-                            </button>
-                        </div>
-                        <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
-                            <div class="flex flex-shrink-0 items-center">
-                                <a href="https://v1michigan.com/" target='_blank'>
-                                    <img class="block h-7 w-auto hover:opacity-75" src="https://v1michigan.com/v1logowhite.svg" alt="V1 Michigan" />
-                                </a>
-                            </div>
-                            <div class="hidden sm:ml-6 sm:block">
-                                <div class="flex space-x-4">
-
-                                    <a href="https://startupfair.v1michigan.com/" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium" aria-current="page">Startup Fair</a>
-                                    <a href="https://v1network.substack.com/" target="_blank" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Newsletter</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-                        <a href="https://v1michigan.com/" target='_blank' class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Go to V1 Michigan</a>
-                            
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="sm:hidden" id="mobile-menu">
-                    <div class="space-y-1 px-2 pb-3 pt-2">
-
-                        <a href="https://startupfair.v1michigan.com/" class="bg-gray-900 text-white block rounded-md px-3 py-2 text-base font-medium" aria-current="page">Startup Fair</a>
-                        <a href="https://v1network.substack.com/" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Newsletter</a>
-                    </div>
-                </div>
-            </nav>
-        </nav>
-    );
+function classNames(...classes) {
+    return classes.filter(Boolean).join(' ')
 }
 
-export default NavBar;
+export default function Example() {
+    return (
+        <Disclosure as="nav" className="bg-gray-800">
+            {({ open }) => (
+                <>
+                    <div className="mx-auto px-2 sm:px-6 lg:px-8">
+                        <div className="relative flex h-16 items-center justify-between">
+                            <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
+                                {/* Mobile menu button*/}
+                                <Disclosure.Button className="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
+                                    <span className="absolute -inset-0.5" />
+                                    <span className="sr-only">Open main menu</span>
+                                    {open ? (
+                                        <XMarkIcon className="block h-6 w-6" aria-hidden="true" />
+                                    ) : (
+                                        <Bars3Icon className="block h-6 w-6" aria-hidden="true" />
+                                    )}
+                                </Disclosure.Button>
+                            </div>
+                            <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+                                <div className="flex flex-shrink-0 items-center">
+                                    <a href="https://v1michigan.com/" target='_blank'>
+                                        <img
+                                            className="block h-7 w-auto hover:opacity-75"
+                                            src="https://v1michigan.com/v1logowhite.svg"
+                                            alt="V1 Michigan"
+                                        />
+                                    </a>
+                                </div>
+                                <div className="hidden sm:ml-6 sm:block">
+                                    <div className="flex space-x-4">
+                                        {navigation.map((item) => (
+                                            <a
+                                                key={item.name}
+                                                href={item.href}
+                                                className={classNames(
+                                                    item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
+                                                    'rounded-md px-3 py-2 text-sm font-medium'
+                                                )}
+                                                aria-current={item.current ? 'page' : undefined}
+                                            >
+                                                {item.name}
+                                            </a>
+                                        ))}
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+                                <a href="https://www.typeform.com/" target='_blank'>
+                                    <button class="bg-gradient-to-r from-yellow-500 to-yellow-700 hover:bg-blue-500hover:opacity-75 text-white py-2 px-3 rounded text-sm font-medium">
+                                        Apply Now &rsaquo;
+                                    </button>
+                                </a>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <Disclosure.Panel className="sm:hidden">
+                        <div className="space-y-1 px-2 pb-3 pt-2">
+                            {navigation.map((item) => (
+                                <Disclosure.Button
+                                    key={item.name}
+                                    as="a"
+                                    href={item.href}
+                                    className={classNames(
+                                        item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
+                                        'block rounded-md px-3 py-2 text-base font-medium'
+                                    )}
+                                    aria-current={item.current ? 'page' : undefined}
+                                >
+                                    {item.name}
+                                </Disclosure.Button>
+                            ))}
+                        </div>
+                    </Disclosure.Panel>
+                </>
+            )}
+        </Disclosure>
+    )
+}

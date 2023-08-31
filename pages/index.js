@@ -11,8 +11,7 @@ import Schedule from "../components/Schedule";
 import Application from "../components/Application";
 import NewsletterForm from "../components/NewsletterForm";
 import Slideshow from "../components/Slideshow";
-import NavBar from "../components/NavBar"; 
-import Example from "../components/NavBar2"
+import Example from "../components/NavBar"
 function initGA() {
   if (process.env.NODE_ENV !== "development") {
     ReactGA.initialize("UA-216661415-1"); // "Startup Fair website" property
@@ -27,7 +26,7 @@ function IndexPage() {
   return (
     <main>
       <SEO />
-      
+
       <Example />
 
       {/* <div className="bg-gray-800 md:flex text-center p-2 tracking-widest">
@@ -61,7 +60,7 @@ function IndexPage() {
 
       <ValueProp />
 
-      <NewsletterForm />
+      <Application />
 
       <Schedule />
       

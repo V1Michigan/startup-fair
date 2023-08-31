@@ -37,11 +37,10 @@ export default function Application() {
           Email
         </label>
         <input
-          className="text-white mt-2 w-3/4 text-base outline-none bg-transparent border-2 border-yellow-400 py-3 rounded-md shadow-sm px-3 leading-tight focus:outline-none opacity-50 cursor-not-allowed"
+          className="text-white mt-2 w-3/4 text-base outline-none bg-transparent border-2 border-yellow-400 py-3 rounded-md shadow-sm px-3 leading-tight focus:outline-none"
           type="text"
           placeholder="billymagic@umich.edu"
           value={email}
-          disabled
           onKeyPress={(e) => {
             if (e.key === "Enter") {
               submitEmail();
@@ -54,16 +53,12 @@ export default function Application() {
       </div>
       <div className="text-center">
         <button
-          className="text-base md:text-xl m-2 font-bold outline-none text-black py-2 px-4 rounded-md bg-yellow-400 /*hover:opacity-75*/ opacity-50 cursor-not-allowed"
-          // onClick={submitEmail}
-          disabled
+          className="text-base md:text-xl m-2 font-bold outline-none text-black py-2 px-4 rounded-md bg-yellow-400 hover:opacity-75"
+          onClick={submitEmail}
+          
         >
           Let's do this ›
         </button>
-        <p className="italic text-white mt-2 text-sm">
-          {/* You will receive an email with the next steps to apply. */}
-          Student applications are now closed.
-        </p>
       </div>
     </section>
   );
