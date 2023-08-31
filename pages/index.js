@@ -127,35 +127,37 @@ function IndexPage() {
         <br />
         <br />
         <div className="text-center mx-auto -space-x-4 mb-4">
-          {[
-            
-            "hari",
-            "pranay",
-            "deric",
-            "dev",
-            "lucas",
-            "daphne",
-            "akira",
-            "tyrus",
-            "amy",
-            "adviti",
-            "spencer",
-            "kevin",
-            "navya",
-            "vijaya",
-            "cole",
-            "raghav",
-            "sohavni",
-            "brian",
-            
-          ].map((member) => (
-            <img
-              className="relative z-10 inline object-cover w-12 h-12 border-2 border-white rounded-full"
-              src={`/team/${member}.jpg`}
-              alt={`Profile image of ${member}`}
-              key={member}
-            />
-          ))}
+  {[
+    "Hari",
+    "Pranay",
+    "Deric",
+    "Dev",
+    "Lucas",
+    "Daphne",
+    "Akira",
+    "Tyrus",
+    "Amy",
+    "Adviti",
+    "Spencer",
+    "Kevin",
+    "Navya",
+    "Vijaya",
+    "Cole",
+    "Raghav",
+    "Sohavni",
+    "Brian",
+  ].map((member) => (
+    <div className="tooltip relative inline-block z-10">
+      <img
+        className="object-cover w-12 h-12 border-2 border-white rounded-full"
+        src={`/team/${member}.jpg`}
+        alt={`Profile image of ${member}`}
+        key={member}
+      />
+      <span className="tooltiptext">{member}</span>
+    </div>
+  ))}
+
           <p className="text-center text-white mt-2 tracking-tight font-bold">
             V1 Michigan Startup Fair Team
           </p>
