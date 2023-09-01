@@ -73,7 +73,7 @@ function IndexPage() {
           {
             question: "What if I already have a job for the summer?",
             answer:
-              "Not a problem at all, still apply! Companies are recruiting for Winter 2023, Summer 2023, and Fall 2023.",
+              "Not a problem at all, still apply! Companies are recruiting for Winter 2024, Summer 2024, and Fall 2024.",
           },
           {
             question: "When and where is this?",
