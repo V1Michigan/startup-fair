@@ -4,6 +4,9 @@ import CompaniesW22 from "./CompaniesW22"
 import CompaniesF22 from "./CompaniesF22"
 import TitleSlide from "./TitleSlide"
 
+import styles from '../styles/Slideshow.module.css';
+
+
 const recaps = [
   {
     isSpecial: true, // Identify as a special slide
