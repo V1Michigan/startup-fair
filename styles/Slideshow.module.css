@@ -1,17 +1,12 @@
-.slide-wrapper {
-  overflow: hidden;
-  position: relative;
-  width: 100%;
-  height: 100vh; /* Setting a fixed height here; adjust as necessary */
+.slide-entering,
+.slide-exiting,
+.slide-exited {
+  opacity: 0;
+  z-index: 1;
 }
 
-.slides {
-  display: flex;
-  transition: transform 0.5s ease-in-out;
-  width: 100%;
-  height: 100%;
-}
-
-.w-full {
-  flex: 0 0 100%;
+.slide-entered {
+  opacity: 1;
+  z-index: 2;
+  transition: opacity 500ms ease-in;
 }
