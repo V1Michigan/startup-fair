@@ -11,10 +11,13 @@ export default function TitleSlide() {
               October 12th, 2023
             </p>
             <a href="https://www.typeform.com/" target="_blank">
-              <button className="bg-gradient-to-r from-yellow-500 to-yellow-700 hover:bg-blue-500 hover:opacity-75 text-white py-3 px-6 rounded text-med font-bold">
-                {/* Made the button larger by increasing the padding and font-size */}
-                Apply Now &rsaquo;
-              </button>
+              <div className="tooltip">
+                <button className="bg-gray-400 cursor-not-allowed text-white py-3 px-6 rounded text-med font-bold" disabled>
+                  {/* Made the button larger by increasing the padding and font-size */}
+                  Apply Now &rsaquo;
+                </button>
+                <span className="tooltiptext-title">Coming soon!</span>
+              </div>
             </a>
           </section>
         </div>

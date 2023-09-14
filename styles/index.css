@@ -280,6 +280,45 @@ html {
   opacity: 1;
 }
 
+/* Tooltip for Title Slide Apply Button */
+
+.tooltip .tooltiptext-title {
+  font-family: "Inter";
+  font-size: 14px;
+  visibility: hidden;
+  width: 110px;
+  background-color: #fff;
+  color: #333;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
+  bottom: calc(100% + 10px);  /* Positioned 10 pixels above the button */
+  left: 50%;
+  margin-left: -55px;
+  opacity: 0;
+  transition: opacity 0.3s;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.tooltip .tooltiptext-title::after {
+  content: "";
+  position: absolute;
+  top: 100%;  /* Arrow at the bottom of the tooltip */
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #fff transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext,
+.tooltip:hover .tooltiptext-title {
+  visibility: visible;
+  opacity: 1;
+}
+
 /* Styles for Slideshow */
 /*
 .slide-wrapper {
