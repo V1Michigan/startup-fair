@@ -61,9 +61,9 @@ export default function Example() {
                             </div>
                             <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
                                 <a href="https://www.typeform.com/" target='_blank'>
-                                <button className="bg-gradient-to-r from-yellow-500 to-yellow-700 hover:bg-blue-500 hover:opacity-75 text-white py-2 px-3 rounded text-sm font-medium">
-    Apply Now &rsaquo;
-</button>
+                                    <button className="bg-gradient-to-r from-yellow-500 to-yellow-700 hover:bg-blue-500 hover:opacity-75 text-white py-2 px-3 rounded text-sm font-medium">
+                                        Apply Now &rsaquo;
+                                    </button>
                                 </a>
 
                             </div>

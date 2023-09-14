@@ -14,7 +14,8 @@ export default function Application() {
         action: "Apply",
         label: "Submit email",
       });
-      router.push("https://v1michigan.typeform.com/apply");
+      const tallyURL = `https://tally.so/r/3xMEgE?email=${encodeURIComponent(email)}`;
+      router.push(tallyURL);
     } else {
       alert("Please enter a valid @umich.edu email address");
     }
