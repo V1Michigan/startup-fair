@@ -45,7 +45,7 @@ export default function Slideshow() {
       }
       <div className="absolute flex gap-4 bottom-2 left-1/2 transform -translate-x-1/2">
         {recaps.map((_, i) => (
-          <div onClick={() => setIndex(i)} className={`cursor-pointer rounded-full border-white border-2 w-5 h-5 ${index === i ? "bg-white" : "bg-transparent"}`}></div>
+          <div onClick={() => setIndex(i)} className={`cursor-pointer rounded-full border-white border-2 w-4 h-4 ${index === i ? "bg-white" : "bg-transparent"}`}></div>
         ))}
       </div>
       <div onClick={() => setIndex(prev => (prev - 1 + recaps.length) % recaps.length)} className="hover:opacity-70 transition cursor-pointer text-white absolute left-5 top-1/2 transform translate-y-1/2 text-5xl">
