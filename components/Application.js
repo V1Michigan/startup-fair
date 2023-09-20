@@ -14,7 +14,8 @@ export default function Application() {
         action: "Apply",
         label: "Submit email",
       });
-      router.push("https://v1michigan.typeform.com/apply");
+      const tallyURL = `https://tally.so/r/3xMEgE?email=${encodeURIComponent(email)}`;
+      router.push(tallyURL);
     } else {
       alert("Please enter a valid @umich.edu email address");
     }
@@ -37,11 +38,10 @@ export default function Application() {
           Email
         </label>
         <input
-          className="text-white mt-2 w-3/4 text-base outline-none bg-transparent border-2 border-yellow-400 py-3 rounded-md shadow-sm px-3 leading-tight focus:outline-none opacity-50 cursor-not-allowed"
+          className="text-white mt-2 w-3/4 text-base outline-none bg-transparent border-2 border-yellow-400 py-3 rounded-md shadow-sm px-3 leading-tight focus:outline-none"
           type="text"
           placeholder="billymagic@umich.edu"
           value={email}
-          disabled
           onKeyPress={(e) => {
             if (e.key === "Enter") {
               submitEmail();
@@ -53,17 +53,16 @@ export default function Application() {
         />
       </div>
       <div className="text-center">
+      <div className="tooltip">
         <button
-          className="text-base md:text-xl m-2 font-bold outline-none text-black py-2 px-4 rounded-md bg-yellow-400 /*hover:opacity-75*/ opacity-50 cursor-not-allowed"
-          // onClick={submitEmail}
-          disabled
+          className="bg-gray-400 cursor-not-allowed text-base md:text-xl m-2 font-bold outline-none text-white py-2 px-4 rounded-md" disabled
+          onClick={submitEmail}
+          
         >
           Let's do this ›
         </button>
-        <p className="italic text-white mt-2 text-sm">
-          {/* You will receive an email with the next steps to apply. */}
-          Student applications are now closed.
-        </p>
+        <span className="tooltiptext-title">Coming soon!</span>
+      </div>
       </div>
     </section>
   );

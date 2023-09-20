@@ -1,0 +1,12 @@
+.slide-entering,
+.slide-exiting,
+.slide-exited {
+  opacity: 0;
+  z-index: 1;
+}
+
+.slide-entered {
+  opacity: 1;
+  z-index: 2;
+  transition: opacity 500ms ease-in;
+}

@@ -11,6 +11,7 @@ import Schedule from "../components/Schedule";
 import Application from "../components/Application";
 import NewsletterForm from "../components/NewsletterForm";
 import Slideshow from "../components/Slideshow";
+import Example from "../components/NavBar"
 function initGA() {
   if (process.env.NODE_ENV !== "development") {
     ReactGA.initialize("UA-216661415-1"); // "Startup Fair website" property
@@ -25,6 +26,8 @@ function IndexPage() {
   return (
     <main>
       <SEO />
+
+      <Example />
 
       {/* <div className="bg-gray-800 md:flex text-center p-2 tracking-widest">
         <p className="text-white uppercase flex-1 p-2">SEED 🌱</p>
@@ -57,7 +60,7 @@ function IndexPage() {
 
       <ValueProp />
 
-      <NewsletterForm />
+      <Application />
 
       <Schedule />
       
@@ -70,12 +73,12 @@ function IndexPage() {
           {
             question: "What if I already have a job for the summer?",
             answer:
-              "Not a problem at all, still apply! Companies are recruiting for Winter 2023, Summer 2023, and Fall 2023.",
+              "Not a problem at all, still apply! Companies are recruiting for Fall 2023, Winter 2024, and Fall 2024.",
           },
           {
             question: "When and where is this?",
             answer:
-              "V1 Startup Fair is November 16th at 1 PM ET. It will be a hybrid event held in the Ross School of Business featuring a mix of startup booths, tech talks with founder, and opportunites to meet like minded students.",
+              "V1 Startup Fair is October 12th (time TBD). It will be a hybrid event held in the Ross School of Business featuring a mix of startup booths, tech talks with founder, and opportunites to meet like minded students.",
           },
           {
             question: "Who is this designed for?",
@@ -124,27 +127,37 @@ function IndexPage() {
         <br />
         <br />
         <div className="text-center mx-auto -space-x-4 mb-4">
-          {[
-            "megan",
-            "reese",
-            "mbogo",
-            "divya",
-            "varun",
-            "samay",
-            "shrey",
-            "tyrus",
-            "hari",
-            "lucas",
-            "elliot",
-            "rohan",
-          ].map((member) => (
-            <img
-              className="relative z-10 inline object-cover w-12 h-12 border-2 border-white rounded-full"
-              src={`/team/${member}.jpg`}
-              alt={`Profile image of ${member}`}
-              key={member}
-            />
-          ))}
+  {[
+    "Hari",
+    "Pranay",
+    "Deric",
+    "Dev",
+    "Lucas",
+    "Daphne",
+    "Akira",
+    "Tyrus",
+    "Amy",
+    "Adviti",
+    "Spencer",
+    "Kevin",
+    "Navya",
+    "Vijaya",
+    "Cole",
+    "Raghav",
+    "Sohavni",
+    "Brian",
+  ].map((member) => (
+    <div className="tooltip relative inline-block z-10">
+      <img
+        className="object-cover w-12 h-12 border-2 border-white rounded-full"
+        src={`/team/${member}.jpg`}
+        alt={`Profile image of ${member}`}
+        key={member}
+      />
+      <span className="tooltiptext">{member}</span>
+    </div>
+  ))}
+
           <p className="text-center text-white mt-2 tracking-tight font-bold">
             V1 Michigan Startup Fair Team
           </p>
@@ -152,7 +165,7 @@ function IndexPage() {
         <p className="footer text-gray-200 text-center py-8 px-4 m-0">
           &copy;{"  "}
           <b>
-            2022 V1 |{"  "}
+            2023 V1 |{"  "}
             <a
               className="underline hover:opacity-90"
               href="mailto:v1startupfair@umich.edu"
