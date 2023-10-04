@@ -148,6 +148,8 @@ function IndexPage() {
             { name: "Brian", linkedin: "https://www.linkedin.com/in/brian-z-travis/"},
             { name: "Angela", linkedin: "https://www.linkedin.com/in/angela-yuan1/"},
             { name: "Alex", linkedin: "https://www.linkedin.com/in/alexandru-beloiu/"},
+            { name: "Daniel", linkedin: "https://www.linkedin.com/in/danielmalis/"},
+            { name: "Advait", linkedin: "https://www.linkedin.com/in/advaitiyer/"},
           ].map((member) => (
             <div className="tooltip relative inline-block z-10" key={member.name}>
               <a href={member.linkedin} target="_blank" rel="noopener noreferrer">
