@@ -5,7 +5,6 @@ import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
 const navigation = [
     { name: 'Startup Fair', href: 'https://startupfair.v1michigan.com/', current: true },
     { name: 'Newsletter', href: 'https://v1network.substack.com/', current: false },
-    { name: 'Startups', href: 'https://v1michigan.com/startups', current: false },
 ]
 
 function classNames(...classes) {
@@ -59,16 +58,6 @@ export default function Example() {
                                     </div>
                                 </div>
                             </div>
-                            <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-                                <div className="tooltip">
-                                    <button className="bg-gray-400 cursor-not-allowed text-white py-2 px-3 rounded text-sm font-medium" disabled>
-                                        Apply Now &rsaquo;
-                                    </button>
-                                    <span className="tooltiptext-navbar">Coming soon!</span>
-                                </div>
-                            </div>
-
-
                         </div>
                     </div>
 

@@ -60,10 +60,10 @@ function IndexPage() {
 
       <ValueProp />
 
-      <Application />
+      <NewsletterForm />
 
       <Schedule />
-      
+
       {/* <Slideshow /> */}
 
       <FAQ
@@ -127,36 +127,39 @@ function IndexPage() {
         <br />
         <br />
         <div className="text-center mx-auto -space-x-4 mb-4">
-  {[
-    "Hari",
-    "Pranay",
-    "Deric",
-    "Dev",
-    "Lucas",
-    "Daphne",
-    "Akira",
-    "Tyrus",
-    "Amy",
-    "Adviti",
-    "Spencer",
-    "Kevin",
-    "Navya",
-    "Vijaya",
-    "Cole",
-    "Raghav",
-    "Sohavni",
-    "Brian",
-  ].map((member) => (
-    <div className="tooltip relative inline-block z-10">
-      <img
-        className="object-cover w-12 h-12 border-2 border-white rounded-full"
-        src={`/team/${member}.jpg`}
-        alt={`Profile image of ${member}`}
-        key={member}
-      />
-      <span className="tooltiptext">{member}</span>
-    </div>
-  ))}
+          {[
+            { name: "Hari", linkedin: "https://www.linkedin.com/in/hariharan-chidambaram/" },
+            { name: "Pranay", linkedin: "https://www.linkedin.com/in/pranay-gupta1/" },
+            { name: "Deric", linkedin: "https://www.linkedin.com/in/dericdinudaniel/" },
+            { name: "Dev", linkedin: "https://www.linkedin.com/in/dev-kunjadia/" },
+            { name: "Lucas", linkedin: "https://www.linkedin.com/in/lbiondos/" },
+            { name: "Daphne", linkedin: "https://www.linkedin.com/in/dvtsai/" },
+            { name: "Akira", linkedin: "https://www.linkedin.com/in/liyile/"},
+            { name: "Tyrus", linkedin: "https://www.linkedin.com/in/tyrus-yeo/"},
+            { name: "Amy", linkedin: "https://www.linkedin.com/in/amyjun26/"},
+            { name: "Adviti", linkedin: "https://www.linkedin.com/in/advitimishra/"},
+            { name: "Spencer", linkedin: "https://www.linkedin.com/in/spencer-goodwin/"},
+            { name: "Kevin", linkedin: "https://www.linkedin.com/in/kevin1015wang/"},
+            { name: "Navya", linkedin: "https://www.linkedin.com/in/navyakumar0752/"},
+            { name: "Vijaya", linkedin: "https://www.linkedin.com/in/vijaya-kukutla-a86495192/"},
+            { name: "Cole", linkedin: "https://www.linkedin.com/in/cole-morehouse-b685b5220/"},
+            { name: "Raghav", linkedin: "https://www.linkedin.com/in/raghav-bhat-02/"},
+            { name: "Sohavni", linkedin: "https://www.linkedin.com/in/sohavni-singh/"},
+            { name: "Brian", linkedin: "https://www.linkedin.com/in/brian-z-travis/"},
+            { name: "Angela", linkedin: "https://www.linkedin.com/in/angela-yuan1/"},
+            { name: "Alex", linkedin: "https://www.linkedin.com/in/alexandru-beloiu/"},
+          ].map((member) => (
+            <div className="tooltip relative inline-block z-10" key={member.name}>
+              <a href={member.linkedin} target="_blank" rel="noopener noreferrer">
+                <img
+                  className="object-cover w-12 h-12 border-2 border-white rounded-full"
+                  src={`/team/${member.name}.jpg`}
+                  alt={`Profile image of ${member.name}`}
+                />
+              </a>
+              <span className="tooltiptext">{member.name}</span>
+            </div>
+          ))}
 
           <p className="text-center text-white mt-2 tracking-tight font-bold">
             V1 Michigan Startup Fair Team
@@ -179,11 +182,14 @@ function IndexPage() {
   );
 }
 
+
+
+
 const withParallax = (Component) => (props) =>
-  (
-    <ParallaxProvider>
-      <Component {...props} />
-    </ParallaxProvider>
-  );
+(
+  <ParallaxProvider>
+    <Component {...props} />
+  </ParallaxProvider>
+);
 
 export default withParallax(IndexPage);
