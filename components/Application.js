@@ -53,16 +53,16 @@ export default function Application() {
         />
       </div>
       <div className="text-center">
-      
+      <div className="tooltip">
         <button
-          className="text-base md:text-xl m-2 font-bold outline-none text-black py-2 px-4 rounded-md bg-yellow-400 hover:opacity-75" 
+          className="bg-gray-400 cursor-not-allowed text-base md:text-xl m-2 font-bold outline-none text-white py-2 px-4 rounded-md" disabled
           onClick={submitEmail}
           
         >
           Let's do this ›
         </button>
-        
-     
+        <span className="tooltiptext-title">Coming soon!</span>
+      </div>
       </div>
     </section>
   );
