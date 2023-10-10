@@ -16,7 +16,7 @@ export default function TitleSlide() {
             </p>
             <div className="flex flex-row flex-wrap justify-center gap-16 my-16">
               <Statistic value={17} label="high-growth startups" />
-              <Statistic value={`${200}+`} label="top students" />
+              <Statistic value={`${400}+`} label="top students" />
             </div>
             <CompaniesF23 />
           </section>
