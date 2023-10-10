@@ -52,7 +52,7 @@ const CompaniesF23 = () => (
       <Logo
         src="/companies/MayMobility.png"
         href="https://maymobility.com/"
-        alt="May Mobility"
+        alt="May Mobility "
         size="40"
       />
       <Logo
