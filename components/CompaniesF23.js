@@ -51,7 +51,7 @@ const CompaniesF23 = () => (
       />
       <Logo
         src="/companies/MayMobility.png"
-        href="https://www.valon.com/"
+        href="https://maymobility.com/"
         alt="May Mobility"
         size="40"
       />
