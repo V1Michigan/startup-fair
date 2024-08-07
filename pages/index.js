@@ -3,11 +3,9 @@ import { useEffect } from "react";
 import { ParallaxProvider } from "react-scroll-parallax";
 import ReactGA from "react-ga";
 import SEO from "../components/SEO";
-import Header from "../components/Header";
 import ValueProp from "../components/ValueProp";
 import FAQ from "../components/FAQ";
 import Schedule from "../components/Schedule";
-import Application from "../components/Application";
 import NewsletterForm from "../components/NewsletterForm";
 import Slideshow from "../components/Slideshow";
 import Example from "../components/NavBar"
