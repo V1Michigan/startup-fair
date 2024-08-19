@@ -4,15 +4,12 @@ import CompaniesW22 from "./CompaniesW22"
 import CompaniesF22 from "./CompaniesF22"
 import TitleSlide from "./TitleSlide"
 
-import styles from '../styles/Slideshow.module.css';
-
-
 const recaps = [
   {
     isTitle: true, // Identify as title slide
   },
   {
-    Header: "Last Year's Recap",
+    Header: "F22 Recap",
     Date: "November 15th, 2022",
     Startups: CompaniesF22,
     numStartups: 14,

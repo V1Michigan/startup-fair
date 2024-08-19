@@ -3,12 +3,9 @@ import { useEffect } from "react";
 import { ParallaxProvider } from "react-scroll-parallax";
 import ReactGA from "react-ga";
 import SEO from "../components/SEO";
-import Header from "../components/Header";
 import ValueProp from "../components/ValueProp";
 import FAQ from "../components/FAQ";
-import CompaniesW22 from "../components/CompaniesW22";
 import Schedule from "../components/Schedule";
-import Application from "../components/Application";
 import NewsletterForm from "../components/NewsletterForm";
 import Slideshow from "../components/Slideshow";
 import Example from "../components/NavBar"
@@ -73,12 +70,12 @@ function IndexPage() {
           {
             question: "What if I already have a job for the summer?",
             answer:
-              "Not a problem at all, still apply! Companies are recruiting for Winter 2024, Summer 2024, and Fall 2024.",
+              "Not a problem at all, still apply! Companies are recruiting for Fall 2024, Winter 2025, Summer 2025.",
           },
           {
             question: "When and where is this?",
             answer:
-              "V1 Startup Fair is October 12th (time TBD). It will be a hybrid event held in the Ross School of Business featuring a mix of startup booths, tech talks with founder, and opportunites to meet like minded students.",
+              "V1 Startup Fair is October 11th (time TBD). It will be a hybrid event held in the Ross School of Business featuring a mix of startup booths, tech talks with founder, and opportunites to meet like minded students.",
           },
           {
             question: "Who is this designed for?",
@@ -128,28 +125,15 @@ function IndexPage() {
         <br />
         <div className="text-center mx-auto -space-x-4 mb-4">
           {[
-            { name: "Hari", linkedin: "https://www.linkedin.com/in/hariharan-chidambaram/" },
-            { name: "Pranay", linkedin: "https://www.linkedin.com/in/pranay-gupta1/" },
-            { name: "Deric", linkedin: "https://www.linkedin.com/in/dericdinudaniel/" },
-            { name: "Dev", linkedin: "https://www.linkedin.com/in/dev-kunjadia/" },
-            { name: "Lucas", linkedin: "https://www.linkedin.com/in/lbiondos/" },
-            { name: "Daphne", linkedin: "https://www.linkedin.com/in/dvtsai/" },
-            { name: "Akira", linkedin: "https://www.linkedin.com/in/liyile/"},
-            { name: "Tyrus", linkedin: "https://www.linkedin.com/in/tyrus-yeo/"},
-            { name: "Amy", linkedin: "https://www.linkedin.com/in/amyjun26/"},
-            { name: "Adviti", linkedin: "https://www.linkedin.com/in/advitimishra/"},
-            { name: "Spencer", linkedin: "https://www.linkedin.com/in/spencer-goodwin/"},
-            { name: "Kevin", linkedin: "https://www.linkedin.com/in/kevin1015wang/"},
-            { name: "Navya", linkedin: "https://www.linkedin.com/in/navyakumar0752/"},
-            { name: "Vijaya", linkedin: "https://www.linkedin.com/in/vijaya-kukutla-a86495192/"},
-            { name: "Cole", linkedin: "https://www.linkedin.com/in/cole-morehouse-b685b5220/"},
-            { name: "Raghav", linkedin: "https://www.linkedin.com/in/raghav-bhat-02/"},
-            { name: "Sohavni", linkedin: "https://www.linkedin.com/in/sohavni-singh/"},
-            { name: "Brian", linkedin: "https://www.linkedin.com/in/brian-z-travis/"},
-            { name: "Angela", linkedin: "https://www.linkedin.com/in/angela-yuan1/"},
-            { name: "Alex", linkedin: "https://www.linkedin.com/in/alexandru-beloiu/"},
-            { name: "Daniel", linkedin: "https://www.linkedin.com/in/danielmalis/"},
-            { name: "Advait", linkedin: "https://www.linkedin.com/in/advaitiyer/"},
+            { name: "Anant", linkedin: "https://www.linkedin.com/in/anant-g/" },
+            { name: "Lance", linkedin: "https://www.linkedin.com/in/lancefuchia/" },
+            { name: "Shrey", linkedin: "https://www.linkedin.com/in/shreypandya/" },
+            { name: "Mihir", linkedin: "https://www.linkedin.com/in/mihir-vador-166b3b173/" },
+            { name: "Divya", linkedin: "https://www.linkedin.com/in/divyaponda/" },
+            { name: "Anu", linkedin: "https://www.linkedin.com/in/anuhea-tao/" },
+            { name: "Sanika", linkedin: "https://www.linkedin.com/in/sanika-kothari/"},
+            { name: "Jonathan", linkedin: "https://www.linkedin.com/in/jonathan-jasica-a24865201/"},
+            { name: "Roshni", linkedin: "https://www.linkedin.com/in/roshni-koduri/"},
           ].map((member) => (
             <div className="tooltip relative inline-block z-10" key={member.name}>
               <a href={member.linkedin} target="_blank" rel="noopener noreferrer">
@@ -170,7 +154,7 @@ function IndexPage() {
         <p className="footer text-gray-200 text-center py-8 px-4 m-0">
           &copy;{"  "}
           <b>
-            2023 V1 |{"  "}
+            2024 V1 |{"  "}
             <a
               className="underline hover:opacity-90"
               href="mailto:v1startupfair@umich.edu"

@@ -1,4 +1,3 @@
-import Logo from "./Logo";
 import CompaniesF23 from "./CompaniesF23";
 import Statistic from "./Statistic";
 
@@ -12,7 +11,7 @@ export default function TitleSlide() {
               <span className="text-yellow-500">V1</span> Startup Fair
             </h1>
             <p className="mt-4 mb-8 text-lg text-gray-400 text-center tracking-tight font-bold">
-              October 12th, 2023
+              October 11th, 2024
             </p>
             <div className="flex flex-row flex-wrap justify-center gap-16 my-16">
               <Statistic value={17} label="high-growth startups" />
