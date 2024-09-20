@@ -7,8 +7,8 @@ export default function NewsletterForm() {
   const [email, setEmail] = useState("");
   const router = useRouter();
 
-  const signUpForNewsletter = () => {
-      router.push("https://v1michigan.com/join")
+  const applyForStartupFair = () => {
+      router.push("https://tally.so/r/3xyRj9")
   };
 
 
@@ -19,7 +19,7 @@ export default function NewsletterForm() {
           Interested?
         </h1>
           <h1 className="text-white text-4xl text-center font-bold tracking-tight my-4">
-          Sign up for V1 Platform
+          <span className="text-yellow-400">Apply</span> for Startup Fair!
         </h1>
         <p className="text-white text-xl text-center my-2 max-w-3xl mx-auto">
           Find your next career-defining role at a high-growth startup. <br />{" "}
@@ -31,7 +31,7 @@ export default function NewsletterForm() {
       <div className="text-center">
         <button
           className="text-base md:text-xl m-2 font-bold outline-none text-black py-2 px-4 rounded-md bg-yellow-400 /*hover:opacity-75*/"
-          onClick={signUpForNewsletter}
+          onClick={applyForStartupFair}
 
         >
           Sign Me Up! ›
