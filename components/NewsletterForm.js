@@ -34,7 +34,7 @@ export default function NewsletterForm() {
           onClick={applyForStartupFair}
 
         >
-          Sign Me Up! ›
+          Click here to Apply ›
         </button>
         <p className="italic text-white mt-2 text-sm">
         </p>
