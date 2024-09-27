@@ -64,7 +64,7 @@ const CompaniesF23 = () => (
         src="/companies/thatch.svg"
         href="https://thatch.ai/"
         alt="Thatch"
-        size="25"
+        size="15"
       />
       <Logo
         src="/companies/annarborspark.png"
