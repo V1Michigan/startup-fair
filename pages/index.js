@@ -1,3 +1,4 @@
+import { useState } from "react";
 import StockTicker from "../components/StockTicker";
 import { useEffect } from "react";
 import { ParallaxProvider } from "react-scroll-parallax";
@@ -9,13 +10,56 @@ import Schedule from "../components/Schedule";
 import NewsletterForm from "../components/NewsletterForm";
 import Slideshow from "../components/Slideshow";
 import Example from "../components/NavBar"
+import { XMarkIcon } from '@heroicons/react/24/solid';
+
+const Banner = ({ text, link, buttonText }) => {
+  const [open, setOpen] = useState(true);
+  if (!open) {
+    return null;
+  }
+  return (
+    <div className="bg-yellow-600 p-3">
+      <div className="flex items-center justify-between flex-wrap">
+        <div className="flex items-center">
+          <span className="flex p-2 rounded-lg bg-yellow-800">
+            {/* <SpeakerphoneIcon className="h-6 w-6 text-white" aria-hidden="true" /> */}
+            {/* <img className="h-6 w-6" src="/public/rocket_icon.png" alt="Rocket Icon" /> */}
+          </span>
+        </div>
+        <p className="p-3 flex-1 flex-grow font-medium font-sans text-white">
+          {text}
+        </p>
+        <div className="order-3 mt-2 flex-shrink-0 w-full sm:order-2 sm:mt-0 sm:w-auto z-50">
+          <a
+            href={link}
+            className="font-sans flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-yellow-600 bg-white hover:bg-yellow-200 transition duration-500"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {buttonText}
+          </a>
+        </div>
+        <div className="order-2 flex-shrink-0 sm:order-3 sm:ml-3">
+          <button
+            type="button"
+            className="-mr-1 flex p-2 rounded-md hover:bg-yellow-500 transition duration-500 focus:outline-none focus:ring-2 focus:ring-white sm:-mr-2"
+            onClick={() => setOpen(false)}
+          >
+            <span className="sr-only">Dismiss</span>
+            <XMarkIcon className="h-6 w-6 text-white" aria-hidden="true" />
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+};
+
 function initGA() {
   if (process.env.NODE_ENV !== "development") {
     ReactGA.initialize("UA-216661415-1"); // "Startup Fair website" property
     ReactGA.pageview(window.location.pathname + window.location.search);
   }
 }
-
 
 function IndexPage() {
   useEffect(initGA, []); // Only runs once
@@ -25,6 +69,17 @@ function IndexPage() {
       <SEO />
 
       <Example />
+      
+      {/* <Banner
+        text={
+          <>
+            Apply by <span className="font-bold">October 1st</span> to meet top
+            startups at <span className="font-bold">V1 Startup Fair</span>
+          </>
+        }
+        link="https://tally.so/r/3xyRj9"
+        buttonText="Apply now &rsaquo;"
+      /> */}
 
       {/* <div className="bg-gray-800 md:flex text-center p-2 tracking-widest">
         <p className="text-white uppercase flex-1 p-2">SEED 🌱</p>

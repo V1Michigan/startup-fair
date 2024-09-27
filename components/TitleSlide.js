@@ -1,4 +1,4 @@
-import CompaniesF23 from "./CompaniesF23";
+import CompaniesF24 from "./CompaniesF24";
 import Statistic from "./Statistic";
 
 export default function TitleSlide() {
@@ -14,10 +14,10 @@ export default function TitleSlide() {
               October 11th, 2024
             </p>
             <div className="flex flex-row flex-wrap justify-center gap-16 my-16">
-              <Statistic value={17} label="high-growth startups" />
+              <Statistic value={12} label="high-growth startups" />
               <Statistic value={`${400}+`} label="top students" />
             </div>
-            <CompaniesF23 />
+            <CompaniesF24 />
           </section>
         </div>
       </div>
