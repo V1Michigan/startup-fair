@@ -24,13 +24,13 @@ const CompaniesF23 = () => (
       <Logo
         src="/companies/courierhealth.png"
         href="https://www.courierhealth.com/"
-        alt="Codeium"
+        alt="Courier Health"
         size="40"
       />
       <Logo
         src="/companies/appliedintuition.svg"
         href="https://www.appliedintuition.com/"
-        alt="Courier Health"
+        alt="Applied Intuition"
         size="40"
       />
     </div>
@@ -43,9 +43,15 @@ const CompaniesF23 = () => (
         size="40"
       />    
       <Logo
-        src="/companies/pylon.svg"
+        src="/companies/pylon.png"
         href="https://usepylon.com/"
         alt="Pylon"
+        size="40"
+      />
+      <Logo
+        src="/companies/codeium.png"
+        href="https://codeium.com"
+        alt="Codeium"
         size="40"
       />
       <Logo

@@ -14,7 +14,7 @@ const recaps = [
     Date: "October 12th, 2023",
     Startups: CompaniesF23,
     numStartups: 17,
-    numStudents: 300,
+    numStudents: 220,
     numOffers: 30
   },
   {
