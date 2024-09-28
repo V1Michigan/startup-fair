@@ -3,10 +3,19 @@ import Recap from "./Recap"
 import CompaniesW22 from "./CompaniesW22"
 import CompaniesF22 from "./CompaniesF22"
 import TitleSlide from "./TitleSlide"
+import CompaniesF23 from "./CompaniesF23"
 
 const recaps = [
   {
     isTitle: true, // Identify as title slide
+  },
+  {
+    Header: "F23 Recap",
+    Date: "October 12th, 2023",
+    Startups: CompaniesF23,
+    numStartups: 17,
+    numStudents: 220,
+    numOffers: 30
   },
   {
     Header: "F22 Recap",
