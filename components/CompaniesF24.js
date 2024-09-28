@@ -14,8 +14,7 @@ const CompaniesF23 = () => (
     </div>
     {/* Iteration */}
     <div className="flex flex-row flex-wrap items-center justify-center gap-x-6 gap-y-4 md:gap-y-2">
-      
-    <Logo
+      <Logo
         src="/companies/watershed.png"
         href="https://watershed.com/"
         alt="Watershed"
@@ -35,13 +34,13 @@ const CompaniesF23 = () => (
       />
     </div>
     {/* Launch */}
-    <div className="flex flex-row flex-wrap items-center justify-center gap-x-6 gap-y-4 md:gap-y-2 2xl:mx-32">    
+    <div className="flex flex-row flex-wrap items-center justify-center gap-x-6 gap-y-4 md:gap-y-2 2xl:mx-32">
       <Logo
         href="https://authenticinsurance.com/"
         src="/companies/authenticinsurance.png"
         alt="Authentic Insurance"
         size="40"
-      />    
+      />
       <Logo
         src="/companies/pylon.png"
         href="https://usepylon.com/"
@@ -64,7 +63,7 @@ const CompaniesF23 = () => (
         src="/companies/thatch.svg"
         href="https://thatch.ai/"
         alt="Thatch"
-        size="15"
+        size="10"
       />
       <Logo
         src="/companies/annarborspark.png"
@@ -78,7 +77,7 @@ const CompaniesF23 = () => (
         alt="Wave RF"
         size="40"
       />
-       <Logo
+      <Logo
         src="/companies/meetyourclass.png"
         href="https://www.meetyourclass.com/"
         alt="Meet Your Class"
