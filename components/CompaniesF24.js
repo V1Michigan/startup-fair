@@ -12,10 +12,8 @@ const CompaniesF23 = () => (
       />
       {/* Growth */}
     </div>
-    {/* Iteration */}
-    <div className="flex flex-row flex-wrap items-center justify-center gap-x-6 gap-y-4 md:gap-y-2">
-      
-    <Logo
+    <div className="flex flex-row flex-wrap items-center justify-center gap-x-8 gap-y-6 md:gap-y-4">
+      <Logo
         src="/companies/watershed.png"
         href="https://watershed.com/"
         alt="Watershed"
@@ -34,14 +32,13 @@ const CompaniesF23 = () => (
         size="40"
       />
     </div>
-    {/* Launch */}
-    <div className="flex flex-row flex-wrap items-center justify-center gap-x-6 gap-y-4 md:gap-y-2 2xl:mx-32">    
+    <div className="flex flex-row flex-wrap items-center justify-center gap-x-8 gap-y-6 md:gap-y-4 2xl:mx-32">
       <Logo
         href="https://authenticinsurance.com/"
         src="/companies/authenticinsurance.png"
         alt="Authentic Insurance"
         size="40"
-      />    
+      />
       <Logo
         src="/companies/pylon.png"
         href="https://usepylon.com/"
@@ -64,8 +61,10 @@ const CompaniesF23 = () => (
         src="/companies/thatch.svg"
         href="https://thatch.ai/"
         alt="Thatch"
-        size="25"
+        size="24"
       />
+    </div>
+    <div className="flex flex-row flex-wrap items-center justify-center gap-x-8 gap-y-6 md:gap-y-4 2xl:mx-32">
       <Logo
         src="/companies/annarborspark.png"
         href="https://annarborusa.org/"
@@ -76,13 +75,13 @@ const CompaniesF23 = () => (
         src="/companies/waverf.png"
         href="https://wave-rf.com/"
         alt="Wave RF"
-        size="40"
+        size="35"
       />
-       <Logo
+      <Logo
         src="/companies/meetyourclass.png"
         href="https://www.meetyourclass.com/"
         alt="Meet Your Class"
-        size="30"
+        size="20"
       />
     </div>
     {/* Partners */}
@@ -97,12 +96,12 @@ const CompaniesF23 = () => (
           alt="Michigan Ross Business + Tech"
           size="35"
         />
-        <Logo
+        {/* <Logo
           src="/companies/ZLIwhite.png"
           href="https://zli.umich.edu/"
           alt="Zell Lurie Institute"
           size="48"
-        />
+        /> */}
       </div>
     </div>
   </div>
