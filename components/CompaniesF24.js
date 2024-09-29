@@ -61,7 +61,7 @@ const CompaniesF23 = () => (
         src="/companies/thatch.svg"
         href="https://thatch.ai/"
         alt="Thatch"
-        size="24"
+        size="15"
       />
     </div>
     <div className="flex flex-row flex-wrap items-center justify-center gap-x-8 gap-y-6 md:gap-y-4 2xl:mx-32">
