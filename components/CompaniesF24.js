@@ -12,7 +12,8 @@ const CompaniesF23 = () => (
       />
       {/* Growth */}
     </div>
-    <div className="flex flex-row flex-wrap items-center justify-center gap-x-8 gap-y-6 md:gap-y-4">
+    {/* Iteration */}
+    <div className="flex flex-row flex-wrap items-center justify-center gap-x-6 gap-y-4 md:gap-y-2">
       <Logo
         src="/companies/watershed.png"
         href="https://watershed.com/"
@@ -32,7 +33,8 @@ const CompaniesF23 = () => (
         size="40"
       />
     </div>
-    <div className="flex flex-row flex-wrap items-center justify-center gap-x-8 gap-y-6 md:gap-y-4 2xl:mx-32">
+    {/* Launch */}
+    <div className="flex flex-row flex-wrap items-center justify-center gap-x-6 gap-y-4 md:gap-y-2 2xl:mx-32">
       <Logo
         href="https://authenticinsurance.com/"
         src="/companies/authenticinsurance.png"
@@ -87,13 +89,13 @@ const CompaniesF23 = () => (
         src="/companies/waverf.png"
         href="https://wave-rf.com/"
         alt="Wave RF"
-        size="35"
+        size="40"
       />
       <Logo
         src="/companies/meetyourclass.png"
         href="https://www.meetyourclass.com/"
         alt="Meet Your Class"
-        size="20"
+        size="30"
       />
     </div>
     {/* Partners */}
@@ -108,15 +110,8 @@ const CompaniesF23 = () => (
           alt="Michigan Ross Business + Tech"
           size="35"
         />
-        {/* <Logo
-          src="/companies/ZLIwhite.png"
-          href="https://zli.umich.edu/"
-          alt="Zell Lurie Institute"
-          size="48"
-        /> */}
       </div>
     </div>
   </div>
 );
-
 export default CompaniesF23;
