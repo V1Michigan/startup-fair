@@ -60,10 +60,24 @@ const CompaniesF23 = () => (
         size="40"
       />
       <Logo
+        src="/companies/pallet.png"
+        href="https://trypallet.com/"
+        alt="Pallet"
+        size="40"
+      />
+    </div>
+    <div className="flex flex-row flex-wrap items-center justify-center gap-x-8 gap-y-6 md:gap-y-4 2xl:mx-32">
+      <Logo
         src="/companies/thatch.svg"
         href="https://thatch.ai/"
         alt="Thatch"
-        size="10"
+        size="12"
+      />
+      <Logo
+        src="/companies/comulate.png"
+        href="https://comulate.com/"
+        alt="Comulate"
+        size="40"
       />
       <Logo
         src="/companies/annarborspark.png"
@@ -96,15 +110,8 @@ const CompaniesF23 = () => (
           alt="Michigan Ross Business + Tech"
           size="35"
         />
-        <Logo
-          src="/companies/ZLIwhite.png"
-          href="https://zli.umich.edu/"
-          alt="Zell Lurie Institute"
-          size="48"
-        />
       </div>
     </div>
   </div>
 );
-
 export default CompaniesF23;
