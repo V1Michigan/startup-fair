@@ -14,7 +14,7 @@
       2. *We will be deleting your existing node installations, because nvm will install its own node installations separately. It won't use your existing installation and as such it will just be wasting space on your disk. So let's remove it! If you have a reason to keep it, scroll below to the "Setup `nvm`" step.*
       3. Run `whereis node`. You should see two paths.
       4. Use `sudo rm -rf <path>` (No angle brackets) to delete each of them (check the [first answer here](https://stackoverflow.com/questions/11177954/how-do-i-completely-uninstall-node-js-and-reinstall-from-beginning-mac-os-x) for more help).
-   2. Set up `nvm` ([find tutorial here](https://www.freecodecamp.org/news/node-version-manager-nvm-install-guide/) or see directions in [their repo here](https://github.com/nvm-sh/nvm#about)).
+   2. Set up `nvm` ([find tutorial here](https://www.freecodecamp.org/news/node-version-manager-nvm-install-guide/) or see directions in [their repon here](https://github.com/nvm-sh/nvm#about)).
    5. Run `nvm install 16`
    6. Run `nvm use 16` to switch to Node v16.
    7. Verify `node -v` again. If it says `v16.x.x`, it worked!

@@ -12,6 +12,11 @@ import Slideshow from "../components/Slideshow";
 import Example from "../components/NavBar"
 import { XMarkIcon } from '@heroicons/react/24/solid';
 
+const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
+const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
+
+const supabase = require('@supabase/supabase-js').createClient(supabaseUrl, supabaseKey);
+
 const Banner = ({ text, link, buttonText }) => {
   const [open, setOpen] = useState(true);
   if (!open) {
@@ -23,7 +28,7 @@ const Banner = ({ text, link, buttonText }) => {
         <div className="flex items-center">
           <span className="flex p-2 rounded-lg bg-yellow-800">
             {/* <SpeakerphoneIcon className="h-6 w-6 text-white" aria-hidden="true" /> */}
-            {/* <img className="h-6 w-6" src="/public/rocket_icon.png" alt="Rocket Icon" /> */}
+            <img className="h-6 w-6" src="/rocket_icon.png" alt="" />
           </span>
         </div>
         <p className="p-3 flex-1 flex-grow font-medium font-sans text-white">
@@ -64,22 +69,80 @@ function initGA() {
 function IndexPage() {
   useEffect(initGA, []); // Only runs once
 
+  const [banners, setBanners] = useState(null);
+  const [error, setError] = useState([]);
+  const [toggle, setToggle] = useState(false);
+
+  useEffect(() => {
+    const fetchBanners = async () => {      
+      let { data: data1, error1 } = await supabase
+      .from('bannerflags')
+      .select('*')
+      .eq('banner_id', '_v1Page');
+
+      if (error1) {
+        console.error('Error fetching banner flags:', error1);
+        setError(true)
+      } else {
+        console.log('Data:', data1);
+        let realQuery = data1[0].link;
+        let { data: data2, error2 } = await supabase
+        .from('bannerflags')
+        .select('*')
+        .eq('banner_id', `${realQuery}`);
+        if (realQuery == "false") {
+          setToggle(false);
+        }
+        if (error2) {
+          console.error('Error fetching banner flags:', error2);
+          setError(true);
+        } else {
+          setBanners(data2); 
+          console.log('Data:', data2);
+        }
+      }
+    };
+
+    fetchBanners();
+  }, []);
+
+  useEffect(() => {
+    const fetchBanners = async () => {      
+      let { data: data1, error1 } = await supabase
+      .from('bannerflags')
+      .select('*')
+      .eq('banner_id', '_v1Page');
+
+      if (error1) {
+        console.error('Error fetching banner flags:', error1);
+        setError(true)
+      } else {
+        console.log('Data:', data1);
+        let realQuery = data1[0].link;
+        let { data: data2, error2 } = await supabase
+        .from('bannerflags')
+        .select('*')
+        .eq('banner_id', `${realQuery}`);
+        if (error2) {
+          console.error('Error fetching banner flags:', error2);
+          setError(true);
+        } else {
+          setBanners(data2 || []); 
+          console.log('Data:', data2);
+        }
+      }
+    };
+
+    fetchBanners();
+  }, []);
+
   return (
     <main>
       <SEO />
 
       <Example />
+
       
-      {/* <Banner
-        text={
-          <>
-            Apply by <span className="font-bold">October 1st</span> to meet top
-            startups at <span className="font-bold">V1 Startup Fair</span>
-          </>
-        }
-        link="https://tally.so/r/3xyRj9"
-        buttonText="Apply now &rsaquo;"
-      /> */}
 
       {/* <div className="bg-gray-800 md:flex text-center p-2 tracking-widest">
         <p className="text-white uppercase flex-1 p-2">SEED 🌱</p>
@@ -92,7 +155,37 @@ function IndexPage() {
       </div> */}
 
       {/* <Header /> */}
+      {(error || banners?.length) == 0 && toggle ? (
+          <Banner
+          key={"error"} // Unique key for each banner
+          text={
+          <>
+            {"Invalid banner ID. Please try again later."}
+          </>
+          }
+          link={'#'} // Provide a default link if none exists
+          buttonText={'Learn more'} // Provide a default button text if none exists
+          open={true}
+        />
+      ) : (
+      banners && banners.map((banner) =>
+        banner.message?.length > 0 && (
+        <Banner
+          key={banner.id} // Unique key for each banner
+          text={
+          <>
+            {banner.message}
+          </>
+          }
+          link={banner.link || '#'} // Provide a default link if none exists
+          buttonText={banner.buttonText || 'Learn more'} // Provide a default button text if none exists
+          open={true}
+        />
+        )
+      )
+      )}
       <Slideshow />
+      
 
       <StockTicker
         text={[
